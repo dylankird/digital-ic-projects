@@ -1,3 +1,5 @@
 /'System Volume Information'/
 *.jar
 *.log
+*.tmp
+*.raw
