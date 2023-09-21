@@ -8,6 +8,21 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell inverter;1{sch}
-Cinverter;1{sch}||schematic|1695262771025|1695262771025|
+Cinverter;1{sch}||schematic|1695262771025|1695268173697|
 Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-1|6||||
+NGround|gnd@0||8|-2||||
+NTransistor|nmos@0||6|3|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S1|ATTR_width(D5G1;X0.5;Y-1;)S1|SIM_spice_model(D5G1;Y-2;)SN
+NWire_Pin|pin@1||5|6||||
+Ngeneric:Invisible-Pin|pin@2||4|8|||||ART_message(D5G1;)SIn
+Ngeneric:Invisible-Pin|pin@3||9|6|||||ART_message(D5G1;)SOut+
+NTransistor|pmos@0||6|9|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S1|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;Y-2;)SP
+NPower|pwr@0||8|15||||
+Awire|net@0|||900|pwr@0||8|15|pmos@0|s|8|11
+Awire|net@1|||900|pmos@0|d|8|7|nmos@0|d|8|5
+Awire|net@2|||900|nmos@0|s|8|1|gnd@0||8|0
+Awire|net@4|||900|pmos@0|g|5|9|pin@1||5|6
+Awire|net@6|||1800|conn@0|y|1|6|pin@1||5|6
+Awire|net@7|||2700|nmos@0|g|5|3|pin@1||5|6
+EVIN||D5G1;X-3;|conn@0|y|I
 X
