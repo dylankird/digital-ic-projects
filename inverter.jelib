@@ -1,5 +1,13 @@
 # header information:
-Hnoname|9.07
+Hinverter|9.07
+
+# Views:
+Vschematic|sch
 
 # Technologies:
 Tmocmos|ScaleFORmocmos()D175.0
+
+# Cell inverter;1{sch}
+Cinverter;1{sch}||schematic|1695262771025|1695262771025|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+X
