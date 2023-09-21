@@ -8,14 +8,15 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell inverter;1{sch}
-Cinverter;1{sch}||schematic|1695262771025|1695268173697|
+Cinverter;1{sch}||schematic|1695262771025|1695268615434|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-1|6||||
 NGround|gnd@0||8|-2||||
 NTransistor|nmos@0||6|3|||R||ATTR_length(D5G0.5;X-0.5;Y-1;)S1|ATTR_width(D5G1;X0.5;Y-1;)S1|SIM_spice_model(D5G1;Y-2;)SN
 NWire_Pin|pin@1||5|6||||
-Ngeneric:Invisible-Pin|pin@2||4|8|||||ART_message(D5G1;)SIn
-Ngeneric:Invisible-Pin|pin@3||9|6|||||ART_message(D5G1;)SOut+
+Ngeneric:Invisible-Pin|pin@2||5|7|||||ART_message(D5G1;)SIn
+Ngeneric:Invisible-Pin|pin@3||8|6|||||ART_message(D5G1;)SOut+
+Ngeneric:Invisible-Pin|pin@4||-7|0|||||SIM_spice_card(D5G1;)S[VDD VDD 0 DC 1.8,VGND GND 0 DC 0,VIN In 0 PULSE(1.8 0 0 100p 100p 10n 20n),.TRAN 0 50n,".include Z:\\MOS_model.txt"]
 NTransistor|pmos@0||6|9|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)S1|ATTR_width(D5G1;X0.5;Y-1;)S2|SIM_spice_model(D5G1;Y-2;)SP
 NPower|pwr@0||8|15||||
 Awire|net@0|||900|pwr@0||8|15|pmos@0|s|8|11
