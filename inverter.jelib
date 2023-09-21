@@ -2,10 +2,44 @@
 Hinverter|9.07
 
 # Views:
+Vlayout|lay
 Vschematic|sch
 
 # Technologies:
 Tmocmos|ScaleFORmocmos()D175.0
+
+# Cell inverter;1{lay}
+Cinverter;1{lay}||mocmos|1695319081130|1695335175689||DRC_last_good_drc_area_date()G1695335091987
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-31|15||3||
+NMetal-1-P-Active-Con|contact@1||-21|15||3||
+NMetal-1-Polysilicon-1-Con|contact@2||-33|5||||
+NMetal-1-N-Active-Con|contact@3||-21|-4||||
+NMetal-1-N-Active-Con|contact@4||-31|-4||||
+NN-Transistor|nmos@0||-26|-4|1||R|
+NPolysilicon-1-Pin|pin@0||-26|5||||
+NMetal-1-Pin|pin@1||-45|5||||
+NN-Active-Pin|pin@2||-31|-4||||
+NMetal-1-Pin|pin@3||-6|5||||
+NMetal-1-Pin|pin@4||-21|5||||
+NP-Transistor|pmos@0||-26|15|5||R|
+NMetal-1-P-Well-Con|substr@0||-26|-12|15|||
+NMetal-1-N-Well-Con|well@0||-26|25|15|||
+AP-Active|net@0|||S0|pmos@0|diff-top|-29.75|15|contact@0||-31|15
+AP-Active|net@1|||S1800|pmos@0|diff-bottom|-22.25|15|contact@1||-21|15
+AMetal-1|net@2|||S2700|contact@0||-31|15|well@0||-31|25
+APolysilicon-1|net@3|||S900|pmos@0|poly-left|-26|9|pin@0||-26|5
+APolysilicon-1|net@4|||S1800|contact@2||-33|5|pin@0||-26|5
+AMetal-1|net@5|||S1800|pin@1||-45|5|contact@2||-33|5
+AN-Active|net@6|||S0|contact@3||-21|-4|nmos@0|diff-bottom|-22.25|-4
+AN-Active|net@7||2|S900|contact@4||-31|-4|pin@2||-31|-4
+AN-Active|net@8|||S0|nmos@0|diff-top|-29.75|-4|pin@2||-31|-4
+APolysilicon-1|net@9|||S2700|nmos@0|poly-right|-26|0|pin@0||-26|5
+AMetal-1|net@10|||S900|contact@4||-31|-4|substr@0||-31|-12
+AMetal-1|net@12|||S900|contact@1||-21|15|pin@4||-21|5
+AMetal-1|net@13|||S900|pin@4||-21|5|contact@3||-21|-4
+AMetal-1|net@14|||S0|pin@3||-6|5|pin@4||-21|5
+X
 
 # Cell inverter;1{sch}
 Cinverter;1{sch}||schematic|1695262771025|1695271810207|
