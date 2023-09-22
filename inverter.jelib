@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell inverter;1{lay}
-Cinverter;1{lay}||mocmos|1695319081130|1695336953546||DRC_last_good_drc_area_date()G1695335091987
+Cinverter;1{lay}||mocmos|1695319081130|1695355001590||DRC_last_good_drc_area_date()G1695335091987
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-31|15||3||
 NMetal-1-P-Active-Con|contact@1||-21|15||3||
@@ -22,7 +22,7 @@ NMetal-1-Pin|pin@1||-45|5||||
 NN-Active-Pin|pin@2||-31|-4||||
 NMetal-1-Pin|pin@3||-7|5||||
 NMetal-1-Pin|pin@4||-21|5||||
-Ngeneric:Invisible-Pin|pin@5||-52|-9|||||SIM_spice_card(D5G1;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,VIN In 0 PULSE(3.3 0 0 100p 100p 10n 20n),.TRAN 0 50n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@5||-63|-8|||||SIM_spice_card(D5G2;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,VIN In 0 PULSE(3.3 0 0 100p 100p 10n 20n),.TRAN 0 50n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||-26|15|5||R|
 NMetal-1-P-Well-Con|substr@0||-26|-12|15|||
 NMetal-1-N-Well-Con|well@0||-26|25|15|||
