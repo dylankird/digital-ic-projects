@@ -9,10 +9,17 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell xor-gate;1{lay}
-Cxor-gate;1{lay}||mocmos|1695699696428|1695702479912|
+Cxor-gate;1{lay}||mocmos|1695699696428|1695702991591|
 Ngeneric:Facet-Center|art@0||0|0||||AV
-NN-Transistor|nmos@0||-105|-35|1||R|
-NN-Transistor|nmos@1||-65|-35|1||R|
+NMetal-1-P-Active-Con|contact@1||-45|15||3||
+NMetal-1-P-Active-Con|contact@2||35|15||3||
+NMetal-1-P-Active-Con|contact@3||110|15||3||
+NMetal-1-P-Active-Con|contact@4||-200|15||3||
+NMetal-1-P-Active-Con|contact@5||-170|15||3||
+NMetal-1-P-Active-Con|contact@6||-125|15||3||
+NMetal-1-P-Active-Con|contact@7||-95|15||3||
+NN-Transistor|nmos@0||-185|-35|1||R|
+NN-Transistor|nmos@1||-110|-35|1||R|
 NN-Transistor|nmos@2||-25|-35|1||R|
 NN-Transistor|nmos@3||15|-35|1||R|
 NN-Transistor|nmos@4||55|-35|1||R|
@@ -21,8 +28,8 @@ NP-Transistor|pmos@0||-25|15|5||R|
 NP-Transistor|pmos@1||15|15|5||R|
 NP-Transistor|pmos@2||55|15|5||R|
 NP-Transistor|pmos@3||95|15|5||R|
-NP-Transistor|pmos@4||-65|15|5||R|
-NP-Transistor|pmos@5||-105|15|5||R|
+NP-Transistor|pmos@4||-110|15|5||R|
+NP-Transistor|pmos@5||-185|15|5||R|
 X
 
 # Cell xor-gate;1{sch}
