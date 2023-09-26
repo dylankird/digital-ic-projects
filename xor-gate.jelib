@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell xor-gate;1{lay}
-Cxor-gate;1{lay}||mocmos|1695699696428|1695706672564|
+Cxor-gate;1{lay}||mocmos|1695699696428|1695709392019||DRC_last_good_drc_area_date()G1695709542066
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@1||-30|10||3||
 NMetal-1-P-Active-Con|contact@2||-15|10||3||
@@ -62,6 +62,7 @@ Ngeneric:Invisible-Pin|pin@32||-20|-30|||||ART_message(D5G3;)SA'
 NMetal-1-Pin|pin@34||-96|20||||
 NMetal-1-Pin|pin@35||-95|-23||||
 NMetal-1-Pin|pin@36||17|-2||||
+Ngeneric:Invisible-Pin|pin@37||-111|-2|||||SIM_spice_card(D5G2;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n),VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n),.TRAN 0 1000n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||-25|10|5||R|
 NP-Transistor|pmos@1||-20|10|5||R|
 NP-Transistor|pmos@2||-10|10|5||R|
@@ -139,6 +140,11 @@ APolysilicon-1|net@83|||S0|pin@30||-48|-23|contact@21||-79|-23
 AMetal-1|net@84|||S0|contact@22||-79|20|pin@34||-96|20
 AMetal-1|net@85|||S0|contact@21||-79|-23|pin@35||-95|-23
 AMetal-1|net@86|||S1800|pin@5||0|-2|pin@36||17|-2
+EA||D5G2;|pin@34||I
+EB||D5G2;|pin@35||I
+EF||D5G2;|pin@36||O
+EGND||D5G2;|substr@0||G
+EVDD||D5G2;|well@0||P
 X
 
 # Cell xor-gate;1{sch}
