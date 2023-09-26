@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell xor-gate;1{lay}
-Cxor-gate;1{lay}||mocmos|1695699696428|1695702991591|
+Cxor-gate;1{lay}||mocmos|1695699696428|1695703591156|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@1||-45|15||3||
 NMetal-1-P-Active-Con|contact@2||35|15||3||
@@ -18,18 +18,37 @@ NMetal-1-P-Active-Con|contact@4||-200|15||3||
 NMetal-1-P-Active-Con|contact@5||-170|15||3||
 NMetal-1-P-Active-Con|contact@6||-125|15||3||
 NMetal-1-P-Active-Con|contact@7||-95|15||3||
-NN-Transistor|nmos@0||-185|-35|1||R|
-NN-Transistor|nmos@1||-110|-35|1||R|
-NN-Transistor|nmos@2||-25|-35|1||R|
-NN-Transistor|nmos@3||15|-35|1||R|
-NN-Transistor|nmos@4||55|-35|1||R|
-NN-Transistor|nmos@5||95|-35|1||R|
+NMetal-1-N-Active-Con|contact@8||-45|-85||||
+NMetal-1-N-Active-Con|contact@9||-5|-85||||
+NMetal-1-N-Active-Con|contact@10||35|-85||||
+NMetal-1-N-Active-Con|contact@11||75|-85||||
+NMetal-1-N-Active-Con|contact@12||115|-85||||
+NMetal-1-N-Active-Con|contact@13||-205|-85||||
+NMetal-1-N-Active-Con|contact@14||-165|-85||||
+NMetal-1-N-Active-Con|contact@15||-130|-85||||
+NMetal-1-N-Active-Con|contact@16||-90|-85||||
+NN-Transistor|nmos@0||-185|-85|1||R|
+NN-Transistor|nmos@1||-110|-85|1||R|
+NN-Transistor|nmos@2||-25|-85|1||R|
+NN-Transistor|nmos@3||15|-85|1||R|
+NN-Transistor|nmos@4||55|-85|1||R|
+NN-Transistor|nmos@5||95|-85|1||R|
 NP-Transistor|pmos@0||-25|15|5||R|
 NP-Transistor|pmos@1||15|15|5||R|
 NP-Transistor|pmos@2||55|15|5||R|
 NP-Transistor|pmos@3||95|15|5||R|
 NP-Transistor|pmos@4||-110|15|5||R|
 NP-Transistor|pmos@5||-185|15|5||R|
+AP-Active|net@0|||S0|pmos@5|diff-top|-188.75|15|contact@4||-200|15
+AP-Active|net@1|||S1800|pmos@5|diff-bottom|-181.25|15|contact@5||-170|15
+AP-Active|net@2|||S0|pmos@4|diff-top|-113.75|15|contact@6||-125|15
+AP-Active|net@3|||S1800|pmos@4|diff-bottom|-106.25|15|contact@7||-95|15
+AP-Active|net@4|||S0|pmos@0|diff-top|-28.75|15|contact@1||-45|15
+AP-Active|net@5|||S1800|pmos@0|diff-bottom|-21.25|15|pmos@1|diff-top|11.25|15
+AP-Active|net@6|||S1800|pmos@1|diff-bottom|18.75|15|contact@2||35|15
+AP-Active|net@7|||S0|pmos@2|diff-top|51.25|15|contact@2||35|15
+AP-Active|net@8|||S1800|pmos@2|diff-bottom|58.75|15|pmos@3|diff-top|91.25|15
+AP-Active|net@9|||S1800|pmos@3|diff-bottom|98.75|15|contact@3||110|15
 X
 
 # Cell xor-gate;1{sch}
