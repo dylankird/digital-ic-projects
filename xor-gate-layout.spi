@@ -1,11 +1,11 @@
 *** SPICE deck for cell xor-gate{lay} from library xor-gate
 *** Created on Mon Sep 25, 2023 20:41:36
-*** Last revised on Mon Sep 25, 2023 22:39:28
-*** Written on Mon Sep 25, 2023 22:39:36 by Electric VLSI Design System, version 9.07
+*** Last revised on Mon Sep 25, 2023 23:23:12
+*** Written on Tue Sep 26, 2023 11:42:05 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-*** TOP LEVEL CELL: xor-gate:xor-gate{lay}
+*** TOP LEVEL CELL: xor-gate{lay}
 Mnmos@0 net@1 A gnd gnd N L=0.35U W=0.7U AS=3.82P AD=1.271P PS=10.587U PD=4.55U
 Mnmos@1 net@3 B gnd gnd N L=0.35U W=0.7U AS=3.82P AD=1.271P PS=10.587U PD=4.55U
 Mnmos@2 F B net@14 gnd N L=0.35U W=0.7U AS=0.758P AD=1.08P PS=3.15U PD=3.675U
@@ -19,7 +19,7 @@ Mpmos@3 F net@3 net@8 vdd P L=0.35U W=1.4U AS=0.482P AD=1.08P PS=2.363U PD=3.675
 Mpmos@4 net@3 B vdd vdd P L=0.35U W=1.4U AS=3.966P AD=1.271P PS=10.5U PD=4.55U
 Mpmos@5 net@1 A vdd vdd P L=0.35U W=1.4U AS=3.966P AD=1.271P PS=10.5U PD=4.55U
 
-* Spice Code nodes in cell cell 'xor-gate:xor-gate{lay}'
+* Spice Code nodes in cell cell 'xor-gate{lay}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n)
