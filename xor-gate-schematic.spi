@@ -1,0 +1,31 @@
+*** SPICE deck for cell xor-gate{sch} from library xor-gate
+*** Created on Mon Sep 25, 2023 17:08:15
+*** Last revised on Mon Sep 25, 2023 18:30:00
+*** Written on Mon Sep 25, 2023 18:30:05 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: xor-gate:xor-gate{sch}
+Mnmos@0 net@83 B gnd gnd N L=0.35U W=0.7U
+Mnmos@1 net@62 A gnd gnd N L=0.35U W=0.7U
+Mnmos@2 F net@62 net@64 gnd N L=0.35U W=0.7U
+Mnmos@3 F B net@64 gnd N L=0.35U W=0.7U
+Mnmos@4 net@64 A gnd gnd N L=0.35U W=0.7U
+Mnmos@5 net@64 net@83 gnd gnd N L=0.35U W=0.7U
+Mpmos@0 net@83 B vdd vdd P L=0.35U W=1.4U
+Mpmos@1 net@62 A vdd vdd P L=0.35U W=1.4U
+Mpmos@2 net@31 net@62 vdd vdd P L=0.35U W=1.4U
+Mpmos@3 F B net@31 vdd P L=0.35U W=1.4U
+Mpmos@4 net@19 A vdd vdd P L=0.35U W=1.4U
+Mpmos@5 F net@83 net@19 vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell 'xor-gate:xor-gate{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n)
+VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n)
+.TRAN 0 1000n
+.include Z:\MOS_model.txt
+.END

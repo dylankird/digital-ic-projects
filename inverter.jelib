@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell inverter;1{lay}
-Cinverter;1{lay}||mocmos|1695319081130|1695355001590||DRC_last_good_drc_area_date()G1695335091987
+Cinverter;1{lay}||mocmos|1695319081130|1695690697529||DRC_last_good_drc_area_date()G1695335091987
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-31|15||3||
 NMetal-1-P-Active-Con|contact@1||-21|15||3||
@@ -40,6 +40,7 @@ AMetal-1|net@10|||S900|contact@4||-31|-4|substr@0||-31|-12
 AMetal-1|net@12|||S900|contact@1||-21|15|pin@4||-21|5
 AMetal-1|net@13|||S900|pin@4||-21|5|contact@3||-21|-4
 AMetal-1|net@14|||S0|pin@3||-7|5|pin@4||-21|5
+AMetal-1|net@15|||S|pin@1||-45|5|pin@1||-45|5
 EGnd||D5G2;|substr@0||G
 EIn||D5G2;|pin@1||I
 EOut||D5G2;|pin@3||O

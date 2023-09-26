@@ -8,7 +8,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell xor-gate;1{sch}
-Cxor-gate;1{sch}||schematic|1695686895372|1695688874873|
+Cxor-gate;1{sch}||schematic|1695686895372|1695691800148|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||1|15||||
 NOff-Page|conn@1||1|29||||
@@ -85,6 +85,7 @@ NWire_Pin|pin@65||64|3||||
 NWire_Pin|pin@66||64|-1||||
 Ngeneric:Invisible-Pin|pin@67||66|0|||||ART_message(D5G2;)SB'
 NWire_Pin|pin@68||61|21||||
+Ngeneric:Invisible-Pin|pin@69||-23|-3|||||SIM_spice_card(D5G2;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n),VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n),.TRAN 0 1000n,".include Z:\\MOS_model.txt"]
 NTransistor|pmos@0||27|26|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@1||17|37|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@2||52|44|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
