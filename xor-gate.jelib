@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell xor-gate;1{lay}
-Cxor-gate;1{lay}||mocmos|1695699696428|1695706444483|
+Cxor-gate;1{lay}||mocmos|1695699696428|1695706672564|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@1||-30|10||3||
 NMetal-1-P-Active-Con|contact@2||-15|10||3||
@@ -29,6 +29,8 @@ NMetal-1-N-Active-Con|contact@15||-53|-15||||
 NMetal-1-N-Active-Con|contact@16||-43|-15||||
 NMetal-1-Polysilicon-1-Con|contact@17||-30|27||||
 NMetal-1-Polysilicon-1-Con|contact@20||-62|-30||||
+NMetal-1-Polysilicon-1-Con|contact@21||-79|-23||||
+NMetal-1-Polysilicon-1-Con|contact@22||-79|20||||
 NN-Transistor|nmos@0||-67|-15|1||R|
 NN-Transistor|nmos@1||-48|-15|1||R|
 NN-Transistor|nmos@2||-30|-15|1||R|
@@ -44,7 +46,6 @@ NMetal-1-Pin|pin@5||0|-2||||
 NMetal-1-Pin|pin@6||-25|-2||||
 NPolysilicon-1-Pin|pin@9||-25|-2||||
 NPolysilicon-1-Pin|pin@10||-30|-2||||
-NMetal-1-Pin|pin@11||35|-2||||
 NPolysilicon-1-Pin|pin@12||-5|1||||
 NPolysilicon-1-Pin|pin@13||0|1||||
 NPolysilicon-1-Pin|pin@14||-5|27||||
@@ -57,9 +58,10 @@ NPolysilicon-1-Pin|pin@25||-10|20||||
 Ngeneric:Invisible-Pin|pin@26||-10|20|||||ART_message(D5G3;)SA
 NPolysilicon-1-Pin|pin@29||-20|-30||||
 NPolysilicon-1-Pin|pin@30||-48|-23||||
-NPolysilicon-1-Pin|pin@31||-90|-23||||
 Ngeneric:Invisible-Pin|pin@32||-20|-30|||||ART_message(D5G3;)SA'
-NPolysilicon-1-Pin|pin@33||-91|20||||
+NMetal-1-Pin|pin@34||-96|20||||
+NMetal-1-Pin|pin@35||-95|-23||||
+NMetal-1-Pin|pin@36||17|-2||||
 NP-Transistor|pmos@0||-25|10|5||R|
 NP-Transistor|pmos@1||-20|10|5||R|
 NP-Transistor|pmos@2||-10|10|5||R|
@@ -104,7 +106,6 @@ AMetal-1|net@33|||S2700|contact@9||-25|-15|pin@6||-25|-2
 APolysilicon-1|net@36|||S900|pmos@0|poly-left|-25|4|pin@9||-25|-2
 APolysilicon-1|net@37|||S0|pin@9||-25|-2|pin@10||-30|-2
 APolysilicon-1|net@38|||S2700|nmos@2|poly-right|-30|-11|pin@10||-30|-2
-AMetal-1|net@39|||S1800|pin@5||0|-2|pin@11||35|-2
 APolysilicon-1|net@40|||S900|pmos@1|poly-left|-20|4|nmos@3|poly-right|-20|-11
 APolysilicon-1|net@41|||S900|pmos@2|poly-left|-10|4|nmos@4|poly-right|-10|-11
 APolysilicon-1|net@42|||S900|pmos@3|poly-left|-5|4|pin@12||-5|1
@@ -126,15 +127,18 @@ AMetal-1|net@69|||S900|contact@5||-62|10|contact@14||-62|-15
 APolysilicon-1|net@70|||S900|nmos@3|poly-left|-20|-19|pin@29||-20|-30
 APolysilicon-1|net@71|||S0|pin@29||-20|-30|contact@20||-62|-30
 APolysilicon-1|net@72|||S900|nmos@1|poly-left|-48|-19|pin@30||-48|-23
-APolysilicon-1|net@73|||S0|pin@30||-48|-23|pin@31||-90|-23
 AMetal-1|net@74|||S2700|contact@20||-62|-30|contact@14||-62|-15
-APolysilicon-1|net@75|||S0|pin@24||-67|20|pin@33||-91|20
 AMetal-1|net@76|||S2700|contact@4||-72|10|well@0||-72|34
 AMetal-1|net@77|||S2700|contact@6||-53|10|well@0||-53|34
 AMetal-1|net@78|||S2700|contact@2||-15|10|well@0||-15|34
 AMetal-1|net@79|||S900|contact@13||-72|-15|substr@0||-72|-37
 AMetal-1|net@80|||S900|contact@15||-53|-15|substr@0||-53|-37
 AMetal-1|net@81|||S900|contact@11||-5|-15|substr@0||-5|-37
+APolysilicon-1|net@82|||S0|pin@24||-67|20|contact@22||-79|20
+APolysilicon-1|net@83|||S0|pin@30||-48|-23|contact@21||-79|-23
+AMetal-1|net@84|||S0|contact@22||-79|20|pin@34||-96|20
+AMetal-1|net@85|||S0|contact@21||-79|-23|pin@35||-95|-23
+AMetal-1|net@86|||S1800|pin@5||0|-2|pin@36||17|-2
 X
 
 # Cell xor-gate;1{sch}
