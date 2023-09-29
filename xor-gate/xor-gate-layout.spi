@@ -1,0 +1,41 @@
+*** SPICE deck for cell xor-gate{lay} from library xor-gate
+*** Created on Mon Sep 25, 2023 20:41:36
+*** Last revised on Fri Sep 29, 2023 14:17:18
+*** Written on Fri Sep 29, 2023 14:20:05 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: xor-gate{lay}
+Mnmos@0 net@1 A gnd gnd N L=0.35U W=1.4U AS=4.349P AD=1.593P PS=11.375U PD=5.075U
+Mnmos@1 net@3 B gnd gnd N L=0.35U W=1.4U AS=4.349P AD=1.593P PS=11.375U PD=5.075U
+Mnmos@2 F B net@14 gnd N L=0.35U W=1.4U AS=1.286P AD=1.286P PS=3.937U PD=3.937U
+Mnmos@3 net@14 net@1 F gnd N L=0.35U W=1.4U AS=1.286P AD=1.286P PS=3.937U PD=3.937U
+Mnmos@4 gnd A net@14 gnd N L=0.35U W=1.4U AS=1.286P AD=4.349P PS=3.937U PD=11.375U
+Mnmos@5 net@14 net@3 gnd gnd N L=0.35U W=1.4U AS=4.349P AD=1.286P PS=11.375U PD=3.937U
+Mpmos@0 net@5 B F vdd P L=0.35U W=1.4U AS=1.286P AD=0.613P PS=3.937U PD=2.275U
+Mpmos@1 vdd net@1 net@5 vdd P L=0.35U W=1.4U AS=0.613P AD=4.961P PS=2.275U PD=11.462U
+Mpmos@2 net@8 A vdd vdd P L=0.35U W=1.4U AS=4.961P AD=0.482P PS=11.462U PD=2.363U
+Mpmos@3 F net@3 net@8 vdd P L=0.35U W=1.4U AS=0.482P AD=1.286P PS=2.363U PD=3.937U
+Mpmos@4 net@3 B vdd vdd P L=0.35U W=1.4U AS=4.961P AD=1.593P PS=11.462U PD=5.075U
+Mpmos@5 net@1 A vdd vdd P L=0.35U W=1.4U AS=4.961P AD=1.593P PS=11.462U PD=5.075U
+
+* Spice Code nodes in cell cell 'xor-gate{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n)
+VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n)
+*
+*For measurements:
+*VA A 0 DC 0
+*VB B 0 PULSE(3.3 0 0 100p 100p 125n 250n)
+*
+.TRAN 0 1000n
+.meas risetime TRIG v(F)=0.33 TD=0 rise=1 TARG v(F)=2.97 TD=0 rise=1
+.meas falltime TRIG v(F)=2.97 TD=0 fall=1 TARG v(F)=0.33 TD=0 fall=1
+.meas tpHL TRIG v(B)=1.65 TD=0 rise=1 TARG v(F)=1.65 TD=0 rise=1
+.meas tpLH TRIG v(B)=1.65 TD=0 fall=1 TARG v(F)=1.65 TD=0 fall=1
+.meas propagationdelay param=(tpHL+tpLH)/2
+.include Z:\MOS_model.txt
+.END

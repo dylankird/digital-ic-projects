@@ -1,7 +1,7 @@
 *** SPICE deck for cell xor-gate{sch} from library xor-gate
 *** Created on Mon Sep 25, 2023 17:08:15
-*** Last revised on Wed Sep 27, 2023 22:25:33
-*** Written on Thu Sep 28, 2023 19:31:02 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Sep 29, 2023 13:28:28
+*** Written on Fri Sep 29, 2023 13:40:04 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -24,9 +24,15 @@ Mpmos@5 F net@83 net@19 vdd P L=0.35U W=1.4U
 * Spice Code nodes in cell cell 'xor-gate{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
-*VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n)
-VA A 0 DC 0
-VB B 0 PULSE(3.3 0 0 100p 100p 125n 250n)
+*
+*For logic simulation:
+VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n)
+VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n)
+*
+*For measurements:
+*VA A 0 DC 0
+*VB B 0 PULSE(3.3 0 0 100p 100p 125n 250n)
+*
 .TRAN 0 1000n
 .meas risetime TRIG v(F)=0.33 TD=0 rise=1 TARG v(F)=2.97 TD=0 rise=1
 .meas falltime TRIG v(F)=2.97 TD=0 fall=1 TARG v(F)=0.33 TD=0 fall=1
