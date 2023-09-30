@@ -106,7 +106,7 @@
   \end{figure}
 
   \paragraph{}
-  After designing the schematic in electric, it must pass the Design Rule Check (DRC) in order to be simulated properly. The results of the DRC are shown in Figure \ref{sch-drc}.
+  After designing the schematic in electric, it must pass the Design Rule Check (DRC) in order to be simulated properly. The DRC checks to make sure there are no major issues with the schematic. The results of the DRC are shown in Figure \ref{fig:sch-drc}. The DRC has found no errors and the design can be simulated.
 
   \begin{figure}[H]
     \centering
@@ -114,6 +114,61 @@
     \caption{The DRC for the schematic shows no errors.}
     \label{fig:sch-drc}
   \end{figure}
+
+\section{Schematic Simulation}
+  \paragraph{}
+  The spice code for the simulation of the XOR gate schematic is shown in Figure \ref{fig:spice-sch}. For this simulation, we are required to generate a 2MHz digital signal for input A and a 4MHz digital signal for input B. Both of these signals must have a rise time of 2ns and a fall time of 3ns. This is accomplished with the spice lines \inlinecode{VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n)} for input A and \inlinecode{VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n)} for B. The resulting output signal from these two pulsed input signals can be seen on net F in the simulation graphs.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/spice-schematic.png}
+    \caption{The spice code for simulating the schematic of the XOR gate.}
+    \label{fig:spice-sch}
+  \end{figure}
+
+  \paragraph{}
+  The graphs for the spice simulation of the XOR gate schematic are shown in Figure \ref{fig:sch-sim}. This simulation shows that the schematic is functioning properly since it behaves exactly as we expect an XOR gate to behave. Compare Figure \ref{fig:sch-sim} to Table \ref{table:xor} to see that the functionality is identical.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/spice-sim-schematic.png}
+    \caption{The resulting graphs from the spice simulation of the XOR gate schematic.}
+    \label{fig:sch-sim}
+  \end{figure}
+
+  \paragraph{}
+  IRSIM is different to spice in that its simulation is purely digital. We can use IRSIM to confirm that the behavior of our XOR gate is correct from a purely digital standpoint. IRSIM does not accurately simulate timing like spice does, but is simply another way to validate our design. The rising and falling edges of the inputs must be set manually, and the output at F is automatically shown with each change to the inputs by the user. The resulting graph from the IRSIM simulation of the XOR gate schematic is shown in Figure \ref{fig:irsim-sch}. This simulation shows the correct results that match Figure \ref{fig:sch-sim} and Table \ref{table:xor}.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/irsim-schematic.png}
+    \caption{The resulting graphs from the IRSIM simulation of the XOR gate schematic.}
+    \label{fig:irsim-sch}
+  \end{figure}
+
+\section{Schematic Measurements}
+  \paragraph{}
+  We are interested in a number of measurements that give us some indication about the performance of our design. The first measurement we are concerned with is the Rise Time of the output signal. The Rise Time of a signal is the amount of time it takes for the signal to go from 10\% of VDD to 90\% of VDD on a rising edge. A rise time that is too slow can cause issues with the propogation of the signal through a system. Similarly, the Fall Time is the time it takes for a signal to go from 90\% of VDD to 10\% of VDD on the falling edge. It is also important that the fall time be fast enough. 
+
+  \paragraph{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
