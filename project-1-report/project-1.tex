@@ -100,7 +100,7 @@
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\linewidth, frame]{screenshots/schematic.png}
+    \includegraphics[width=\linewidth, frame]{screenshots/schematic.png}
     \caption{The finished schematic in Electric.}
     \label{fig:schem}
   \end{figure}
@@ -153,23 +153,143 @@
   We are interested in a number of measurements that give us some indication about the performance of our design. The first measurement we are concerned with is the Rise Time of the output signal. The Rise Time of a signal is the amount of time it takes for the signal to go from 10\% of VDD to 90\% of VDD on a rising edge. A rise time that is too slow can cause issues with the propogation of the signal through a system. Similarly, the Fall Time is the time it takes for a signal to go from 90\% of VDD to 10\% of VDD on the falling edge. It is also important that the fall time be fast enough. 
 
   \paragraph{}
+  Another important metric is the propagation delay. $t_{pHL}$ is a measure of the time between when the rising edge of the input signal hits 50\% of VDD and when the falling edge of the output signal hits 50\% of VDD. It essentially tells us the time for a rising edge to propagate from input to falling edge of the output. Similarly, $t_{pLH}$ is the time from falling edge of the input to rising edge of the output (also measured from 50\% of VDD for each). The propagation delay is then the average of the two, as in $Propagation\ Delay=\frac{t_{pHL}+t_{pLH}}{2}$.
+
+  \paragraph{}
+  The spice code for measuring these parameters is shown in Figure \ref{fig:sch-sim-meas}. The first thing to note is that input A is kept at a constant 3.3V so that we can pulse input B and get the inverse waveform at output F. The rise and fall times were also modified from 2ns and 3ns to 100ps. I found that the 2ns and 3ns rise and fall times were too slow, and as a result the output signal would actually reach 50\% of VDD before the input signal did. Changing the rise and fall times to 100ps solved this issue and allowed me to take accurate measurements. 
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/spice-meas-schematic.png}
+    \caption{The spice code that measures the rise time, fall time, and propagation delay of the output signal of the XOR gate schematic.}
+    \label{fig:sch-sim-meas}
+  \end{figure}
+
+  \paragraph{}
+  The lines of spice code that start with \inlinecode{.meas} are the lines that actually take the measurements we are interested in. The line \inlinecode{.meas risetime TRIG v(F)=0.33 TD=0 rise=1 TARG v(F)=2.97 TD=0 rise=1} calculates the rise time by recording the time when output F reaches 10\% of VDD and the time when F reaches 90\% of VDD and then finding the difference. Similarly, the line \inlinecode{.meas falltime TRIG v(F)=2.97 TD=0 fall=1 TARG v(F)=0.33 TD=0 fall=1} measures the fall time by determining the length of time between F reaching 90\% of VDD and it reaching 10\% of VDD. The line \inlinecode{.meas tpHL TRIG v(B)=1.65 TD=0 rise=1 TARG v(F)=1.65 TD=0 fall=1} measures $t_{pHL}$ by finding the time between the 50\% point of the rising edge of input B and the 50\% point of the falling edge of output F. The line \inlinecode{.meas tpLH TRIG v(B)=1.65 TD=0 fall=1 TARG v(F)=1.65 TD=0 rise=1} does the same except it measures from the falling edge of B and the rising edge of F in order to measure $t_{pLH}$. Finally, the line \inlinecode{.meas propagationdelay param=(tpHL+tpLH)/2} averages $t_{pHL}$ and $t_{pLH}$ in order to calculate the propagation delay.
+
+  \paragraph{}
+  After running the code in LTSpice, the measurements can be viewed by opening the error log. The results of these measurements are shown in Figure \ref{fig:meas-sch}. The measurements can be viewed more clearly in Table \ref{table:meas-sch}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth, frame]{screenshots/meas-schematic.png}
+    \caption{The output from LTSpice showing the measurements done on the output of the XOR gate schematic.}
+    \label{fig:meas-sch}
+  \end{figure}
+
+
+  \begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{|c|c|}
+      \hline
+      \textbf{Parameter} & \textbf{Measurement} \\
+      \hline
+      Rise Time & 76.2ps\\
+      \hline
+      Fall Time & 35.3ps \\
+      \hline
+      $t_{pHL}$ & 14.0ps \\
+      \hline
+      $t_{pLH}$ & 56.2ps \\
+      \hline
+      Propagation Delay & 35.1ps \\
+      \hline
+    \end{tabular}
+    \caption{The measurements done on the XOR gate schematic in LTSpice.}
+    \label{table:meas-sch}
+  \end{table}
+
+
+\section{Layout in Electric}
+  \paragraph{}
+  I began designing the layout with a stick diagram, as shown in Figure \ref{fig:stick}. I started with the active areas and then drew the polysilicon gates. I planned out which gates would take which input signal by looking at the various nodes of the schematic in Figure \ref{fig:schem} and determining which transistors from the schematic should be adjacent. Then I routed the metal layer to connect the transistor sources and drains to each other and to VDD and GND. Finally, I added the inverters to the left and routed $A$, $B$, $\overline{A}$, and $\overline{B}$ to the proper transistor pairs on the right.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth, frame]{screenshots/stick-diagram.png}
+    \caption{The stick diagram used to plan out the layout of the XOR gate.}
+    \label{fig:stick}
+  \end{figure}
+
+  \paragraph{}
+  I then turned the stick diagram into the layout in Figure \ref{fig:layout} with some minor changes to optimize space. For instance, $A$ is now on top on the input side and there is a much more direct connection from $B$ at the input of the inverter to the input to the right of the inverter. Both of these changes save space. The spacing of every part of the design is as close as possible while still passing the DRC. The VDD and GND wells may look like they can be closer, but the metal to polysilicon contacts are in the way and there is nowhere else to place them. It may be noted that the NMOS transistors of the inverters are shifted up slightly - this is to allow me to place GND closer to the rest of the design. I would move the NMOS transistors from the PDN up as well, but that would cause the metal traces to be too close together to pass the DRC. As far as I am aware, every space between design elements has been minimized. The design also conforms to design rules discussed in class that are not built into Electric's design rules, such as the 3$\lambda$ wide rule for the metal layer.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth, frame]{screenshots/layout.png}
+    \caption{The layout of the XOR gate in Electric.}
+    \label{fig:layout}
+  \end{figure}
+
+  \paragraph{}
+  For the layout, the DRC is very important, since it specifies rules for distances between, widths of, and lengths of parts of the design that must be met. These rules ensure that the design is both functional and able to be manufactured. The results of the DRC check for the XOR gate layout are shown in figure \ref{fig:lay-drc}. The design passes the DRC check. It is also important to do a well check (which is in the ERC tools in Electric) to ensure that wells that should be connected are. The results of this check are shown in Figure \ref{fig:well-check}, which shows no errors.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth, frame]{screenshots/layout-drc.png}
+    \caption{The DRC results for the XOR gate layout showing no errors.}
+    \label{fig:lay-drc}
+  \end{figure}
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth, frame]{screenshots/layout-well-check.png}
+    \caption{The well check results for the XOR gate layout showing no errors.}
+    \label{fig:well-check}
+  \end{figure}
+
+\section{Layout Simulation}
+  \paragraph{}
+  The process for simulating the layout in LTSpice is essentially the same as for the simulation of the schematic. The spice code for the simulation can be seen in Figure \ref{fig:spice-lay}.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/spice-layout.png}
+    \caption{The spice code for simulating the layout of the XOR gate.}
+    \label{fig:spice-lay}
+  \end{figure}
+
+  \paragraph{}
+  The resulting waveforms from the spice simulation of the XOR gate layout are shown in Figure \ref{fig:spice-sim-lay}. This shows the same correct behavior we saw in Table \ref{table:xor} and the simulation of the schematic in Figure \ref{sch-sim}.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/spice-sim-layout.png}
+    \caption{The resulting graphs from the spice simulation of the XOR gate layout.}
+    \label{fig:spice-sim-lay}
+  \end{figure}
+
+  \paragraph{}
+  The IRSIM simulation also follows the same procedure as with the schematic. The results for the IRSIM simulation are shown in Figure \ref{fig:irsim-lay}. The results are correct and match the simulation from LTSpice in Figure \ref{fig:spice-sim-lay} and the logic shown in Table \ref{table:xor}.
 
 
 
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/irsim-layout.png}
+    \caption{The resulting graphs from the IRSIM simulation of the XOR gate layout.}
+    \label{fig:irsim-lay}
+  \end{figure}
+
+\section{Layout Measurements}
+  \paragraph{}
+  The same measurements are taken using LTSpice with the same procedure as detailed for the schematic. The spice code for taking these measurements is shown in Figure \ref{fig:spice-meas-lay}.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/spice-meas-layout.png}
+    \caption{The spice code that measures the rise time, fall time, and propagation delay of the output signal of the XOR gate layout.}
+    \label{fig:spice-meas-lay}
+  \end{figure}
 
 
 
