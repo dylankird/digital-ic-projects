@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell xor-gate;1{lay}
-Cxor-gate;1{lay}||mocmos|1695699696428|1696022238740||DRC_last_good_drc_area_date()G1695878680507|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1695878680507
+Cxor-gate;1{lay}||mocmos|1695699696428|1696022238740||DRC_last_good_drc_area_date()G1696088268808|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1696088268808
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@1||-30|10||3||
 NMetal-1-P-Active-Con|contact@2||-13|10||3||
