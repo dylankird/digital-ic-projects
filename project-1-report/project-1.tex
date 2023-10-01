@@ -96,7 +96,7 @@
 \section{Schematic in Electric}
 
   \paragraph{}
-  The sketch of the circuit was then built in the schematic design portion of Electric. The final schematic can be seen in Figure \ref{fig:schem}. The various nets that feed into the PUN and PDN are labeled to make the schematic easier to read. The transistors were initially chosen to be 8$\lambda$ wide and 2$\lambda$ long for PMOS and 4$\lambda$ wide and 2$\lambda$ because those are the dimensions that worked best for the inverter that we designed previously. However, we were told to make the PMOS transistors and NMOS transistors the same size, so I made them all 8$\lambda$ wide and 2$\lambda$.
+  The sketch of the circuit was then built in the schematic design portion of Electric. The final schematic can be seen in Figure \ref{fig:schem}. The various nets that feed into the PUN and PDN are labeled to make the schematic easier to read. The transistors were initially chosen to be 8$\lambda$ wide and 2$\lambda$ long for PMOS and 4$\lambda$ wide and 2$\lambda$ for NMOS because those are the dimensions that worked best for the inverter that we designed previously. However, we were told to make the PMOS transistors and NMOS transistors the same size, so I made them all 8$\lambda$ wide and 2$\lambda$.
 
   \begin{figure}[H]
     \centering
@@ -150,7 +150,7 @@
 
 \section{Schematic Measurements}
   \paragraph{}
-  We are interested in a number of measurements that give us some indication about the performance of our design. The first measurement we are concerned with is the Rise Time of the output signal. The Rise Time of a signal is the amount of time it takes for the signal to go from 10\% of VDD to 90\% of VDD on a rising edge. A rise time that is too slow can cause issues with the propogation of the signal through a system. Similarly, the Fall Time is the time it takes for a signal to go from 90\% of VDD to 10\% of VDD on the falling edge. It is also important that the fall time be fast enough. 
+  We are interested in a number of measurements that give us some indication about the performance of our design. The first measurement we are concerned with is the Rise Time of the output signal. The Rise Time of a signal is the amount of time it takes for the signal to go from 10\% of VDD to 90\% of VDD on a rising edge. A rise time that is too slow can cause issues with the propagation of the signal through a system. Similarly, the Fall Time is the time it takes for a signal to go from 90\% of VDD to 10\% of VDD on the falling edge. It is also important that the fall time be fast enough. 
 
   \paragraph{}
   Another important metric is the propagation delay. $t_{pHL}$ is a measure of the time between when the rising edge of the input signal hits 50\% of VDD and when the falling edge of the output signal hits 50\% of VDD. It essentially tells us the time for a rising edge to propagate from input to falling edge of the output. Similarly, $t_{pLH}$ is the time from falling edge of the input to rising edge of the output (also measured from 50\% of VDD for each). The propagation delay is then the average of the two, as in $Propagation\ Delay=\frac{t_{pHL}+t_{pLH}}{2}$.
@@ -197,7 +197,7 @@
       Propagation Delay & 35.1ps \\
       \hline
     \end{tabular}
-    \caption{The measurements done on the XOR gate schematic in LTSpice.}
+    \caption{The measurement results for the XOR gate schematic in LTSpice.}
     \label{table:meas-sch}
   \end{table}
 
@@ -257,8 +257,7 @@
   \end{figure}
 
   \paragraph{}
-  The resulting waveforms from the spice simulation of the XOR gate layout are shown in Figure \ref{fig:spice-sim-lay}. This shows the same correct behavior we saw in Table \ref{table:xor} and the simulation of the schematic in Figure \ref{sch-sim}.
-
+  The resulting waveforms from the spice simulation of the XOR gate layout are shown in Figure \ref{fig:spice-sim-lay}. This shows the same correct behavior we saw in Table \ref{table:xor} and the simulation of the schematic in Figure \ref{fig:sch-sim}.
 
   \begin{figure}[H]
     \centering
@@ -290,6 +289,77 @@
     \caption{The spice code that measures the rise time, fall time, and propagation delay of the output signal of the XOR gate layout.}
     \label{fig:spice-meas-lay}
   \end{figure}
+
+  \paragraph{}
+  The results of the measurements in the LTSpice error log are shown in Figure \ref{fig:meas-lay}. The measurements are shown in Table \ref{table:meas-lay} along with the measurements from the schematic for comparison.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/meas-layout.png}
+    \caption{The output from LTSpice showing the measurements done on the output of the XOR gate layout.}
+    \label{fig:meas-lay}
+  \end{figure}
+
+
+
+  \begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textbf{Parameter} & \textbf{Measurement (Schematic)} & \textbf{Measurement (Layout)} \\
+      \hline
+      Rise Time & 76.2ps & 368.5ps\\
+      \hline
+      Fall Time & 35.3ps & 95.8ps\\
+      \hline
+      $t_{pHL}$ & 14.0ps & 52.8ps \\
+      \hline
+      $t_{pLH}$ & 56.2ps & 177.6ps\\
+      \hline
+      Propagation Delay & 35.1ps & 115.2ps \\
+      \hline
+    \end{tabular}
+    \caption{The measurements results for the XOR gate schematic and layout in LTSpice.}
+    \label{table:meas-lay}
+  \end{table}
+
+
+\section{Conclusion}
+  \paragraph{}
+  In this project, I designed the schematic for an XOR gate using CMOS logic, turned that schematic into a layout, simulated both in LTSpice and IRSIM, and then took measurements on both in LTSpice. I learned a lot in the process about digital IC design, Electric, LTSpice, and the various parameters that make a design good or bad. I enjoyed the process of turning a simple logic gate into a schematic and then into a completed layout far more than I expected, and it was interesting to be able to analyze the final designs with LTSpice and IRSIM. 
+
+\newpage
+\section{References}
+
+\noindent [\text{1}] EE 457 Lecture 1, 2, and 3
+
+\noindent [\text{2}] https://cmosedu.com/videos/electric/tutorial3/electric\_tutorial\_3.htm 
+
+\noindent [\text{3}] https://cmosedu.com/videos/electric/tutorial4/electric\_tutorial\_4.htm 
+
+\noindent [\text{4}] https://en.wikipedia.org/wiki/XOR\_gate 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

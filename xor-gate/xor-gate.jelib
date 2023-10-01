@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell xor-gate;1{lay}
-Cxor-gate;1{lay}||mocmos|1695699696428|1696022238740||DRC_last_good_drc_area_date()G1696088268808|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1696088268808
+Cxor-gate;1{lay}||mocmos|1695699696428|1696125360684||DRC_last_good_drc_area_date()G1696088268808|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1696088268808
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@1||-30|10||3||
 NMetal-1-P-Active-Con|contact@2||-13|10||3||
@@ -62,7 +62,7 @@ Ngeneric:Invisible-Pin|pin@32||-19|-26.5|||||ART_message(D5G3;)SA'
 NMetal-1-Pin|pin@34||-96|20||||
 NMetal-1-Pin|pin@35||-95|-20.5||||
 NMetal-1-Pin|pin@36||22.5|2||||
-Ngeneric:Invisible-Pin|pin@38||-126|-20|||||SIM_spice_card(D5G2;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n),VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n),*,*For measurements:,*VA A 0 DC 0,*VB B 0 PULSE(3.3 0 0 100p 100p 125n 250n),*,.TRAN 0 1000n,.meas risetime TRIG v(F)=0.33 TD=0 rise=1 TARG v(F)=2.97 TD=0 rise=1,.meas falltime TRIG v(F)=2.97 TD=0 fall=1 TARG v(F)=0.33 TD=0 fall=1,.meas tpHL TRIG v(B)=1.65 TD=0 rise=1 TARG v(F)=1.65 TD=0 rise=1,.meas tpLH TRIG v(B)=1.65 TD=0 fall=1 TARG v(F)=1.65 TD=0 fall=1,.meas propagationdelay param=(tpHL+tpLH)/2,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@39||-131.5|-20|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n),VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n),*,*For measurements:,*VA A 0 DC 3.3,*VB B 0 PULSE(3.3 0 0 100p 100p 125n 250n),*,.TRAN 0 1000n,.meas risetime TRIG v(F)=0.33 TD=0 rise=1 TARG v(F)=2.97 TD=0 rise=1,.meas falltime TRIG v(F)=2.97 TD=0 fall=1 TARG v(F)=0.33 TD=0 fall=1,.meas tpHL TRIG v(B)=1.65 TD=0 rise=1 TARG v(F)=1.65 TD=0 fall=1,.meas tpLH TRIG v(B)=1.65 TD=0 fall=1 TARG v(F)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,".include Z:\\MOS_model.txt"]
 NN-Well-Node|plnode@0||-32|23.5|86|12||A
 NP-Well-Node|plnode@2||-32|-25|86|12||A
 NP-Transistor|pmos@0||-25|10|5||R|
@@ -150,7 +150,7 @@ EVDD||D5G3;X-0.5;Y4.5;|well@0||P
 X
 
 # Cell xor-gate;1{sch}
-Cxor-gate;1{sch}||schematic|1695686895372|1696019308031|
+Cxor-gate;1{sch}||schematic|1695686895372|1696125347307|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||1|15||||
 NOff-Page|conn@1||1|29||||
@@ -227,7 +227,7 @@ NWire_Pin|pin@65||64|3||||
 NWire_Pin|pin@66||64|-1||||
 Ngeneric:Invisible-Pin|pin@67||66|0|||||ART_message(D5G2;)SB'
 NWire_Pin|pin@68||61|21||||
-Ngeneric:Invisible-Pin|pin@69||-24|4|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n),VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n),*,*For measurements:,*VA A 0 DC 0,*VB B 0 PULSE(3.3 0 0 100p 100p 125n 250n),*,.TRAN 0 1000n,.meas risetime TRIG v(F)=0.33 TD=0 rise=1 TARG v(F)=2.97 TD=0 rise=1,.meas falltime TRIG v(F)=2.97 TD=0 fall=1 TARG v(F)=0.33 TD=0 fall=1,.meas tpHL TRIG v(B)=1.65 TD=0 rise=1 TARG v(F)=1.65 TD=0 rise=1,.meas tpLH TRIG v(B)=1.65 TD=0 fall=1 TARG v(F)=1.65 TD=0 fall=1,.meas propagationdelay param=(tpHL+tpLH)/2,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@69||-24|4|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 2n 3n 250n 500n),VB B 0 PULSE(3.3 0 0 2n 3n 125n 250n),*,*For measurements:,*VA A 0 DC 3.3,*VB B 0 PULSE(3.3 0 0 100p 100p 125n 250n),*,.TRAN 0 1000n,.meas risetime TRIG v(F)=0.33 TD=0 rise=1 TARG v(F)=2.97 TD=0 rise=1,.meas falltime TRIG v(F)=2.97 TD=0 fall=1 TARG v(F)=0.33 TD=0 fall=1,.meas tpHL TRIG v(B)=1.65 TD=0 rise=1 TARG v(F)=1.65 TD=0 fall=1,.meas tpLH TRIG v(B)=1.65 TD=0 fall=1 TARG v(F)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,".include Z:\\MOS_model.txt"]
 Ngeneric:Invisible-Pin|pin@70||64.5|55|||||ART_message(D5G2;)SVDD
 Ngeneric:Invisible-Pin|pin@71||65|-13.5|||||ART_message(D5G2;)SGND
 NTransistor|pmos@0||27|26|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
