@@ -9,16 +9,50 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell hw2-layout;1{lay}
-Chw2-layout;1{lay}||mocmos|1697781077523|1697781525926|
+Chw2-layout;1{lay}||mocmos|1697781077523|1697782284350||DRC_last_good_drc_area_date()G1697782262551|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1697782262551
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-26.5|15||3||
 NMetal-1-P-Active-Con|contact@1||-7.5|15||3||
 NMetal-1-N-Active-Con|contact@2||-31.5|-25||3||
-NMetal-1-N-Active-Con|contact@3||-10.5|-25||3||
+NMetal-1-N-Active-Con|contact@3||-11.5|-25||3||
+NMetal-1-N-Active-Con|contact@4||36|-27.5||3||
+NMetal-1-N-Active-Con|contact@6||51|-27.5||3||
+NMetal-1-N-Active-Con|contact@8||66|-27.5||3||
+NMetal-1-P-Active-Con|contact@9||30|6||3||
+NMetal-1-P-Active-Con|contact@10||40|6||3||
+NMetal-1-P-Active-Con|contact@11||50|6||3||
+NMetal-1-P-Active-Con|contact@12||60|6||3||
+NMetal-1-P-Active-Con|contact@13||70|6||3||
 NN-Transistor|nmos@0||-22|-25|5||R|
+NN-Transistor|nmos@1||41|-27.5|5||R|
+NN-Transistor|nmos@2||46|-27.5|5||R|
+NN-Transistor|nmos@3||56|-27.5|5||R|
+NN-Transistor|nmos@4||61|-27.5|5||R|
 NP-Transistor|pmos@0||-17|15|5||R|
+NP-Transistor|pmos@1||35|6|5||R|
+NP-Transistor|pmos@2||45|6|5||R|
+NP-Transistor|pmos@3||55|6|5||R|
+NP-Transistor|pmos@4||65|6|5||R|
 NMetal-1-P-Well-Con|substr@0||-6|-92.5|75|||
 NMetal-1-N-Well-Con|well@0||-12|29|75|1||
+AN-Active|net@0|||S0|nmos@3|diff-bottom|59.75|-27.5|nmos@4|diff-top|57.25|-27.5
+AN-Active|net@1|||S1800|nmos@4|diff-bottom|64.75|-27.5|contact@8||66.5|-27.5
+AN-Active|net@2|||S0|nmos@3|diff-top|52.25|-27.5|contact@6||51|-27.5
+AN-Active|net@3|||S1800|nmos@2|diff-bottom|49.75|-27.5|contact@6||51.5|-27.5
+AN-Active|net@4|||S1800|nmos@2|diff-top|42.25|-27.5|nmos@1|diff-bottom|44.75|-27.5
+AN-Active|net@5|||S0|nmos@1|diff-top|37.25|-27.5|contact@4||36.5|-27.5
+AN-Active|net@6|||S1800|nmos@0|diff-bottom|-18.25|-25|contact@3||-11.5|-25
+AN-Active|net@7|||S0|nmos@0|diff-top|-25.75|-25|contact@2||-31.5|-25
+AP-Active|net@8|||S1800|pmos@0|diff-bottom|-13.25|15|contact@1||-7.5|15
+AP-Active|net@9|||S0|pmos@0|diff-top|-20.75|15|contact@0||-26.5|15
+AP-Active|net@10|||S0|pmos@1|diff-top|31.25|6|contact@9||30.5|6
+AP-Active|net@11|||S1800|pmos@1|diff-bottom|38.75|6|contact@10||40.5|6
+AP-Active|net@12|||S0|pmos@2|diff-top|41.25|6|contact@10||40.5|6
+AP-Active|net@13|||S1800|pmos@2|diff-bottom|48.75|6|contact@11||50.5|6
+AP-Active|net@14|||S0|pmos@3|diff-top|51.25|6|contact@11||50.5|6
+AP-Active|net@15|||S1800|pmos@3|diff-bottom|58.75|6|contact@12||60.5|6
+AP-Active|net@16|||S0|pmos@4|diff-top|61.25|6|contact@12||60|6
+AP-Active|net@17|||S1800|pmos@4|diff-bottom|68.75|6|contact@13||69.5|6
 X
 
 # Cell hw2-schematic;1{sch}
