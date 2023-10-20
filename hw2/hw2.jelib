@@ -2,13 +2,27 @@
 Hhw2|9.07
 
 # Views:
+Vlayout|lay
 Vschematic|sch
 
 # Technologies:
 Tmocmos|ScaleFORmocmos()D175.0
 
-# Cell hw2;1{sch}
-Chw2;1{sch}||schematic|1697665020232|1697765146599|
+# Cell hw2-layout;1{lay}
+Chw2-layout;1{lay}||mocmos|1697781077523|1697781525926|
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-26.5|15||3||
+NMetal-1-P-Active-Con|contact@1||-7.5|15||3||
+NMetal-1-N-Active-Con|contact@2||-31.5|-25||3||
+NMetal-1-N-Active-Con|contact@3||-10.5|-25||3||
+NN-Transistor|nmos@0||-22|-25|5||R|
+NP-Transistor|pmos@0||-17|15|5||R|
+NMetal-1-P-Well-Con|substr@0||-6|-92.5|75|||
+NMetal-1-N-Well-Con|well@0||-12|29|75|1||
+X
+
+# Cell hw2-schematic;1{sch}
+Chw2-schematic;1{sch}||schematic|1697665020232|1697770075292|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-5.5|9.5||||
 NOff-Page|conn@1||-66|-5||||
@@ -88,7 +102,7 @@ NWire_Pin|pin@80||-37|-5||||
 NWire_Pin|pin@81||-37|22||||
 NWire_Pin|pin@82||-18|22||||
 NWire_Pin|pin@83||-18|18||||
-Ngeneric:Invisible-Pin|pin@84||-93.5|4|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,.TRAN 0 1000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@84||-93.5|4|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,.TRAN 0 2000n,.print VA,".include Z:\\MOS_model.txt"]
 NTransistor|pmos@2||-13|18|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@3||-23|18|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@4||-13|35|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
