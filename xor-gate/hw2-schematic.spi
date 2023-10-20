@@ -1,0 +1,36 @@
+*** SPICE deck for cell hw2-schematic{sch} from library hw2
+*** Created on Wed Oct 18, 2023 14:37:00
+*** Last revised on Fri Oct 20, 2023 00:16:28
+*** Written on Fri Oct 20, 2023 00:16:38 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: hw2-schematic{sch}
+Mnmos@2 F net@136 net@20 gnd N L=0.35U W=1.4U
+Mnmos@3 net@20 D gnd gnd N L=0.35U W=1.4U
+Mnmos@4 F A net@13 gnd N L=0.35U W=1.4U
+Mnmos@5 net@13 net@127 gnd gnd N L=0.35U W=1.4U
+Mnmos@9 net@127 B gnd gnd N L=0.35U W=1.4U
+Mnmos@10 net@136 C gnd gnd N L=0.35U W=1.4U
+Mpmos@2 F D net@26 vdd P L=0.35U W=1.4U
+Mpmos@3 F net@136 net@26 vdd P L=0.35U W=1.4U
+Mpmos@4 net@26 net@127 vdd vdd P L=0.35U W=1.4U
+Mpmos@5 net@26 A vdd vdd P L=0.35U W=1.4U
+Mpmos@9 net@127 B vdd vdd P L=0.35U W=1.4U
+Mpmos@10 net@136 C vdd vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell 'hw2-schematic{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
+VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD D 0 PULSE(3.3 0 0 1n 1n 125n 250n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
