@@ -1,0 +1,25 @@
+*** SPICE deck for cell hw2-tg-schematic{sch} from library hw2-tg
+*** Created on Fri Oct 20, 2023 15:11:33
+*** Last revised on Fri Oct 20, 2023 16:55:43
+*** Written on Fri Oct 20, 2023 16:56:06 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: hw2-tg-schematic{sch}
+Mnmos@0 net@8 S gnd gnd N L=0.35U W=1.4U
+Mnmos@1 A S F gnd N L=0.35U W=1.4U
+Mpmos@0 net@8 S vdd vdd P L=0.35U W=1.4U
+Mpmos@1 A net@8 F vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell 'hw2-tg-schematic{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+VS S 0 PULSE(3.3 0 0 1n 1n 300n 600n)
+VA A 0 PULSE(3.3 0 0 1n 1n 125n 250n)
+*
+.TRAN 0 3000n
+.include Z:\MOS_model.txt
+.END

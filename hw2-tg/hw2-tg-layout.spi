@@ -1,0 +1,23 @@
+*** SPICE deck for cell hw2-tg-layout{lay} from library hw2-tg
+*** Created on Fri Oct 20, 2023 15:39:45
+*** Last revised on Fri Oct 20, 2023 16:46:30
+*** Written on Fri Oct 20, 2023 16:46:37 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: hw2-tg-layout{lay}
+Mnmos@0 net@1 S gnd gnd N L=0.35U W=1.4U AS=9.249P AD=1.593P PS=24.325U PD=5.075U
+Mnmos@2 F S A gnd N L=0.35U W=1.4U AS=1.593P AD=1.593P PS=5.075U PD=5.075U
+Mpmos@0 net@1 S vdd vdd P L=0.35U W=1.4U AS=10.78P AD=1.593P PS=24.675U PD=5.075U
+Mpmos@2 F net@1 A vdd P L=0.35U W=1.4U AS=1.593P AD=1.593P PS=5.075U PD=5.075U
+
+* Spice Code nodes in cell cell 'hw2-tg-layout{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+VS S 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VA A 0 PULSE(3.3 0 0 1n 1n 125n 250n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END

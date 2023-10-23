@@ -1,5 +1,5 @@
 # header information:
-Hhw2|9.07
+Hhw2-function|9.07
 
 # Views:
 Vlayout|lay
@@ -8,8 +8,8 @@ Vschematic|sch
 # Technologies:
 Tmocmos|ScaleFORmocmos()D175.0
 
-# Cell hw2-layout;1{lay}
-Chw2-layout;1{lay}||mocmos|1697781077523|1697786356397||DRC_last_good_drc_area_date()G1697786373819|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1697786373819
+# Cell hw2-function-layout;1{lay}
+Chw2-function-layout;1{lay}||mocmos|1697781077523|1697864107703||DRC_last_good_drc_area_date()G1697864108360|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1697864108360
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||12|6||3||
 NMetal-1-P-Active-Con|contact@1||22|6||3||
@@ -79,9 +79,9 @@ NMetal-1-Pin|pin@55||-15|3||||
 NMetal-1-Pin|pin@56||-27|3||||
 NPolysilicon-1-Pin|pin@59||-7|-24||||
 NPolysilicon-1-Pin|pin@60||-7|-20||||
-NPolysilicon-1-Pin|pin@62||-11.5|-20||||
-NPolysilicon-1-Pin|pin@63||-11.5|-18.5||||
-NPolysilicon-1-Pin|pin@64||-11.5|-12.5||||
+NPolysilicon-1-Pin|pin@62||-14|-20||||
+NPolysilicon-1-Pin|pin@63||-14|-18.5||||
+NPolysilicon-1-Pin|pin@64||-14|-12.5||||
 NPolysilicon-1-Pin|pin@65||-2.5|-29||||
 NPolysilicon-1-Pin|pin@66||-13.5|-29||||
 NMetal-1-Pin|pin@67||-26|-12.5||||
@@ -182,10 +182,10 @@ AMetal-1|net@99|||S900|contact@17||-7|-14|substr@0||-7|-33.5
 AMetal-1|net@100|||S900|contact@2||12|-14|substr@0||12|-33.5
 APolysilicon-1|net@104|||S0|pin@39||17|-24|pin@59||-7|-24
 APolysilicon-1|net@105|||S2700|pin@59||-7|-24|pin@60||-7|-20
-APolysilicon-1|net@107|||S0|pin@60||-7|-20|pin@62||-11.5|-20
-APolysilicon-1|net@108|||S2700|pin@62||-11.5|-20|pin@63||-11.5|-18.5
-APolysilicon-1|net@109|||S2700|pin@63||-11.5|-18.5|pin@64||-11.5|-12.5
-APolysilicon-1|net@110|||S0|pin@64||-11.5|-12.5|contact@22||-14|-12.5
+APolysilicon-1|net@107|||S0|pin@60||-7|-20|pin@62||-14|-20
+APolysilicon-1|net@108|||S2700|pin@62||-14|-20|pin@63||-14|-18.5
+APolysilicon-1|net@109|||S2700|pin@63||-14|-18.5|pin@64||-14|-12.5
+APolysilicon-1|net@110|||S0|pin@64||-14|-12.5|contact@22||-14|-12.5
 APolysilicon-1|net@111|||S0|pin@42||45|-29|pin@65||-2.5|-29
 APolysilicon-1|net@112|||S0|pin@65||-2.5|-29|pin@66||-13.5|-29
 APolysilicon-1|net@113|||S2700|pin@66||-13.5|-29|contact@23||-13.5|-26.5
@@ -207,12 +207,12 @@ EB||D5G2;|pin@78||I
 EC||D5G2;|pin@77||I
 ED||D5G2;|pin@76||I
 EF||D5G2;|pin@75||I
-EGND||D5G2;|substr@0||G
-EVDD||D5G2;|well@0||P
+EGND||D5G2;Y-4;|substr@0||G
+EVDD||D5G2;Y4.5;|well@0||P
 X
 
-# Cell hw2-schematic;1{sch}
-Chw2-schematic;1{sch}||schematic|1697665020232|1697786188970|
+# Cell hw2-function-schematic;1{sch}
+Chw2-function-schematic;1{sch}||schematic|1697665020232|1697858068035|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-5.5|9.5||||
 NOff-Page|conn@1||-66|-5||||
@@ -292,7 +292,7 @@ NWire_Pin|pin@80||-37|-5||||
 NWire_Pin|pin@81||-37|22||||
 NWire_Pin|pin@82||-18|22||||
 NWire_Pin|pin@83||-18|18||||
-Ngeneric:Invisible-Pin|pin@84||-93.5|4|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@84||-119.5|4|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NTransistor|pmos@2||-13|18|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@3||-23|18|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@4||-13|35|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0

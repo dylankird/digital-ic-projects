@@ -1,11 +1,11 @@
-*** SPICE deck for cell hw2-layout{lay} from library hw2
+*** SPICE deck for cell hw2-function-layout{lay} from library hw2-function
 *** Created on Thu Oct 19, 2023 22:51:17
-*** Last revised on Fri Oct 20, 2023 00:16:20
-*** Written on Fri Oct 20, 2023 00:17:01 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Oct 20, 2023 21:55:07
+*** Written on Fri Oct 20, 2023 21:57:40 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
-*** TOP LEVEL CELL: hw2-layout{lay}
+*** TOP LEVEL CELL: hw2-function-layout{lay}
 Mnmos@0 net@6 C gnd gnd N L=0.35U W=1.4U AS=4.885P AD=1.593P PS=12.6U PD=5.075U
 Mnmos@1 net@4 net@6 F gnd N L=0.35U W=1.4U AS=1.286P AD=0.482P PS=3.937U PD=2.363U
 Mnmos@2 gnd D net@4 gnd N L=0.35U W=1.4U AS=0.482P AD=4.885P PS=2.363U PD=12.6U
@@ -19,7 +19,7 @@ Mpmos@3 vdd net@43 net@10 vdd P L=0.35U W=1.4U AS=1.286P AD=5.604P PS=3.937U PD=
 Mpmos@4 net@10 A vdd vdd P L=0.35U W=1.4U AS=5.604P AD=1.286P PS=12.688U PD=3.937U
 Mpmos@5 net@43 B vdd vdd P L=0.35U W=1.4U AS=5.604P AD=1.593P PS=12.688U PD=5.075U
 
-* Spice Code nodes in cell cell 'hw2-layout{lay}'
+* Spice Code nodes in cell cell 'hw2-function-layout{lay}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 *
