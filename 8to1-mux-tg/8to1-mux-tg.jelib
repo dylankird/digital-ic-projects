@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-tg-layout;1{lay}
-C8to1-mux-tg-layout;1{lay}||mocmos|1698175057948|1698178470041||DRC_last_good_drc_area_date()G1698178476147|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698178476147
+C8to1-mux-tg-layout;1{lay}||mocmos|1698175057948|1698178729831||DRC_last_good_drc_area_date()G1698178694457|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698178694457
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-19|22||3||
 NMetal-1-N-Active-Con|contact@1||-19|2||3||
@@ -21,14 +21,14 @@ NMetal-1-P-Active-Con|contact@7||11|22||3||
 NMetal-1-N-Active-Con|contact@8||11|2||3||
 NMetal-1-Metal-2-Con|contact@10||-14|-6.5||||
 NMetal-1-Polysilicon-1-Con|contact@11||-14|-6.5||||
-NMetal-1-Metal-2-Con|contact@12||47.5|-42||||
-NMetal-1-Polysilicon-1-Con|contact@13||47.5|-42||||
+NMetal-1-Metal-2-Con|contact@12||43.5|-83||||
+NMetal-1-Polysilicon-1-Con|contact@13||43.5|-83||||
 NMetal-2-Metal-3-Con|contact@15||-14|30.5||||
 NMetal-1-Metal-2-Con|contact@16||-14|30.5||||
 NMetal-1-Polysilicon-1-Con|contact@17||-14|30.5||||
-NMetal-2-Metal-3-Con|contact@18||47.5|-21.5||||
-NMetal-1-Metal-2-Con|contact@19||47.5|-21.5||||
-NMetal-1-Polysilicon-1-Con|contact@20||47.5|-21.5||||
+NMetal-2-Metal-3-Con|contact@18||43.5|-62.5||||
+NMetal-1-Metal-2-Con|contact@19||43.5|-62.5||||
+NMetal-1-Polysilicon-1-Con|contact@20||43.5|-62.5||||
 NMetal-2-Metal-3-Con|contact@21||6|30.5||||
 NMetal-1-Metal-2-Con|contact@22||6|30.5||||
 NMetal-1-Polysilicon-1-Con|contact@23||6|30.5||||
@@ -217,7 +217,7 @@ NN-Transistor|nmos@22||-4|-313|5||R|
 NN-Transistor|nmos@23||6|-313|5||R|
 NPolysilicon-1-Pin|pin@4||-23.5|25||||
 NPolysilicon-1-Pin|pin@5||-23.5|-1||||
-Ngeneric:Invisible-Pin|pin@6||47.5|-37|||||ART_message(D5G1;)Smetal2-to-poly
+Ngeneric:Invisible-Pin|pin@6||43.5|-78|||||ART_message(D5G1;)Smetal2-to-poly
 NMetal-2-Pin|pin@9||-27|-6.5||||
 NMetal-2-Pin|pin@10||-27|24.5||||
 NMetal-3-Pin|pin@15||-31|30.5||||
@@ -286,17 +286,15 @@ NMetal-2-Pin|pin@81||-27|-96.5||||
 NMetal-2-Pin|pin@82||-27|-65.5||||
 NMetal-3-Pin|pin@83||-31|-59.5||||
 NMetal-3-Pin|pin@84||-31|-90.5||||
-NPolysilicon-1-Pin|pin@85||-8.5|-74||||
 NPolysilicon-1-Pin|pin@86||-8.5|-78||||
 NPolysilicon-1-Pin|pin@87||-23.5|-78||||
 NPolysilicon-1-Pin|pin@88||-4|-82||||
-NPolysilicon-1-Pin|pin@89||0.5|-82||||
 NPolysilicon-1-Pin|pin@90||0.5|-78||||
 NPolysilicon-1-Pin|pin@91||15.5|-78||||
 Ngeneric:Invisible-Pin|pin@92||-14|-88|||||ART_message(D5G3;)SS'2
 Ngeneric:Invisible-Pin|pin@93||-14|-68|||||ART_message(D5G3;)SS2
-Ngeneric:Invisible-Pin|pin@94||-4|-88|||||ART_message(D5G3;)SS'1
-Ngeneric:Invisible-Pin|pin@95||-4|-68|||||ART_message(D5G3;)SS1
+Ngeneric:Invisible-Pin|pin@94||-4|-88|||||ART_message(D5G3;)SS1
+Ngeneric:Invisible-Pin|pin@95||-4|-68|||||ART_message(D5G3;)SS'1
 Ngeneric:Invisible-Pin|pin@96||6|-88|||||ART_message(D5G3;)SS'0
 Ngeneric:Invisible-Pin|pin@97||6|-68|||||ART_message(D5G3;)SS0
 NPolysilicon-1-Pin|pin@98||15.5|-65||||
@@ -311,7 +309,7 @@ Ngeneric:Invisible-Pin|pin@106||-23.5|-78|||||ART_message(D5G2;)SS1
 Ngeneric:Invisible-Pin|pin@107||15.5|-78|||||ART_message(D5G2;)SS'1
 Ngeneric:Invisible-Pin|pin@108||19|-78|||||ART_message(D5G2;)SS'0
 Ngeneric:Invisible-Pin|pin@109||23|-78|||||ART_message(D5G2;)SS0
-Ngeneric:Invisible-Pin|pin@110||-4|-78|||||ART_message(D5G5;)SD0
+Ngeneric:Invisible-Pin|pin@110||-4|-78|||||ART_message(D5G5;)SD2
 NPolysilicon-1-Pin|pin@111||-23.5|-110||||
 NPolysilicon-1-Pin|pin@112||-23.5|-136||||
 NMetal-2-Pin|pin@113||-27|-141.5||||
@@ -472,9 +470,11 @@ Ngeneric:Invisible-Pin|pin@267||15.5|-303|||||ART_message(D5G2;)SS'1
 Ngeneric:Invisible-Pin|pin@268||19|-303|||||ART_message(D5G2;)SS'0
 Ngeneric:Invisible-Pin|pin@269||23|-303|||||ART_message(D5G2;)SS0
 Ngeneric:Invisible-Pin|pin@270||-4|-303|||||ART_message(D5G5;)SD0
-Ngeneric:Invisible-Pin|pin@271||47.5|-17|||||ART_message(D5G1;)Smetal3-to-poly
+Ngeneric:Invisible-Pin|pin@271||43.5|-58|||||ART_message(D5G1;)Smetal3-to-poly
 NMetal-3-Pin|pin@272||23|-51.5||||
 NMetal-2-Pin|pin@273||19|-14.5||||
+NPolysilicon-1-Pin|pin@274||-8.5|-82||||
+NPolysilicon-1-Pin|pin@275||0.5|-74||||
 NP-Transistor|pmos@0||-14|22|5||R|
 NP-Transistor|pmos@1||-4|22|5||R|
 NP-Transistor|pmos@2||6|22|5||R|
@@ -516,14 +516,14 @@ AN-Active|net@19|||S0|nmos@2|diff-top|2.25|2|contact@6||1|2
 AMetal-1|net@20|||S900|contact@5||1|22|contact@6||1|2
 AMetal-1|net@21|||S900|contact@7||11|22|contact@8||11|2
 AMetal-1|net@26|||S900|contact@10||-14.5|-6.5|contact@11||-14.5|-6.5
-AMetal-1|net@28|||S900|contact@12||47.5|-42|contact@13||47.5|-42
+AMetal-1|net@28|||S900|contact@12||43.5|-83|contact@13||43.5|-83
 APolysilicon-1|net@29|||S900|nmos@0|poly-left|-14|-4|contact@11||-14|-6.5
 AMetal-2|net@32|||S0|contact@10||-14.5|-6.5|pin@9||-27|-6.5
 AMetal-2|net@34|||S2700|pin@9||-27|-6.5|pin@10||-27|24.5
 AMetal-2|net@36|||S2700|contact@15||-14|30.5|contact@16||-14|30.5
 AMetal-1|net@37|||S2700|contact@16||-14|30.5|contact@17||-14|30.5
-AMetal-2|net@39|||S2700|contact@18||47.5|-21.5|contact@19||47.5|-21.5
-AMetal-1|net@40|||S2700|contact@19||47.5|-21.5|contact@20||47.5|-21.5
+AMetal-2|net@39|||S2700|contact@18||43.5|-62.5|contact@19||43.5|-62.5
+AMetal-1|net@40|||S2700|contact@19||43.5|-62.5|contact@20||43.5|-62.5
 APolysilicon-1|net@41|||S2700|pmos@0|poly-right|-14|28|contact@17||-14|30.5
 AMetal-3|net@49|||S900|pin@15||-31|30.5|pin@16||-31|-0.5
 APolysilicon-1|net@51|||S0|pmos@1|poly-left|-4|16|pin@17||-8.5|16
@@ -613,14 +613,10 @@ AMetal-2|net@151|||S2700|contact@62||-14|-59.5|contact@63||-14|-59.5
 AMetal-1|net@152|||S2700|contact@63||-14|-59.5|contact@64||-14|-59.5
 APolysilicon-1|net@153|||S2700|pmos@6|poly-right|-14|-62|contact@64||-14|-59.5
 AMetal-3|net@154|||S900|pin@83||-31|-59.5|pin@84||-31|-90.5
-APolysilicon-1|net@155|||S0|pmos@7|poly-left|-4|-74|pin@85||-8.5|-74
-APolysilicon-1|net@156|||S900|pin@85||-8.5|-74|pin@86||-8.5|-78
 APolysilicon-1|net@157|||S900|pin@79||-23.5|-65|pin@87||-23.5|-78
 APolysilicon-1|net@158|||S900|pin@87||-23.5|-78|pin@80||-23.5|-91
 APolysilicon-1|net@159|||S0|pin@86||-8.5|-78|pin@87||-23.5|-78
 APolysilicon-1|net@160|||S2700|nmos@7|poly-right|-4|-82|pin@88||-4|-82
-APolysilicon-1|net@161|||S1800|pin@88||-4|-82|pin@89||0.5|-82
-APolysilicon-1|net@162|||S2700|pin@89||0.5|-82|pin@90||0.5|-78
 APolysilicon-1|net@163|||S1800|pin@90||0.5|-78|pin@91||15.5|-78
 AP-Active|net@164|||S0|pmos@6|diff-top|-17.75|-68|contact@52||-19|-68
 AMetal-2|net@165|||S2700|contact@65||6|-59.5|contact@66||6|-59.5
@@ -899,6 +895,18 @@ AMetal-3|net@442|||S900|pin@39||23|-0.5|pin@70||23|-14.5
 AMetal-3|net@443|||S900|pin@16||-31|-0.5|pin@51||-31|-14.5
 AMetal-2|net@444|||S900|pin@9||-27|-6.5|pin@50||-27|-20.5
 AMetal-2|net@445|||S900|pin@32||19|-6.5|pin@273||19|-14.5
+APolysilicon-1|net@446|||S900|pin@31||15.5|-1|pin@66||15.5|-20
+APolysilicon-1|net@447|||S900|pin@5||-23.5|-1|pin@47||-23.5|-20
+APolysilicon-1|net@448|||S0|pin@88||-4|-82|pin@274||-8.5|-82
+APolysilicon-1|net@449|||S900|pin@86||-8.5|-78|pin@274||-8.5|-82
+APolysilicon-1|net@450|||S1800|pmos@7|poly-left|-4|-74|pin@275||0.5|-74
+APolysilicon-1|net@451|||S2700|pin@90||0.5|-78|pin@275||0.5|-74
+APolysilicon-1|net@452|||S900|pin@67||15.5|-46|pin@98||15.5|-65
+AMetal-2|net@453|||S900|pin@68||19|-51.5|pin@101||19|-66
+AMetal-3|net@454|||S900|pin@272||23|-51.5|pin@102||23|-59.5
+APolysilicon-1|net@455|||S900|pin@48||-23.5|-46|pin@79||-23.5|-65
+AMetal-2|net@456|||S900|pin@49||-27|-51.5|pin@82||-27|-65.5
+AMetal-3|net@457|||S900|pin@52||-31|-45.5|pin@83||-31|-59.5
 X
 
 # Cell 8to1-mux-tg-schematic;1{sch}
