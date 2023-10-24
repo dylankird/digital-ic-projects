@@ -8,7 +8,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-tg;1{sch}
-C8to1-mux-tg;1{sch}||schematic|1698168418863|1698173795743|
+C8to1-mux-tg;1{sch}||schematic|1698168418863|1698174176045|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-35|-34||||
 NOff-Page|conn@1||-35|-20||||
@@ -889,4 +889,18 @@ Awire|net@578|||2700|gnd@0||-10|-45|pin@437||-10|-42
 Awire|net@579|||2700|pin@437||-10|-42|nmos@5|s|-10|-25
 Awire|net@580|||0|pin@435||1|-42|pin@437||-10|-42
 Awire|net@581|||1800|pin@434||-20|-42|pin@437||-10|-42
+ED0||D5G2;X1;|conn@10|a|I
+ED1||D5G2;X-3;|conn@9|y|I
+ED2||D5G2;X1;|conn@8|a|I
+ED3||D5G2;X1;|conn@7|a|I
+ED4||D5G2;X1;|conn@6|a|I
+ED5||D5G2;X1;|conn@5|a|I
+ED6||D5G2;X1;|conn@4|a|I
+ED7||D5G2;X1;|conn@3|a|I
+EGND||D5G2;X4;Y-3;|gnd@0||G
+ES0||D5G2;X1;|conn@0|a|I
+ES1||D5G2;X1;|conn@1|a|I
+ES2||D5G2;X-3;|conn@2|y|I
+EVDD||D5G2;X4;|pwr@0||P
+EY||D5G2;X2;|conn@11|a|O
 X
