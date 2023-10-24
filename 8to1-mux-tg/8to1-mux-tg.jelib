@@ -8,7 +8,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-tg;1{sch}
-C8to1-mux-tg;1{sch}||schematic|1698168418863|1698173616818|
+C8to1-mux-tg;1{sch}||schematic|1698168418863|1698173795743|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-35|-34||||
 NOff-Page|conn@1||-35|-20||||
@@ -22,6 +22,7 @@ NOff-Page|conn@8||-35|129||||
 NOff-Page|conn@9||-35|153||||
 NOff-Page|conn@10||-35|177||||
 NOff-Page|conn@11||68|93||||
+NGround|gnd@0||-10|-47||||
 NTransistor|nmos@1||20|5.5|||RR||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|nmos@2||30|5.5|||RR||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|nmos@3||40|5.5|||RR||ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
@@ -432,6 +433,12 @@ NWire_Pin|pin@423||50|129||||
 NWire_Pin|pin@424||43|153||||
 NWire_Pin|pin@425||50|153||||
 NWire_Pin|pin@428||50|93||||
+NWire_Pin|pin@429||1|189||||
+NWire_Pin|pin@431||-20|189||||
+NWire_Pin|pin@432||-10|189||||
+NWire_Pin|pin@434||-20|-42||||
+NWire_Pin|pin@435||1|-42||||
+NWire_Pin|pin@437||-10|-42||||
 NTransistor|pmos@1||20|12.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@2||30|12.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@3||40|12.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
@@ -459,6 +466,7 @@ NTransistor|pmos@24||40|156.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_wi
 NTransistor|pmos@25||20|180.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@26||30|180.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@27||40|180.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
+NPower|pwr@0||-10|195||||
 Awire|net@0|||1800|pmos@1|s|22|10.5|pin@0||23|10.5
 Awire|net@2|||0|pmos@1|d|18|10.5|pin@2||17|10.5
 Awire|net@3|||1800|pin@3||17|7.5|nmos@1|d|18|7.5
@@ -869,4 +877,16 @@ Awire|net@556|||1800|pin@424||43|153|pin@425||50|153
 Awire|net@561|||900|pin@421||50|105|pin@428||50|93
 Awire|net@562|||900|pin@428||50|93|pin@419||50|81
 Awire|net@563|||0|conn@11|a|66|93|pin@428||50|93
+Awire|net@564|||2700|pmos@4|s|1|-1|pin@429||1|189
+Awire|net@568|||2700|pmos@6|s|-20|-29|pin@431||-20|189
+Awire|net@569|||2700|pmos@5|s|-10|-15|pin@432||-10|189
+Awire|net@570|||2700|pin@432||-10|189|pwr@0||-10|195
+Awire|net@571|||1800|pin@431||-20|189|pin@432||-10|189
+Awire|net@572|||0|pin@429||1|189|pin@432||-10|189
+Awire|net@574|||900|nmos@6|s|-20|-39|pin@434||-20|-42
+Awire|net@575|||900|nmos@4|s|1|-11|pin@435||1|-42
+Awire|net@578|||2700|gnd@0||-10|-45|pin@437||-10|-42
+Awire|net@579|||2700|pin@437||-10|-42|nmos@5|s|-10|-25
+Awire|net@580|||0|pin@435||1|-42|pin@437||-10|-42
+Awire|net@581|||1800|pin@434||-20|-42|pin@437||-10|-42
 X
