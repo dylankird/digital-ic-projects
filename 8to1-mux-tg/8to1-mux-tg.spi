@@ -1,0 +1,78 @@
+*** SPICE deck for cell 8to1-mux-tg{sch} from library 8to1-mux-tg
+*** Created on Tue Oct 24, 2023 10:26:58
+*** Last revised on Tue Oct 24, 2023 12:07:23
+*** Written on Tue Oct 24, 2023 12:13:15 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 8to1-mux-tg{sch}
+Mnmos@1 D7 S2 net@0 gnd N L=0.35U W=1.4U
+Mnmos@2 net@0 S1 net@14 gnd N L=0.35U W=1.4U
+Mnmos@3 net@14 S0 Y gnd N L=0.35U W=1.4U
+Mnmos@4 net@44 S2 gnd gnd N L=0.35U W=1.4U
+Mnmos@5 net@45 S1 gnd gnd N L=0.35U W=1.4U
+Mnmos@6 net@46 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@7 D6 S2 net@133 gnd N L=0.35U W=1.4U
+Mnmos@8 net@133 S1 net@134 gnd N L=0.35U W=1.4U
+Mnmos@9 net@134 net@46 Y gnd N L=0.35U W=1.4U
+Mnmos@10 D5 S2 net@165 gnd N L=0.35U W=1.4U
+Mnmos@11 net@165 net@45 net@166 gnd N L=0.35U W=1.4U
+Mnmos@12 net@166 S0 Y gnd N L=0.35U W=1.4U
+Mnmos@13 D4 S2 net@197 gnd N L=0.35U W=1.4U
+Mnmos@14 net@197 net@45 net@198 gnd N L=0.35U W=1.4U
+Mnmos@15 net@198 net@46 Y gnd N L=0.35U W=1.4U
+Mnmos@16 D3 net@44 net@229 gnd N L=0.35U W=1.4U
+Mnmos@17 net@229 S1 net@230 gnd N L=0.35U W=1.4U
+Mnmos@18 net@230 S0 Y gnd N L=0.35U W=1.4U
+Mnmos@19 D2 net@44 net@261 gnd N L=0.35U W=1.4U
+Mnmos@20 net@261 S1 net@262 gnd N L=0.35U W=1.4U
+Mnmos@21 net@262 net@46 Y gnd N L=0.35U W=1.4U
+Mnmos@22 D1 net@44 net@293 gnd N L=0.35U W=1.4U
+Mnmos@23 net@293 net@45 net@294 gnd N L=0.35U W=1.4U
+Mnmos@24 net@294 S0 Y gnd N L=0.35U W=1.4U
+Mnmos@25 D0 net@44 net@325 gnd N L=0.35U W=1.4U
+Mnmos@26 net@325 net@45 net@326 gnd N L=0.35U W=1.4U
+Mnmos@27 net@326 net@46 Y gnd N L=0.35U W=1.4U
+Mpmos@1 D7 net@44 net@0 vdd P L=0.35U W=1.4U
+Mpmos@2 net@0 net@45 net@14 vdd P L=0.35U W=1.4U
+Mpmos@3 net@14 net@46 Y vdd P L=0.35U W=1.4U
+Mpmos@4 net@44 S2 vdd vdd P L=0.35U W=1.4U
+Mpmos@5 net@45 S1 vdd vdd P L=0.35U W=1.4U
+Mpmos@6 net@46 S0 vdd vdd P L=0.35U W=1.4U
+Mpmos@7 D6 net@44 net@133 vdd P L=0.35U W=1.4U
+Mpmos@8 net@133 net@45 net@134 vdd P L=0.35U W=1.4U
+Mpmos@9 net@134 S0 Y vdd P L=0.35U W=1.4U
+Mpmos@10 D5 net@44 net@165 vdd P L=0.35U W=1.4U
+Mpmos@11 net@165 S1 net@166 vdd P L=0.35U W=1.4U
+Mpmos@12 net@166 net@46 Y vdd P L=0.35U W=1.4U
+Mpmos@13 D4 net@44 net@197 vdd P L=0.35U W=1.4U
+Mpmos@14 net@197 S1 net@198 vdd P L=0.35U W=1.4U
+Mpmos@15 net@198 S0 Y vdd P L=0.35U W=1.4U
+Mpmos@16 D3 S2 net@229 vdd P L=0.35U W=1.4U
+Mpmos@17 net@229 net@45 net@230 vdd P L=0.35U W=1.4U
+Mpmos@18 net@230 net@46 Y vdd P L=0.35U W=1.4U
+Mpmos@19 D2 S2 net@261 vdd P L=0.35U W=1.4U
+Mpmos@20 net@261 net@45 net@262 vdd P L=0.35U W=1.4U
+Mpmos@21 net@262 S0 Y vdd P L=0.35U W=1.4U
+Mpmos@22 D1 S2 net@293 vdd P L=0.35U W=1.4U
+Mpmos@23 net@293 S1 net@294 vdd P L=0.35U W=1.4U
+Mpmos@24 net@294 net@46 Y vdd P L=0.35U W=1.4U
+Mpmos@25 D0 S2 net@325 vdd P L=0.35U W=1.4U
+Mpmos@26 net@325 S1 net@326 vdd P L=0.35U W=1.4U
+Mpmos@27 net@326 S0 Y vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell '8to1-mux-tg{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
+VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD3 D3 0 PULSE(3.3 0 0 1n 1n 125n 250n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
