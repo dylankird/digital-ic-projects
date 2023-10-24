@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell hw2-function-layout;1{lay}
-Chw2-function-layout;1{lay}||mocmos|1697781077523|1697864107703||DRC_last_good_drc_area_date()G1697864108360|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1697864108360
+Chw2-function-layout;1{lay}||mocmos|1697781077523|1698097999234||DRC_last_good_drc_area_date()G1697864108360|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1697864108360
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||12|6||3||
 NMetal-1-P-Active-Con|contact@1||22|6||3||
@@ -92,12 +92,12 @@ NMetal-1-Pin|pin@71||-20|18.5||||
 NMetal-1-Pin|pin@72||-20|12.5||||
 NMetal-1-Pin|pin@73||-27.5|12.5||||
 NMetal-1-Pin|pin@74||78.5|-8||||
-NMetal-1-Pin|pin@75||94|-8||||
+NMetal-1-Pin|pin@75||84.5|-8||||
 NMetal-1-Pin|pin@76||-38.5|-22||||
 NMetal-1-Pin|pin@77||-38.5|-12.5||||
 NMetal-1-Pin|pin@78||-38.5|3||||
 NMetal-1-Pin|pin@79||-38.5|12.5||||
-Ngeneric:Invisible-Pin|pin@80||-64.5|-16|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@80||-57.5|-6|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NN-Well-Node|plnode@0||25.5|18|100|12||A
 NP-Well-Node|plnode@1||25.5|-26.5|100|12||A
 NP-Transistor|pmos@0||17|6|5||R|
@@ -197,7 +197,7 @@ AMetal-1|net@118|||S0|contact@20||-13.5|18.5|pin@71||-20|18.5
 AMetal-1|net@119|||S900|pin@71||-20|18.5|pin@72||-20|12.5
 AMetal-1|net@120|||S0|pin@72||-20|12.5|pin@73||-27.5|12.5
 AMetal-1|net@121|||S1800|pin@13||65|-8|pin@74||78.5|-8
-AMetal-1|net@122|||S1800|pin@74||78.5|-8|pin@75||94|-8
+AMetal-1|net@122|||S1800|pin@74||78.5|-8|pin@75||84.5|-8
 AMetal-1|net@123|||S0|pin@70||-26|-22|pin@76||-38.5|-22
 AMetal-1|net@124|||S0|pin@67||-26|-12.5|pin@77||-38.5|-12.5
 AMetal-1|net@125|||S0|pin@56||-27|3|pin@78||-38.5|3
