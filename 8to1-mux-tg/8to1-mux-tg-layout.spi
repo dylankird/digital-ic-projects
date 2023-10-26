@@ -1,0 +1,76 @@
+*** SPICE deck for cell 8to1-mux-tg-layout{lay} from library 8to1-mux-tg
+*** Created on Tue Oct 24, 2023 12:17:37
+*** Last revised on Wed Oct 25, 2023 00:30:13
+*** Written on Wed Oct 25, 2023 00:30:34 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: 8to1-mux-tg-layout{lay}
+Mnmos@0 net@7 net@26 D0 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@1 net@14 net@28 net@7 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@2 Y net@63 net@14 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@3 net@82 net@26 D1 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@4 net@86 net@28 net@82 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@5 Y S0 net@86 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@6 net@137 net@26 D2 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@7 net@139 S1 net@137 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@8 Y net@63 net@139 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@9 net@138 net@26 D3 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@10 net@187 S1 net@138 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@11 Y S0 net@187 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@12 net@229 S2 D4 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@13 net@273 net@28 net@229 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@14 Y net@63 net@273 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@15 net@253 S2 D5 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@16 net@410 net@28 net@253 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@17 Y S0 net@410 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@18 net@270 S2 D6 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@19 net@272 S1 net@270 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@20 Y net@63 net@272 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@21 net@271 S2 D7 gnd N L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mnmos@22 net@325 S1 net@271 gnd N L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mnmos@23 Y S0 net@325 gnd N L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mnmos@24 net@26 S2 gnd gnd N L=0.35U W=1.4U AS=5.421P AD=1.593P PS=14.408U PD=5.075U
+Mnmos@25 net@28 S1 gnd gnd N L=0.35U W=1.4U AS=5.421P AD=1.593P PS=14.408U PD=5.075U
+Mnmos@26 net@63 S0 gnd gnd N L=0.35U W=1.4U AS=5.421P AD=1.593P PS=14.408U PD=5.075U
+Mpmos@0 net@7 S2 D0 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@1 net@14 S1 net@7 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@2 Y S0 net@14 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@3 net@82 S2 D1 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@4 net@86 S1 net@82 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@5 Y net@63 net@86 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@6 net@137 S2 D2 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@7 net@139 net@28 net@137 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@8 Y S0 net@139 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@9 net@138 S2 D3 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@10 net@187 net@28 net@138 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@11 Y net@63 net@187 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@12 net@229 net@26 D4 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@13 net@273 S1 net@229 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@14 Y S0 net@273 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@15 net@253 net@26 D5 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@16 net@410 S1 net@253 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@17 Y net@63 net@410 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@18 net@270 net@26 D6 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@19 net@272 net@28 net@270 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@20 Y S0 net@272 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@21 net@271 net@26 D7 vdd P L=0.35U W=1.4U AS=1.593P AD=0.98P PS=5.075U PD=2.8U
+Mpmos@22 net@325 net@28 net@271 vdd P L=0.35U W=1.4U AS=0.98P AD=0.98P PS=2.8U PD=2.8U
+Mpmos@23 Y net@63 net@325 vdd P L=0.35U W=1.4U AS=0.98P AD=1.593P PS=2.8U PD=5.075U
+Mpmos@24 net@26 S2 vdd vdd P L=0.35U W=1.4U AS=6.186P AD=1.593P PS=14.525U PD=5.075U
+Mpmos@25 net@28 S1 vdd vdd P L=0.35U W=1.4U AS=6.186P AD=1.593P PS=14.525U PD=5.075U
+Mpmos@26 net@63 S0 vdd vdd P L=0.35U W=1.4U AS=6.186P AD=1.593P PS=14.525U PD=5.075U
+
+* Spice Code nodes in cell cell '8to1-mux-tg-layout{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
+VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD1 D7 0 PULSE(3.3 0 0 1n 1n 125n 250n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END

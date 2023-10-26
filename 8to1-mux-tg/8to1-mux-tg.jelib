@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-tg-layout;1{lay}
-C8to1-mux-tg-layout;1{lay}||mocmos|1698175057948|1698218835652||DRC_last_good_drc_area_date()G1698218810638|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698218810638
+C8to1-mux-tg-layout;1{lay}||mocmos|1698175057948|1698219013996||DRC_last_good_drc_area_date()G1698218810638|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698218810638
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-19|22||3||
 NMetal-1-N-Active-Con|contact@1||-19|2||3||
@@ -603,6 +603,7 @@ NMetal-1-Pin|pin@431||-19|10||||
 NMetal-1-Pin|pin@432||-48.5|10||||
 NMetal-1-Pin|pin@433||31|-145.5||||
 NMetal-1-Pin|pin@434||48.5|-145.5||||
+Ngeneric:Invisible-Pin|pin@437||-84.5|-180.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||-14|22|5||R|
 NP-Transistor|pmos@1||-4|22|5||R|
 NP-Transistor|pmos@2||6|22|5||R|
@@ -1210,6 +1211,20 @@ AMetal-1|net@814|||S900|contact@252||-1.5|-363.5|substr@0||-1.5|-374
 AMetal-1|net@815|||S900|contact@256||19.5|-363.5|substr@0||19.5|-374
 AMetal-2|net@816|||S2700|pin@353||27|29.5|contact@278||27|38
 AMetal-1|net@817|||JS|well@0||27|38|contact@278||27|38
+ED0||D5G2;|pin@432||I
+ED1||D5G2;|pin@430||I
+ED2||D5G2;|pin@428||I
+ED3||D5G2;|pin@426||I
+ED4||D5G2;|pin@424||I
+ED5||D5G2;|pin@422||I
+ED6||D5G2;|pin@418||I
+ED7||D5G2;|pin@416||I
+EGND||D5G2;|substr@0||G
+ES0||D5G2;|pin@414||I
+ES1||D5G2;|pin@410||I
+ES2||D5G2;|pin@408||I
+EVDD||D5G2;Y4.5;|well@0||P
+EY||D5G2;|pin@434||O
 X
 
 # Cell 8to1-mux-tg-schematic;1{sch}
