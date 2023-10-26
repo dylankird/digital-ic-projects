@@ -1,0 +1,96 @@
+*** SPICE deck for cell 8to1-mux-cmos-schematic{sch} from library 8to1-mux-cmos
+*** Created on Wed Oct 25, 2023 19:41:55
+*** Last revised on Wed Oct 25, 2023 20:40:04
+*** Written on Wed Oct 25, 2023 20:41:52 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 8to1-mux-cmos-schematic{sch}
+Mnmos@0 net@45 S2 gnd gnd N L=0.35U W=1.4U
+Mnmos@1 net@8 net@45 gnd gnd N L=0.35U W=1.4U
+Mnmos@2 net@18 S2 gnd gnd N L=0.35U W=1.4U
+Mnmos@3 net@2 net@50 net@8 gnd N L=0.35U W=1.4U
+Mnmos@4 net@2 net@52 net@18 gnd N L=0.35U W=1.4U
+Mnmos@5 Y net@2 gnd gnd N L=0.35U W=1.4U
+Mnmos@6 net@109 S1 gnd gnd N L=0.35U W=1.4U
+Mnmos@7 net@147 net@109 gnd gnd N L=0.35U W=1.4U
+Mnmos@8 net@86 S1 gnd gnd N L=0.35U W=1.4U
+Mnmos@9 net@50 net@115 net@147 gnd N L=0.35U W=1.4U
+Mnmos@10 net@50 net@117 net@86 gnd N L=0.35U W=1.4U
+Mnmos@12 net@169 S1 gnd gnd N L=0.35U W=1.4U
+Mnmos@13 net@203 net@169 gnd gnd N L=0.35U W=1.4U
+Mnmos@14 net@214 S1 gnd gnd N L=0.35U W=1.4U
+Mnmos@15 net@52 net@175 net@203 gnd N L=0.35U W=1.4U
+Mnmos@16 net@52 net@177 net@214 gnd N L=0.35U W=1.4U
+Mnmos@17 net@244 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@18 net@278 net@244 gnd gnd N L=0.35U W=1.4U
+Mnmos@19 net@358 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@20 net@115 D0 net@278 gnd N L=0.35U W=1.4U
+Mnmos@21 net@115 D1 net@358 gnd N L=0.35U W=1.4U
+Mnmos@22 net@298 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@23 net@332 net@298 gnd gnd N L=0.35U W=1.4U
+Mnmos@24 net@343 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@25 net@117 D2 net@332 gnd N L=0.35U W=1.4U
+Mnmos@26 net@117 D3 net@343 gnd N L=0.35U W=1.4U
+Mnmos@27 net@380 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@28 net@414 net@380 gnd gnd N L=0.35U W=1.4U
+Mnmos@29 net@494 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@30 net@175 D4 net@414 gnd N L=0.35U W=1.4U
+Mnmos@31 net@175 D5 net@494 gnd N L=0.35U W=1.4U
+Mnmos@32 net@434 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@33 net@468 net@434 gnd gnd N L=0.35U W=1.4U
+Mnmos@34 net@479 S0 gnd gnd N L=0.35U W=1.4U
+Mnmos@35 net@177 D6 net@468 gnd N L=0.35U W=1.4U
+Mnmos@36 net@177 D7 net@479 gnd N L=0.35U W=1.4U
+Mpmos@0 net@45 S2 vdd vdd P L=0.35U W=1.4U
+Mpmos@1 net@2 S2 net@34 vdd P L=0.35U W=1.4U
+Mpmos@2 net@2 net@52 net@34 vdd P L=0.35U W=1.4U
+Mpmos@3 net@34 net@45 vdd vdd P L=0.35U W=1.4U
+Mpmos@4 net@34 net@50 vdd vdd P L=0.35U W=1.4U
+Mpmos@5 Y net@2 vdd vdd P L=0.35U W=1.4U
+Mpmos@6 net@109 S1 vdd vdd P L=0.35U W=1.4U
+Mpmos@7 net@50 S1 net@98 vdd P L=0.35U W=1.4U
+Mpmos@8 net@50 net@117 net@98 vdd P L=0.35U W=1.4U
+Mpmos@9 net@98 net@109 vdd vdd P L=0.35U W=1.4U
+Mpmos@10 net@98 net@115 vdd vdd P L=0.35U W=1.4U
+Mpmos@12 net@169 S1 vdd vdd P L=0.35U W=1.4U
+Mpmos@13 net@52 S1 net@160 vdd P L=0.35U W=1.4U
+Mpmos@14 net@52 net@177 net@160 vdd P L=0.35U W=1.4U
+Mpmos@15 net@160 net@169 vdd vdd P L=0.35U W=1.4U
+Mpmos@16 net@160 net@175 vdd vdd P L=0.35U W=1.4U
+Mpmos@17 net@244 S0 vdd vdd P L=0.35U W=1.4U
+Mpmos@18 net@115 S0 net@235 vdd P L=0.35U W=1.4U
+Mpmos@19 net@115 D1 net@235 vdd P L=0.35U W=1.4U
+Mpmos@20 net@235 net@244 vdd vdd P L=0.35U W=1.4U
+Mpmos@21 net@235 D0 vdd vdd P L=0.35U W=1.4U
+Mpmos@22 net@298 S0 vdd vdd P L=0.35U W=1.4U
+Mpmos@23 net@117 S0 net@289 vdd P L=0.35U W=1.4U
+Mpmos@24 net@117 D3 net@289 vdd P L=0.35U W=1.4U
+Mpmos@25 net@289 net@298 vdd vdd P L=0.35U W=1.4U
+Mpmos@26 net@289 D2 vdd vdd P L=0.35U W=1.4U
+Mpmos@27 net@380 S0 vdd vdd P L=0.35U W=1.4U
+Mpmos@28 net@175 S0 net@371 vdd P L=0.35U W=1.4U
+Mpmos@29 net@175 D5 net@371 vdd P L=0.35U W=1.4U
+Mpmos@30 net@371 net@380 vdd vdd P L=0.35U W=1.4U
+Mpmos@31 net@371 D4 vdd vdd P L=0.35U W=1.4U
+Mpmos@32 net@434 S0 vdd vdd P L=0.35U W=1.4U
+Mpmos@33 net@177 S0 net@425 vdd P L=0.35U W=1.4U
+Mpmos@34 net@177 D7 net@425 vdd P L=0.35U W=1.4U
+Mpmos@35 net@425 net@434 vdd vdd P L=0.35U W=1.4U
+Mpmos@36 net@425 D6 vdd vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell '8to1-mux-cmos-schematic{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
+VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD3 D3 0 PULSE(3.3 0 0 1n 1n 125n 250n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
