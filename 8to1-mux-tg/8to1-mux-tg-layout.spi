@@ -1,7 +1,7 @@
 *** SPICE deck for cell 8to1-mux-tg-layout{lay} from library 8to1-mux-tg
 *** Created on Tue Oct 24, 2023 12:17:37
-*** Last revised on Wed Oct 25, 2023 00:30:13
-*** Written on Wed Oct 25, 2023 00:30:34 by Electric VLSI Design System, version 9.07
+*** Last revised on Fri Oct 27, 2023 13:01:32
+*** Written on Fri Oct 27, 2023 13:01:42 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -66,11 +66,27 @@ VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 *
 *For logic simulation:
-VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
-VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
-VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n)
-VD1 D7 0 PULSE(3.3 0 0 1n 1n 125n 250n)
+*Select lines:
+VS2 S2 0 DC 0
+VS1 S1 0 DC 0
+VS0 S0 0 DC 0
+*
+*Inputs:
+VD0 D0 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VD1 D1 0 DC 0
+VD2 D2 0 DC 0
+VD3 D3 0 DC 0
+VD4 D4 0 DC 0
+VD5 D5 0 DC 0
+VD6 D6 0 DC 0
+VD7 D7 0 DC 0
 *
 .TRAN 0 2000n
+.meas risetime TRIG v(Y)=0.33 TD=0 rise=1 TARG v(Y)=2.97 TD=0 rise=1
+.meas falltime TRIG v(Y)=2.97 TD=0 fall=1 TARG v(Y)=0.33 TD=0 fall=1
+.meas tpHL TRIG v(D0)=1.65 TD=0 fall=1 TARG v(Y)=1.65 TD=0 fall=1
+.meas tpLH TRIG v(D0)=1.65 TD=0 rise=1 TARG v(Y)=1.65 TD=0 rise=1
+.meas propagationdelay param=(tpHL+tpLH)/2
+.meas chip_current I_vdd AVG I(VDD)
 .include Z:\MOS_model.txt
 .END

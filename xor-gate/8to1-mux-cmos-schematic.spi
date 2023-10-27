@@ -1,13 +1,13 @@
 *** SPICE deck for cell 8to1-mux-cmos-schematic{sch} from library 8to1-mux-cmos
 *** Created on Wed Oct 25, 2023 19:41:55
 *** Last revised on Fri Oct 27, 2023 12:55:21
-*** Written on Fri Oct 27, 2023 12:59:28 by Electric VLSI Design System, version 9.07
+*** Written on Fri Oct 27, 2023 12:55:30 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 .global gnd vdd
 
-*** TOP LEVEL CELL: 8to1-mux-cmos-schematic{sch}
+*** TOP LEVEL CELL: 8to1-mux-cmos:8to1-mux-cmos-schematic{sch}
 Mnmos@0 net@45 S2 gnd gnd N L=0.35U W=1.4U
 Mnmos@1 net@8 net@45 gnd gnd N L=0.35U W=1.4U
 Mnmos@2 net@18 S2 gnd gnd N L=0.35U W=1.4U
@@ -81,7 +81,7 @@ Mpmos@34 net@177 D7 net@425 vdd P L=0.35U W=1.4U
 Mpmos@35 net@425 net@434 vdd vdd P L=0.35U W=1.4U
 Mpmos@36 net@425 D6 vdd vdd P L=0.35U W=1.4U
 
-* Spice Code nodes in cell cell '8to1-mux-cmos-schematic{sch}'
+* Spice Code nodes in cell cell '8to1-mux-cmos:8to1-mux-cmos-schematic{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 *

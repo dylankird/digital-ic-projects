@@ -2,6 +2,7 @@
 H8to1-mux-cmos|9.07
 
 # Views:
+Vicon|ic
 Vlayout|lay
 Vschematic|sch
 
@@ -9,7 +10,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-cmos-layout;1{lay}
-C8to1-mux-cmos-layout;1{lay}||mocmos|1698370656912|1698389437849||DRC_last_good_drc_area_date()G1698389221116|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698389221116
+C8to1-mux-cmos-layout;1{lay}||mocmos|1698370656912|1698436878742||DRC_last_good_drc_area_date()G1698389221116|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698389221116
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-8|-1||3||
 NMetal-1-P-Active-Con|contact@1||2|-1||3||
@@ -575,7 +576,16 @@ NPolysilicon-1-Pin|pin@706||288.5|-11.5||||
 NMetal-1-Pin|pin@707||288.5|-60||||
 NMetal-1-Pin|pin@708||247.5|-13||||
 NMetal-1-Pin|pin@709||338.5|-13||||
-Ngeneric:Invisible-Pin|pin@711||80.5|-120|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,VD0 D0 0 DC 0,VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@711||-136|-43|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 DC 0,VS1 S1 0 DC 0,VS0 S0 0 DC 0,*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD3 D3 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,.meas risetime TRIG v(Y)=0.33 TD=0 rise=1 TARG v(Y)=2.97 TD=0 rise=1,.meas falltime TRIG v(Y)=2.97 TD=0 fall=1 TARG v(Y)=0.33 TD=0 fall=1,.meas tpHL TRIG v(D0)=1.65 TD=0 fall=1 TARG v(Y)=1.65 TD=0 fall=1,.meas tpLH TRIG v(D0)=1.65 TD=0 rise=1 TARG v(Y)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,.meas chip_current I_vdd AVG I(VDD),".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@712||-134|10.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 100n 200n),VD1 D1 0 PULSE(3.3 0 0 1n 1n 50n 100n),VD2 D2 0 PULSE(3.3 0 0 1n 1n 25n 50n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 12.5n 25n),VD4 D4 0 PULSE(3.3 0 0 1n 1n 150n 200n),VD5 D5 0 PULSE(3.3 0 0 1n 1n 75n 100n),VD6 D6 0 PULSE(3.3 0 0 1n 1n 37.5n 50n),VD7 D7 0 PULSE(3.3 0 0 1n 1n 18.75n 25n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+NP-Well-Node|plnode@0||297.5|-52|12|70||A
+NP-Well-Node|plnode@1||250|-23|90|12||A
+NP-Well-Node|plnode@2||130.5|-25.5|90|12||A
+NP-Well-Node|plnode@3||36|-24.5|90|12||A
+NN-Well-Node|plnode@4||-46|-23.5|12|70||A
+NN-Well-Node|plnode@5||-26|-53|50|12||A
+NN-Well-Node|plnode@6||40|-48.5|50|12||A
+NN-Well-Node|plnode@7||126.5|-48.5|50|12||A
 NP-Transistor|pmos@0||-3|-1|5||R|
 NP-Transistor|pmos@1||7|-1|5||R|
 NP-Transistor|pmos@2||17|-1|5||R|
@@ -1243,8 +1253,71 @@ EVDD||D5G2;Y4.5;|well@0||P
 EY||D5G2;|pin@709||O
 X
 
+# Cell 8to1-mux-cmos-schematic;1{ic}
+C8to1-mux-cmos-schematic;1{ic}||artwork|1698426432019|1698428180345|E
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOpened-Thicker-Polygon|art@1||0|0|6|22|||SCHEM_function(D5G2;X0.5;Y17;)S8to1-mux-cmos-schematic|trace()V[-3/-11,-3/11,3/8,3/-8,-3/-11]
+Nschematic:Bus_Pin|pin@0||-5|10||||
+Nschematic:Wire_Pin|pin@1||-3|10||||
+Nschematic:Bus_Pin|pin@2||-5|8||||
+Nschematic:Wire_Pin|pin@3||-3|8||||
+Nschematic:Bus_Pin|pin@4||-5|6||||
+Nschematic:Wire_Pin|pin@5||-3|6||||
+Nschematic:Bus_Pin|pin@6||-5|4||||
+Nschematic:Wire_Pin|pin@7||-3|4||||
+Nschematic:Bus_Pin|pin@8||-5|2||||
+Nschematic:Wire_Pin|pin@9||-3|2||||
+Nschematic:Bus_Pin|pin@10||-5|0||||
+Nschematic:Wire_Pin|pin@11||-3|0||||
+Nschematic:Bus_Pin|pin@12||-5|-2||||
+Nschematic:Wire_Pin|pin@13||-3|-2||||
+Nschematic:Bus_Pin|pin@14||-5|-4||||
+Nschematic:Wire_Pin|pin@15||-3|-4||||
+Nschematic:Bus_Pin|pin@16||0|-13.5||||
+Nschematic:Wire_Pin|pin@17||0|-9.5||||
+Nschematic:Bus_Pin|pin@18||-5|-6||||
+Nschematic:Wire_Pin|pin@19||-3|-6||||
+Nschematic:Bus_Pin|pin@20||-5|-8||||
+Nschematic:Wire_Pin|pin@21||-3|-8||||
+Nschematic:Bus_Pin|pin@22||-5|-10||||
+Nschematic:Wire_Pin|pin@23||-3|-10||||
+Nschematic:Bus_Pin|pin@24||0|13.5||||
+Nschematic:Wire_Pin|pin@25||0|9.5||||
+Nschematic:Bus_Pin|pin@26||5|0||||
+Nschematic:Wire_Pin|pin@27||3|0||||
+Aschematic:wire|net@0|||0|pin@1||-3|10|pin@0||-5|10
+Aschematic:wire|net@1|||0|pin@3||-3|8|pin@2||-5|8
+Aschematic:wire|net@2|||0|pin@5||-3|6|pin@4||-5|6
+Aschematic:wire|net@3|||0|pin@7||-3|4|pin@6||-5|4
+Aschematic:wire|net@4|||0|pin@9||-3|2|pin@8||-5|2
+Aschematic:wire|net@5|||0|pin@11||-3|0|pin@10||-5|0
+Aschematic:wire|net@6|||0|pin@13||-3|-2|pin@12||-5|-2
+Aschematic:wire|net@7|||0|pin@15||-3|-4|pin@14||-5|-4
+Aschematic:wire|net@8|||900|pin@17||0|-9.5|pin@16||0|-13.5
+Aschematic:wire|net@9|||0|pin@19||-3|-6|pin@18||-5|-6
+Aschematic:wire|net@10|||0|pin@21||-3|-8|pin@20||-5|-8
+Aschematic:wire|net@11|||0|pin@23||-3|-10|pin@22||-5|-10
+Aschematic:wire|net@12|||2700|pin@25||0|9.5|pin@24||0|13.5
+Aschematic:wire|net@13|||1800|pin@27||3|0|pin@26||5|0
+ED0||D5G2;X-1.5;|pin@0||I
+ED1||D5G2;X-1.5;|pin@2||I
+ED2||D5G2;X-1.5;|pin@4||I
+ED3||D5G2;X-1.5;|pin@6||I
+ED4||D5G2;X-1.5;|pin@8||I
+ED5||D5G2;X-1.5;|pin@10||I
+ED6||D5G2;X-1.5;|pin@12||I
+ED7||D5G2;X-1.5;|pin@14||I
+EGND||D5G2;X2.5;Y1;|pin@16||G
+ES0||D5G2;X-1.5;|pin@18||I
+ES1||D5G2;X-1.5;|pin@20||I
+ES2||D5G2;X-1.5;|pin@22||I
+EVDD||D5G2;X2.5;Y-1;|pin@24||P
+EY||D5G2;X0.5;|pin@26||O
+X
+
 # Cell 8to1-mux-cmos-schematic;1{sch}
-C8to1-mux-cmos-schematic;1{sch}||schematic|1698288115799|1698300126712|
+C8to1-mux-cmos-schematic;1{sch}||schematic|1698288115799|1698436806909|
+I8to1-mux-cmos-schematic;1{ic}|8to1-mux@0||61|174|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-182|-115||||
 NOff-Page|conn@1||-182|-120||||
@@ -1717,7 +1790,8 @@ NWire_Pin|pin@463||-8|-115||||
 NWire_Pin|pin@465||-82|-120||||
 NWire_Pin|pin@467||-159|-125||||
 NWire_Pin|pin@469||41|-2||||
-Ngeneric:Invisible-Pin|pin@470||-216.5|-0.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,VD0 D0 0 DC 0,VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@470||-216.5|-0.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 DC 0,VS1 S1 0 DC 0,VS0 S0 0 DC 0,*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD3 D3 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,.meas risetime TRIG v(Y)=0.33 TD=0 rise=1 TARG v(Y)=2.97 TD=0 rise=1,.meas falltime TRIG v(Y)=2.97 TD=0 fall=1 TARG v(Y)=0.33 TD=0 fall=1,.meas tpHL TRIG v(D0)=1.65 TD=0 fall=1 TARG v(Y)=1.65 TD=0 fall=1,.meas tpLH TRIG v(D0)=1.65 TD=0 rise=1 TARG v(Y)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,.meas chip_current I_vdd AVG I(VDD),".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@471||-220|57|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 100n 200n),VD1 D1 0 PULSE(3.3 0 0 1n 1n 50n 100n),VD2 D2 0 PULSE(3.3 0 0 1n 1n 25n 50n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 12.5n 25n),VD4 D4 0 PULSE(3.3 0 0 1n 1n 150n 200n),VD5 D5 0 PULSE(3.3 0 0 1n 1n 75n 100n),VD6 D6 0 PULSE(3.3 0 0 1n 1n 37.5n 50n),VD7 D7 0 PULSE(3.3 0 0 1n 1n 18.75n 25n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NTransistor|pmos@0||-1|-18|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@1||14|4|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@2||31|4|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
