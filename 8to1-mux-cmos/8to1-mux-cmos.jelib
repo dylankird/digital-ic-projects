@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-cmos-layout;1{lay}
-C8to1-mux-cmos-layout;1{lay}||mocmos|1698370656912|1698389256255||DRC_last_good_drc_area_date()G1698389221116|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698389221116
+C8to1-mux-cmos-layout;1{lay}||mocmos|1698370656912|1698389437849||DRC_last_good_drc_area_date()G1698389221116|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698389221116
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-8|-1||3||
 NMetal-1-P-Active-Con|contact@1||2|-1||3||
@@ -356,15 +356,11 @@ NMetal-1-Pin|pin@422||-43.5|6.5||||
 NMetal-1-Pin|pin@423||-44|-9||||
 NMetal-1-Pin|pin@424||-87|-9||||
 NMetal-3-Pin|pin@425||-13.5|-23||||
-Ngeneric:Invisible-Pin|pin@429||-90.5|-2|||||ART_message(D5G2;)SD0
-Ngeneric:Invisible-Pin|pin@430||-90|-9|||||ART_message(D5G2;)SD1
 Ngeneric:Invisible-Pin|pin@431||127.5|-12|||||ART_message(D5G2;)SD3
 NMetal-1-Pin|pin@432||-50|-16||||
 NMetal-1-Pin|pin@433||-50|-16||||
 NMetal-1-Pin|pin@434||-87|-16||||
-Ngeneric:Invisible-Pin|pin@435||-90|-16|||||ART_message(D5G2;)SD2
 NMetal-1-Pin|pin@438||-87|-23||||
-Ngeneric:Invisible-Pin|pin@439||-90|-23|||||ART_message(D5G2;)SD3
 NMetal-2-Pin|pin@440||211|-9||||
 NMetal-1-Pin|pin@441||125|-29||||
 NMetal-1-Pin|pin@443||132|-29||||
@@ -491,15 +487,11 @@ NMetal-1-Pin|pin@591||-87|-30||||
 NMetal-1-Pin|pin@592||-58|-37||||
 NMetal-1-Pin|pin@593||-87|-37||||
 NMetal-3-Pin|pin@594||3.5|-51||||
-Ngeneric:Invisible-Pin|pin@595||-90|-30|||||ART_message(D5G2;)SD4
-Ngeneric:Invisible-Pin|pin@596||-90|-37|||||ART_message(D5G2;)SD5
 Ngeneric:Invisible-Pin|pin@597||127.5|-62|||||ART_message(D5G2;)SD7
 NMetal-1-Pin|pin@598||-64|-44||||
 NMetal-1-Pin|pin@599||-64|-44||||
 NMetal-1-Pin|pin@600||-87|-44||||
-Ngeneric:Invisible-Pin|pin@601||-90|-44|||||ART_message(D5G2;)SD6
 NMetal-1-Pin|pin@602||-87|-51||||
-Ngeneric:Invisible-Pin|pin@603||-90|-51|||||ART_message(D5G2;)SD7
 NMetal-2-Pin|pin@604||211|-59||||
 Ngeneric:Invisible-Pin|pin@607||211|-49|||||ART_message(D5G2;)SD4/D5
 NPolysilicon-1-Pin|pin@608||183|-84||||
@@ -565,9 +557,7 @@ NMetal-3-Pin|pin@680||134.5|-72||||
 NMetal-3-Pin|pin@681||134.5|-43.5||||
 NMetal-3-Pin|pin@682||-13.5|-72||||
 NMetal-1-Pin|pin@685||-87|-62||||
-Ngeneric:Invisible-Pin|pin@686||-90|-62|||||ART_message(D5G2;)SS0
 NMetal-1-Pin|pin@688||-87|-69||||
-Ngeneric:Invisible-Pin|pin@689||-90|-69|||||ART_message(D5G2;)SS1
 NPolysilicon-1-Pin|pin@690||145.5|-43.5||||
 NPolysilicon-1-Pin|pin@691||224|-36||||
 NMetal-3-Pin|pin@692||217.5|-78||||
@@ -579,13 +569,13 @@ NMetal-3-Pin|pin@698||-13.5|-69||||
 NMetal-3-Pin|pin@699||-30|-76||||
 NMetal-1-Pin|pin@700||-43.5|-2||||
 NMetal-1-Pin|pin@701||-87|-2||||
-Ngeneric:Invisible-Pin|pin@702||-90|-76|||||ART_message(D5G2;)SS1
 NMetal-1-Pin|pin@703||295|-21.5||||
 NPolysilicon-1-Pin|pin@705||252.5|-11.5||||
 NPolysilicon-1-Pin|pin@706||288.5|-11.5||||
 NMetal-1-Pin|pin@707||288.5|-60||||
 NMetal-1-Pin|pin@708||247.5|-13||||
 NMetal-1-Pin|pin@709||338.5|-13||||
+Ngeneric:Invisible-Pin|pin@711||80.5|-120|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 125n 250n),*,VD0 D0 0 DC 0,VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||-3|-1|5||R|
 NP-Transistor|pmos@1||7|-1|5||R|
 NP-Transistor|pmos@2||17|-1|5||R|
@@ -1237,6 +1227,20 @@ AMetal-1|net@1298|||S900|contact@235||173|-74|substr@0||173|-88.5
 AMetal-1|net@1299|||S900|contact@268||218|-72|substr@0||218|-88.5
 AMetal-1|net@1300|||S900|contact@263||250.5|-74|substr@0||250.5|-88.5
 AMetal-1|net@1301|||S900|pin@703||295|-21.5|substr@0||295|-88.5
+ED0||D5G2;|pin@701||I
+ED1||D5G2;|pin@424||I
+ED2||D5G2;|pin@434||I
+ED3||D5G2;|pin@438||I
+ED4||D5G2;|pin@591||I
+ED5||D5G2;|pin@593||I
+ED6||D5G2;|pin@600||I
+ED7||D5G2;|pin@602||I
+EGND||D5G2;Y-4;|substr@0||G
+ES0||D5G2;|pin@685||I
+ES1||D5G2;|pin@688||I
+ES2||D5G2;|pin@696||I
+EVDD||D5G2;Y4.5;|well@0||P
+EY||D5G2;|pin@709||O
 X
 
 # Cell 8to1-mux-cmos-schematic;1{sch}
