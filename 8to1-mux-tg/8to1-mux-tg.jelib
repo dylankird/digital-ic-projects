@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-tg-layout;1{lay}
-C8to1-mux-tg-layout;1{lay}||mocmos|1698175057948|1698436995368||DRC_last_good_drc_area_date()G1698425701083|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698425701083
+C8to1-mux-tg-layout;1{lay}||mocmos|1698175057948|1698438339952||DRC_last_good_drc_area_date()G1698438485534|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698438485534
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-19|22||3||
 NMetal-1-N-Active-Con|contact@1||-19|2||3||
@@ -603,8 +603,8 @@ NMetal-1-Pin|pin@431||-19|10||||
 NMetal-1-Pin|pin@432||-48.5|10||||
 NMetal-1-Pin|pin@433||31|-145.5||||
 NMetal-1-Pin|pin@434||48.5|-145.5||||
-Ngeneric:Invisible-Pin|pin@437||-84.5|-180.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 DC 0,VS1 S1 0 DC 0,VS0 S0 0 DC 0,*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD3 D3 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,.meas risetime TRIG v(Y)=0.33 TD=0 rise=1 TARG v(Y)=2.97 TD=0 rise=1,.meas falltime TRIG v(Y)=2.97 TD=0 fall=1 TARG v(Y)=0.33 TD=0 fall=1,.meas tpHL TRIG v(D0)=1.65 TD=0 fall=1 TARG v(Y)=1.65 TD=0 fall=1,.meas tpLH TRIG v(D0)=1.65 TD=0 rise=1 TARG v(Y)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,.meas chip_current I_vdd AVG I(VDD),".include Z:\\MOS_model.txt"]
-Ngeneric:Invisible-Pin|pin@438||-82|-124|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 100n 200n),VD1 D1 0 PULSE(3.3 0 0 1n 1n 50n 100n),VD2 D2 0 PULSE(3.3 0 0 1n 1n 25n 50n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 12.5n 25n),VD4 D4 0 PULSE(3.3 0 0 1n 1n 150n 200n),VD5 D5 0 PULSE(3.3 0 0 1n 1n 75n 100n),VD6 D6 0 PULSE(3.3 0 0 1n 1n 37.5n 50n),VD7 D7 0 PULSE(3.3 0 0 1n 1n 18.75n 25n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@437||-269.5|-205.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 DC 0,VS1 S1 0 DC 0,VS0 S0 0 DC 0,*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD3 D3 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,.meas risetime TRIG v(Y)=0.33 TD=0 rise=1 TARG v(Y)=2.97 TD=0 rise=1,.meas falltime TRIG v(Y)=2.97 TD=0 fall=1 TARG v(Y)=0.33 TD=0 fall=1,.meas tpHL TRIG v(D0)=1.65 TD=0 fall=1 TARG v(Y)=1.65 TD=0 fall=1,.meas tpLH TRIG v(D0)=1.65 TD=0 rise=1 TARG v(Y)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,.meas chip_current I_vdd AVG I(VDD),".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@438||-267|-129|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 100n 200n),VD1 D1 0 PULSE(3.3 0 0 1n 1n 50n 100n),VD2 D2 0 PULSE(3.3 0 0 1n 1n 25n 50n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 12.5n 25n),VD4 D4 0 PULSE(3.3 0 0 1n 1n 150n 200n),VD5 D5 0 PULSE(3.3 0 0 1n 1n 75n 100n),VD6 D6 0 PULSE(3.3 0 0 1n 1n 37.5n 50n),VD7 D7 0 PULSE(3.3 0 0 1n 1n 18.75n 25n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NP-Well-Node|plnode@0||-39|-172.5|8|400||A
 NP-Well-Node|plnode@1||-27.5|-315.5|30|12||A
 NP-Well-Node|plnode@2||-27|-270|30|12||A
@@ -1246,7 +1246,7 @@ EY||D5G2;|pin@434||O
 X
 
 # Cell 8to1-mux-tg-schematic;1{sch}
-C8to1-mux-tg-schematic;1{sch}||schematic|1698168418863|1698437204264|
+C8to1-mux-tg-schematic;1{sch}||schematic|1698168418863|1698438202432|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-35|-34||||
 NOff-Page|conn@1||-35|-20||||
@@ -1677,8 +1677,8 @@ NWire_Pin|pin@432||-10|189||||
 NWire_Pin|pin@434||-20|-42||||
 NWire_Pin|pin@435||1|-42||||
 NWire_Pin|pin@437||-10|-42||||
-Ngeneric:Invisible-Pin|pin@438||-76.5|142|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 DC 0,VS1 S1 0 DC 0,VS0 S0 0 DC 0,*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD3 D3 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,.meas risetime TRIG v(Y)=0.33 TD=0 rise=1 TARG v(Y)=2.97 TD=0 rise=1,.meas falltime TRIG v(Y)=2.97 TD=0 fall=1 TARG v(Y)=0.33 TD=0 fall=1,.meas tpHL TRIG v(D0)=1.65 TD=0 fall=1 TARG v(Y)=1.65 TD=0 fall=1,.meas tpLH TRIG v(D0)=1.65 TD=0 rise=1 TARG v(Y)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,.meas chip_current I_vdd AVG I(VDD),".include Z:\\MOS_model.txt"]
-Ngeneric:Invisible-Pin|pin@439||-77.5|103|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 100n 200n),VD1 D1 0 PULSE(3.3 0 0 1n 1n 50n 100n),VD2 D2 0 PULSE(3.3 0 0 1n 1n 25n 50n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 12.5n 25n),VD4 D4 0 PULSE(3.3 0 0 1n 1n 150n 200n),VD5 D5 0 PULSE(3.3 0 0 1n 1n 75n 100n),VD6 D6 0 PULSE(3.3 0 0 1n 1n 37.5n 50n),VD7 D7 0 PULSE(3.3 0 0 1n 1n 18.75n 25n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@438||-163|168.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For measurements:,*Select lines:,VS2 S2 0 DC 0,VS1 S1 0 DC 0,VS0 S0 0 DC 0,*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VD1 D1 0 DC 0,VD2 D2 0 DC 0,VD3 D3 0 DC 0,VD4 D4 0 DC 0,VD5 D5 0 DC 0,VD6 D6 0 DC 0,VD7 D7 0 DC 0,*,.TRAN 0 2000n,.meas risetime TRIG v(Y)=0.33 TD=0 rise=1 TARG v(Y)=2.97 TD=0 rise=1,.meas falltime TRIG v(Y)=2.97 TD=0 fall=1 TARG v(Y)=0.33 TD=0 fall=1,.meas tpHL TRIG v(D0)=1.65 TD=0 fall=1 TARG v(Y)=1.65 TD=0 fall=1,.meas tpLH TRIG v(D0)=1.65 TD=0 rise=1 TARG v(Y)=1.65 TD=0 rise=1,.meas propagationdelay param=(tpHL+tpLH)/2,.meas chip_current I_vdd AVG I(VDD),".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@439||-145|107|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,*Select lines:,VS2 S2 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VS1 S1 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VS0 S0 0 PULSE(3.3 0 0 1n 1n 250n 500n),*,*Inputs:,VD0 D0 0 PULSE(3.3 0 0 1n 1n 100n 200n),VD1 D1 0 PULSE(3.3 0 0 1n 1n 50n 100n),VD2 D2 0 PULSE(3.3 0 0 1n 1n 25n 50n),VD3 D3 0 PULSE(3.3 0 0 1n 1n 12.5n 25n),VD4 D4 0 PULSE(3.3 0 0 1n 1n 150n 200n),VD5 D5 0 PULSE(3.3 0 0 1n 1n 75n 100n),VD6 D6 0 PULSE(3.3 0 0 1n 1n 37.5n 50n),VD7 D7 0 PULSE(3.3 0 0 1n 1n 18.75n 25n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NTransistor|pmos@1||20|12.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@2||30|12.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NTransistor|pmos@3||40|12.5|||YRR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0

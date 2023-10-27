@@ -10,7 +10,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 8to1-mux-cmos-layout;1{lay}
-C8to1-mux-cmos-layout;1{lay}||mocmos|1698370656912|1698436878742||DRC_last_good_drc_area_date()G1698389221116|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698389221116
+C8to1-mux-cmos-layout;1{lay}||mocmos|1698370656912|1698438681126||DRC_last_good_drc_area_date()G1698438686972|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1698438686972
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-8|-1||3||
 NMetal-1-P-Active-Con|contact@1||2|-1||3||
@@ -582,10 +582,11 @@ NP-Well-Node|plnode@0||297.5|-52|12|70||A
 NP-Well-Node|plnode@1||250|-23|90|12||A
 NP-Well-Node|plnode@2||130.5|-25.5|90|12||A
 NP-Well-Node|plnode@3||36|-24.5|90|12||A
-NN-Well-Node|plnode@4||-46|-23.5|12|70||A
-NN-Well-Node|plnode@5||-26|-53|50|12||A
+NN-Well-Node|plnode@4||-46.5|-23.5|12|70||A
+NN-Well-Node|plnode@5||-26|-49|50|20||A
 NN-Well-Node|plnode@6||40|-48.5|50|12||A
 NN-Well-Node|plnode@7||126.5|-48.5|50|12||A
+NN-Well-Node|plnode@8||-34.5|4|30|30||A
 NP-Transistor|pmos@0||-3|-1|5||R|
 NP-Transistor|pmos@1||7|-1|5||R|
 NP-Transistor|pmos@2||17|-1|5||R|
