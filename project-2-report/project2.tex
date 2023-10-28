@@ -140,7 +140,7 @@
     \label{fig:mux}
   \end{figure}
 
-  In order to implement this, we first need to create the 2-to-1 multiplexer. I started with the function $Y=\overline{S}\cdot D_0+S\cdot D_1$ and implemented it with CMOS logic. Since CMOS logic outputs an inverted signal, we can do one of two things: either invert the function and then implement that, or add an inverter at the end. I chose to add an inverter at the end, since inverting the whole function would involve inverting both D0 and D1 in addition to S. Adding an inverter at the end means we only need two inverters instead of three. The sketch I drew of the schematic is shown in Figure \ref{21schem}.
+  In order to implement this, we first need to create the 2-to-1 multiplexer. I started with the function $Y=\overline{S}\cdot D_0+S\cdot D_1$ and implemented it with CMOS logic. Since CMOS logic outputs an inverted signal, we can do one of two things: either invert the function and then implement that, or add an inverter at the end. I chose to add an inverter at the end, since inverting the whole function would involve inverting both D0 and D1 in addition to S. Adding an inverter at the end means we only need two inverters instead of three. The sketch I drew of the schematic is shown in Figure \ref{fig:21schem}.
 
 
   \begin{figure}[H]
@@ -170,6 +170,7 @@
     \caption{The stick diagram for the 2-to-1 multiplexer.}
     \label{fig:stick}
   \end{figure}
+
 
   \paragraph{}
   We now have all of the information we need to begin the design of both the transmission gate and CMOS multiplexers.
@@ -207,9 +208,21 @@
       \label{fig:tgschem3}
     \end{figure}
 
+
+    Figure \ref{fig:tgschemdrc} shows that the schematic passes the DRC check.
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\linewidth, frame]{screenshots/tg/schem/drc.png}
+      \caption{The DRC check for the transmission gate schematic.}
+      \label{fig:tgschemdrc}
+    \end{figure}
+
+
   \subsection{CMOS Schematic}
     \paragraph{}
-    The schematic for the CMOS design of the 8-to-1 multiplexer is simply the 2-to-1 multiplexer schematic sketched in Figure \ref{fig:21schem} repeated seven times in the configuration shown in Figure \ref{fig:mux}. However, there is one change. I realized that having an inverter on the output of each of the 2-to-1 multiplexer was redundant. Only the last stage needs an inverter. This is because while the first stage inverts the output (due to CMOS logic outputting an inverted signal), the second stage will invert it again, cancelling out the first inversion. This saves 12 transistors in the final design. The full schematic is shown in Figure \ref{fig:cmosschem1}.
+    The schematic for the CMOS design of the 8-to-1 multiplexer is simply the 2-to-1 multiplexer schematic sketched in Figure \ref{fig:21schem} repeated seven times in the configuration shown in Figure \ref{fig:mux}. However, there is one change. I realized that having an inverter on the output of each of the 2-to-1 multiplexer was redundant. Only the last stage needs an inverter. This is because while the first stage inverts the output (due to CMOS logic outputting an inverted signal), the second stage will invert it again, cancelling out the first inversion. This saves 12 transistors in the final design. The full schematic is shown in Figure \ref{fig:cmosschem1}. A close up of the first two stages of the multiplexer is shown in Figure \ref{fig:cmosschem2}. A close up of the last stage is shown in Figure \ref{fig:cmosschem3}.
 
 
     \begin{figure}[H]
@@ -218,6 +231,288 @@
       \caption{The schematic in Electric for the CMOS design.}
       \label{fig:cmosschem1}
     \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.9\linewidth, frame]{screenshots/cmos/schem/schem2.png}
+      \caption{A close up of the schematic showing the first two stages.}
+      \label{fig:cmosschem2}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.9\linewidth, frame]{screenshots/cmos/schem/schem3.png}
+      \caption{A close up of the schematic showing the last stage.}
+      \label{fig:cmosschem3}
+    \end{figure}
+
+    Figure \ref{fig:cmosschemdrc} shows that the schematic passes the DRC check.
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\linewidth, frame]{screenshots/cmos/schem/drc.png}
+      \caption{The DRC check for the CMOS schematic.}
+      \label{fig:cmosschemdrc}
+    \end{figure}
+
+
+\section{LTSpice Simulation for Schematic}
+  \paragraph{}
+  This section will detail the LTSpice simulations for both the transmission gate schematic and the CMOS schematic. The spice code used to generate the graphs for this simulation are shown in Figure \ref{fig:simcode}. LTSpice was also used to take measurements that will be detailed later in the report. The code used to generate those measurements is shown in Figure \ref{fig:meascode}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth, frame]{screenshots/spice-sim-code.png}
+    \caption{The LTSpice code used to generate the graphs in the following section.}
+    \label{fig:simcode}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth, frame]{screenshots/spice-meas-code.png}
+    \caption{The LTSpice code used to generate the measurements which will be detailed in a later section.}
+    \label{fig:meascode}
+  \end{figure}
+
+
+  \subsection{Transmission Gate Schematic}
+    \paragraph{}
+    The spice simulation for the transmission gate schematic is shown in Figure \ref{fig:tgspice}. The inputs D0 through D7 are shown first, each with their own uniquely identifying waveform. The select line is stepped through all eight values from 000 to 111, each corresponding to the inputs D0 through D7 as shown in the figure. At the output Y, the correct waveform can be seen corresponding to the selected input. The waveforms have been highlighted with a colored dotted rectangle to show the location of the input and the output at Y. This figure illustrates the expected behavior.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/tg/schem/spice.png}
+      \caption{The LTSpice simulation of the transmission gate schematic showing that each combination of inputs to the select line passes through the corresponding inputs D0 through D7.}
+      \label{fig:tgspice}
+    \end{figure}
+
+    \paragraph{}
+    The measurements obtained with the spice code shown in Figure \ref{fig:meascode} for the transmission gate schematic are shown in Figure \ref{fig:tgschemmeas}.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\linewidth, frame]{screenshots/tg/schem/meas.png}
+      \caption{The measurements obtained through LTSpice simulation of the transmission gate schematic.}
+      \label{fig:tgschemmeas}
+    \end{figure}
+
+
+
+  \subsection{CMOS Schematic Spice}
+    \paragraph{}
+    The spice simulation for the CMOS schematic is shown in Figure \ref{fig:cmosspice}. As described in the last subsection, the behavior in the graph is as expected. Each input is passed through to the output when selected by the select line.
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/schem/spice.png}
+      \caption{The LTSpice simulation of the CMOS schematic showing that each combination of inputs to the select line passes through the corresponding inputs D0 through D7.}
+      \label{fig:cmosspice}
+    \end{figure}
+
+
+    \paragraph{}
+    The measurements obtained with the spice code shown in Figure \ref{fig:meascode} for the CMOS schematic are shown in Figure \ref{fig:cmosschemmeas}.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\linewidth, frame]{screenshots/cmos/schem/meas.png}
+      \caption{The measurements obtained through LTSpice simulation of the CMOS schematic.}
+      \label{fig:cmosschemmeas}
+    \end{figure}
+
+
+
+\section{IRSIM for Schematic}
+  \paragraph{}
+  This section details the IRSIM simulations done on both the transmission gate schematic and the CMOS schematic. I chose to simulate only one D input per screenshot and two per design. This is because IRSIM can be buggy and has a hard time with too many inputs changing at once.  
+
+  \subsection{Transmission Gate Schematic IRSIM}
+    \paragraph{}
+    The IRSIM simulation for the transmission gate schematic is shown in Figure \ref{fig:tgschemirsim1} and \ref{fig:tgschemirsim2}. As shown in the screenshots, the schematic behaves as expected.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/tg/schem/irsim.png}
+      \caption{One IRSIM simulation for the transmission gate schematic showing that the design works as expected.}
+      \label{fig:tgschemirsim1}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/tg/schem/irsim2.png}
+      \caption{Another IRSIM simulation for the transmission gate schematic showing that the design works as expected.}
+      \label{fig:tgschemirsim2}
+    \end{figure}
+
+
+  \subsection{CMOS Schematic IRSIM}
+    \paragraph{}
+    The IRSIM simulation for the CMOS schematic is shown in Figure \ref{fig:cmosschemirsim1} and \ref{fig:cmosschemirsim2}. As shown in the screenshots, the schematic behaves as expected.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/schem/irsim.png}
+      \caption{One IRSIM simulation for the CMOS schematic showing that the design works as expected.}
+      \label{fig:cmosschemirsim1}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/schem/irsim2.png}
+      \caption{Another IRSIM simulation for the CMOS schematic showing that the design works as expected.}
+      \label{fig:cmosschemirsim2}
+    \end{figure}
+
+\section{Electric Layouts}
+  \paragraph{}
+  This section details the design of the layouts in Electric for both the transmission gate multiplexer and the CMOS multiplexer.
+
+  \subsection{Transmission Gate Layout}
+    \paragraph{}
+    The transmission gate layout of the 8-to-1 multiplexer is shown in Figure \ref{fig:tglay1}. I first designed one set of three transmission gates and then stacked them, running the inputs to the sets along the left and right. I had to pay careful attention to the layout of each set of gates to make sure that I could run the proper signals to each. A close up of the individual sets of transmission gates is shown in Figure \ref{fig:tglay2}. I placed the inverters for the select line at the bottom as shown in Figure \ref{fig:tglay3}. On the left of the transmission gates are metal and polysilicon lines for $S_2$, $\overline{S_2}$, and $S_1$, and to the right are lines for $\overline{S_1}$, $\overline{S_0}$, and $S_0$. I also had to route VDD to the right as well.
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.4\linewidth, frame]{screenshots/tg/lay/lay1.png}
+      \caption{The layout for the transmission gate design of the 8-to-1 multiplexer.}
+      \label{fig:tglay1}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.45\linewidth, frame]{screenshots/tg/lay/lay2.png}
+      \caption{A close up of the sets of transmission gates for the layout.}
+      \label{fig:tglay2}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.45\linewidth, frame]{screenshots/tg/lay/lay3.png}
+      \caption{A close up of the inverters at the bottom of the transmission gate layout.}
+      \label{fig:tglay3}
+    \end{figure}
+
+    \paragraph{}
+    The DRC results are shown in Figure \ref{fig:tglaydrc} and the well check results are shown in Figure \ref{fig:tglaywell}, both showing no errors.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\linewidth, frame]{screenshots/tg/lay/drc.png}
+      \caption{The DRC results for the transmission gate layout showing no errors.}
+      \label{fig:tglaydrc}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\linewidth, frame]{screenshots/tg/lay/well.png}
+      \caption{The well check results for the transmission gate layout showing no errors.}
+      \label{fig:tglaywell}
+    \end{figure}
+
+
+
+  \subsection{CMOS Layout}
+    \paragraph{}
+    The CMOS layout of the 8-to-1 multiplexer is shown in Figure \ref{fig:cmoslay1}. I first designed one 2-to-1 inverter based off of the stick diagram shown in Figure \ref{fig:stick}. I then planned out how I would arrange the seven 2-to-1 multiplexers. I decided the most space-efficient approach would be to make the cell two multiplexers high. The first four multiplexers take all 8 of the inputs. I used metal 2 and metal 3 to bring the inputs over the multiplexers to their inputs. I then connected the output of those four multiplexers to another two multiplexers, and then the output of those two to another singular multiplexer. I then managed to fit the inverter above the final multiplexer. I ran the select lines at the bottom of the design. Figure \ref{fig:cmoslay2} shows a close up of the first stage, consisting of four 2-to-1 multiplexers. Figure \ref{fig:cmoslay3} shows a close up of the last two stages and the inverter.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/lay/lay1.png}
+      \caption{The layout for the CMOS design of the 8-to-1 multiplexer.}
+      \label{fig:cmoslay1}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/lay/lay2.png}
+      \caption{A close up of the first stage of the multiplexer.}
+      \label{fig:cmoslay2}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/lay/lay3.png}
+      \caption{A close up of the last two stages and final inverter of the multiplexer.}
+      \label{fig:cmoslay3}
+    \end{figure}
+
+    \paragraph{}
+    The DRC results are shown in Figure \ref{fig:cmoslaydrc} and the well check results are shown in Figure \ref{fig:cmoslaywell}, both showing no errors.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\linewidth, frame]{screenshots/cmos/lay/drc.png}
+      \caption{The DRC results for the CMOS layout showing no errors.}
+      \label{fig:cmoslaydrc}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.6\linewidth, frame]{screenshots/cmos/lay/well.png}
+      \caption{The well check results for the CMOS layout showing no errors.}
+      \label{fig:cmoslaywell}
+    \end{figure}
+
+
+\section{LTSpice Simulation for Layout}
+  \paragraph{}
+  This section will detail the LTSpice simulations for both the transmission gate schematic and the CMOS layouts. As previously mentioned, the spice code used to generate the graphs for this simulation are shown in Figure \ref{fig:simcode} and the code used to generate the measurements is shown in Figure \ref{fig:meascode}.
+
+
+  \subsection{Transmission Gate Layout LTSpice}
+    \paragraph{}
+    The spice simulation for the transmission gate layout is shown in Figure \ref{fig:tglayspice}. As described in previous sections, the behavior in the graph is as expected. Each input is passed through to the output when selected by the select line.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/tg/lay/spice.png}
+      \caption{The LTSpice simulation of the transmission gate layout showing that each combination of inputs to the select line passes through the corresponding inputs D0 through D7.}
+      \label{fig:tglayspice}
+    \end{figure}
+
+    \paragraph{}
+    The measurements obtained with the spice code shown in Figure \ref{fig:meascode} for the transmission gate layout are shown in Figure \ref{fig:tglaymeas}.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\linewidth, frame]{screenshots/tg/lay/meas.png}
+      \caption{The measurements obtained through LTSpice simulation of the transmission gate layout.}
+      \label{fig:tglaymeas}
+    \end{figure}
+
+
+  \subsection{CMOS Layout LTSpice}
+    \paragraph{}
+    The spice simulation for the CMOS layout is shown in Figure \ref{fig:cmoslayspice}. As described in previous sections, the behavior in the graph is as expected. Each input is passed through to the output when selected by the select line.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/lay/spice.png}
+      \caption{The LTSpice simulation of the CMOS layout showing that each combination of inputs to the select line passes through the corresponding inputs D0 through D7.}
+      \label{fig:cmoslayspice}
+    \end{figure}
+
+    \paragraph{}
+    The measurements obtained with the spice code shown in Figure \ref{fig:meascode} for the CMOS layout are shown in Figure \ref{fig:cmoslaymeas}.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.5\linewidth, frame]{screenshots/cmos/lay/meas.png}
+      \caption{The measurements obtained through LTSpice simulation of the CMOS layout.}
+      \label{fig:cmoslaymeas}
+    \end{figure}
+
+
 
 
 
