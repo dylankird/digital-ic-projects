@@ -42,7 +42,7 @@
   In this project, the multiplexer is realized using the software Electric, which allows us to design a schematic, layout, and icon for the multiplexer. We are also able to export the design to LTSpice in order to run in-depth simulations as well as simulate the designs with the built-in IRSIM. 
 
   \paragraph{}
-  I designed the transmission gate multiplexer and the CMOS multiplexer with two different philosophies. For the transmission gate design, I used the method that we learned about in class, where each input has its own set of tranmission gates that connect to a single node for the output. For the CMOS design, I chose to create a 2-to-1 multiplexer and then chain them together to build the 8-to-1 multiplexer. Both designs were an interesting challenge.
+  I designed the transmission gate multiplexer and the CMOS multiplexer with two different philosophies. For the transmission gate design, I used the method that we learned about in class, where each input has its own set of transmission gates that connect to a single node for the output. For the CMOS design, I chose to create a 2-to-1 multiplexer and then chain them together to build the 8-to-1 multiplexer. Both designs were an interesting challenge.
 
   \paragraph{}
   The simulation component of the project involved generating input signals and then confirming that the designs generates the expected output. In addition, various measurements can be taken within LTSpice with the \inlinecode{.meas} command. These measurements include propagation delay, rise and fall times, and average current draw.
@@ -258,7 +258,7 @@
     \end{figure}
 
 
-\section{LTSpice Simulation for Schematic}
+\section{LTSpice Simulation for Schematics}
   \paragraph{}
   This section will detail the LTSpice simulations for both the transmission gate schematic and the CMOS schematic. The spice code used to generate the graphs for this simulation are shown in Figure \ref{fig:simcode}. LTSpice was also used to take measurements that will be detailed later in the report. The code used to generate those measurements is shown in Figure \ref{fig:meascode}.
 
@@ -277,7 +277,7 @@
   \end{figure}
 
 
-  \subsection{Transmission Gate Schematic}
+  \subsection{Transmission Gate Schematic LTSpice}
     \paragraph{}
     The spice simulation for the transmission gate schematic is shown in Figure \ref{fig:tgspice}. The inputs D0 through D7 are shown first, each with their own uniquely identifying waveform. The select line is stepped through all eight values from 000 to 111, each corresponding to the inputs D0 through D7 as shown in the figure. At the output Y, the correct waveform can be seen corresponding to the selected input. The waveforms have been highlighted with a colored dotted rectangle to show the location of the input and the output at Y. This figure illustrates the expected behavior.
 
@@ -300,7 +300,7 @@
 
 
 
-  \subsection{CMOS Schematic Spice}
+  \subsection{CMOS Schematic LTSpice}
     \paragraph{}
     The spice simulation for the CMOS schematic is shown in Figure \ref{fig:cmosspice}. As described in the last subsection, the behavior in the graph is as expected. Each input is passed through to the output when selected by the select line.
 
@@ -514,8 +514,117 @@
 
 
 
+\section{IRSIM for Layout}
+  \paragraph{}
+  This section details the IRSIM simulations done on both the transmission gate layout and the CMOS layout. As mentioned previously, I chose to simulate only one D input per screenshot and two per design. This is because IRSIM can be buggy and has a hard time with too many inputs changing at once.  
+
+  \subsection{Transmission Gate Layout IRSIM}
+    \paragraph{}
+    The IRSIM simulation for the transmission gate layout is shown in Figure \ref{fig:tglayirsim1} and \ref{fig:tglayirsim2}. As shown in the screenshots, the layout behaves as expected.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/tg/lay/irsim.png}
+      \caption{One IRSIM simulation for the transmission gate layout showing that the design works as expected.}
+      \label{fig:tglayirsim1}
+    \end{figure}
 
 
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/tg/lay/irsim2.png}
+      \caption{Another IRSIM simulation for the transmission gate layout showing that the design works as expected.}
+      \label{fig:tglayirsim2}
+    \end{figure}
+
+
+  \subsection{CMOS Layout IRSIM}
+    \paragraph{}
+    The IRSIM simulation for the CMOS layout is shown in Figure \ref{fig:cmoslayirsim1} and \ref{fig:cmoslayirsim2}. As shown in the screenshots, the layout behaves as expected.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/lay/irsim.png}
+      \caption{One IRSIM simulation for the CMOS layout showing that the design works as expected.}
+      \label{fig:cmoslayirsim1}
+    \end{figure}
+
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=\linewidth, frame]{screenshots/cmos/lay/irsim2.png}
+      \caption{Another IRSIM simulation for the CMOS layout showing that the design works as expected.}
+      \label{fig:cmoslayirsim2}
+    \end{figure}
+
+
+
+
+\section{Schematic vs Layout Measurements}
+  \paragraph{}
+  This section details the measurements taken for the schematics and layouts of both the transmission gate multiplexer and CMOS multiplexer. The measurements will be compared between the schematic and layout for each. These measurements were taken using the spice code in Figure \ref{fig:meascode} and the measurements were shown for each simulation in the LTSpice sections.
+
+  \subsection{Transmission Gate Schematic vs Layout}
+    \paragraph{}
+    The measurements for the transmission gate schematic and layout are shown in Table \ref{table:tgmeas}. The table shows that the schematic has shorter rise times than the layout, but the layout has shorter fall times than the schematic. The propagation delay is about double for the layout versus the schematic, and the power draw for the schematic is about four times that of the layout.
+
+    \begin{table}[H]
+      \centering
+      \footnotesize
+      \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Parameter} & \textbf{TG Schematic} & \textbf{TG Layout}\\
+        \hline
+        Rise Time & 1.47ns & 4.02ns\\
+        \hline
+        Fall Time & 7.27ns & 1.29ns\\
+        \hline
+        $t_{pHL}$ & 273ps & 667ps\\
+        \hline
+        $t_{pLH}$ & 239ps & 714ps\\
+        \hline
+        $t_{p}$ & 256ps & 690ps\\
+        \hline
+        Power Draw & 8.17nW & 2.19nW \\
+       \hline
+      \end{tabular}
+      \caption{The measurement results for the schematic and layout for the transmission gate multiplexer design.}
+      \label{table:tgmeas}
+    \end{table}
+
+  \subsection{CMOS Schematic vs Layout}
+    \paragraph{}
+    The measurements for the CMOS schematic and layout are shown in Table \ref{table:cmosmeas}. The rise times, fall times, and propagation delay are shorter for the schematic versus the layout. The power draw for the layout is about double that of the schematic. 
+
+
+
+  \begin{table}[H]
+    \centering
+    \footnotesize
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      \textbf{Parameter} & \textbf{CMOS Schematic} & \textbf{CMOS Layout} \\
+      \hline
+      Rise Time & 80.8ps & 159ps \\
+      \hline
+      Fall Time & 39.2ps & 119ps\\
+      \hline
+      $t_{pHL}$ & 477ps & 793ps\\
+      \hline
+      $t_{pLH}$ & 357ps & 763ps\\
+      \hline
+      $t_{p}$ & 417ps & 778ps\\
+      \hline
+      Power Draw & 473nW & 851nW \\
+     \hline
+    \end{tabular}
+    \caption{The measurements results for the schematic and layout for the CMOS multiplexer design.}
+    \label{table:cmosmeas}
+  \end{table}
+
+\section{Transmission Gate vs CMOS Measurements}
+  \paragraph{}
+  All of the measurements taken for the schematics and layouts of both the transmission gate multiplexer and the CMOS multiplexer are shown in Table \ref{table:measurements}. The rise times and fall times for the CMOS design are better by an order of magnitude than the transmission gate design. The propagation delay is only slightly better for the transmission gate design. Where the transmission gate design very clearly outperforms the CMOS design is in power draw. The CMOS design uses two orders of magnitude more power! In terms of area, the transmission gate design is only slightly smaller than the CMOS design, but it still has an advantage. The transmission gate design also has a clear advantage over the CMOS design with 54 transistors versus 72 transistors. 
 
   \begin{table}[H]
     \centering
@@ -547,27 +656,32 @@
       Transistor Count & 54 & 54 & 72 & 72 \\
       \hline
     \end{tabular}
-    \caption{The measurements results for the XOR gate schematic and layout in LTSpice.}
-    \label{table:meas-lay}
+    \caption{The measurement results for the transmission gate schematic and layout as well as the CMOS schematic and layout.}
+    \label{table:measurements}
   \end{table}
 
 
 \section{Conclusion}
   \paragraph{}
-  In this project, I designed the schematic for an XOR gate using CMOS logic, turned that schematic into a layout, simulated both in LTSpice and IRSIM, and then took measurements on both in LTSpice. I learned a lot in the process about digital IC design, Electric, LTSpice, and the various parameters that make a design good or bad. I enjoyed the process of turning a simple logic gate into a schematic and then into a completed layout far more than I expected, and it was interesting to be able to analyze the final designs with LTSpice and IRSIM. 
+  In this project I designed a schematic and layout for an 8-to-1 multiplexer using both transmission gates and CMOS logic. I wrote spice code to simulate the schematics and layouts in order to confirm that they worked properly, and I also wrote spice code to take measurements. I used IRSIM as well to confirm the operation of the designs. After obtaining measurements, I was able to compare the performance between the schematics and layouts and also between the transmission gate and CMOS designs in terms of rise and fall times, propagation delay, power draw, physical size, and transistor count. 
+
+  \paragraph{}
+  I learned a lot along the way about turning more complex functions into real functional designs. I also became a lot better at creating layouts, as these designs were much more complex than the XOR gate I designed for the last project. Routing all of the different lines between functional blocks and from inputs proved very challenging, but it felt very rewarding to end up with relatively compact layouts that functioned properly. I also found it interesting to compare the performance between the two designs. Overall, this project was an excellent learning experience, and while it took a very long time, I am pleased with the outcome.
 
 \newpage
 \section{References}
 
-\noindent [\text{1}] EE 457 Lecture 1, 2, and 3
+\noindent [\text{1}] EE 457 Lectures 1, 2, 3, and 4
 
 \noindent [\text{2}] https://cmosedu.com/videos/electric/tutorial3/electric\_tutorial\_3.htm 
 
 \noindent [\text{3}] https://cmosedu.com/videos/electric/tutorial4/electric\_tutorial\_4.htm 
 
-\noindent [\text{4}] https://en.wikipedia.org/wiki/XOR\_gate 
+\noindent [\text{4}] https://en.wikipedia.org/wiki/Multiplexer
 
+\noindent [\text{5}] https://vlsiuniverse.blogspot.com/search/label/8\%3A1\%20mux
 
+\noindent [\text{6}] https://cmosedu.com/videos/electric/tutorial5/electric\_tutorial\_5.htm 
 
 
 

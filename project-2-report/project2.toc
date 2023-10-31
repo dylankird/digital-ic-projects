@@ -21,12 +21,12 @@
 \contentsline {paragraph}{}{6}{section*.25}%
 \contentsline {subsection}{\numberline {3.2}CMOS Schematic}{9}{subsection.3.2}%
 \contentsline {paragraph}{}{9}{section*.30}%
-\contentsline {section}{\numberline {4}LTSpice Simulation for Schematic}{12}{section.4}%
+\contentsline {section}{\numberline {4}LTSpice Simulation for Schematics}{12}{section.4}%
 \contentsline {paragraph}{}{12}{section*.35}%
-\contentsline {subsection}{\numberline {4.1}Transmission Gate Schematic}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Transmission Gate Schematic LTSpice}{13}{subsection.4.1}%
 \contentsline {paragraph}{}{13}{section*.38}%
 \contentsline {paragraph}{}{13}{section*.40}%
-\contentsline {subsection}{\numberline {4.2}CMOS Schematic Spice}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}CMOS Schematic LTSpice}{14}{subsection.4.2}%
 \contentsline {paragraph}{}{14}{section*.42}%
 \contentsline {paragraph}{}{14}{section*.44}%
 \contentsline {section}{\numberline {5}IRSIM for Schematic}{15}{section.5}%
@@ -51,6 +51,21 @@
 \contentsline {subsection}{\numberline {7.2}CMOS Layout LTSpice}{23}{subsection.7.2}%
 \contentsline {paragraph}{}{23}{section*.73}%
 \contentsline {paragraph}{}{24}{section*.75}%
-\contentsline {section}{\numberline {8}Conclusion}{25}{section.8}%
+\contentsline {section}{\numberline {8}IRSIM for Layout}{24}{section.8}%
+\contentsline {paragraph}{}{24}{section*.77}%
+\contentsline {subsection}{\numberline {8.1}Transmission Gate Layout IRSIM}{25}{subsection.8.1}%
 \contentsline {paragraph}{}{25}{section*.78}%
-\contentsline {section}{\numberline {9}References}{26}{section.9}%
+\contentsline {subsection}{\numberline {8.2}CMOS Layout IRSIM}{25}{subsection.8.2}%
+\contentsline {paragraph}{}{25}{section*.81}%
+\contentsline {section}{\numberline {9}Schematic vs Layout Measurements}{26}{section.9}%
+\contentsline {paragraph}{}{26}{section*.84}%
+\contentsline {subsection}{\numberline {9.1}Transmission Gate Schematic vs Layout}{27}{subsection.9.1}%
+\contentsline {paragraph}{}{27}{section*.85}%
+\contentsline {subsection}{\numberline {9.2}CMOS Schematic vs Layout}{27}{subsection.9.2}%
+\contentsline {paragraph}{}{27}{section*.87}%
+\contentsline {section}{\numberline {10}Transmission Gate vs CMOS Measurements}{27}{section.10}%
+\contentsline {paragraph}{}{27}{section*.89}%
+\contentsline {section}{\numberline {11}Conclusion}{28}{section.11}%
+\contentsline {paragraph}{}{28}{section*.91}%
+\contentsline {paragraph}{}{28}{section*.92}%
+\contentsline {section}{\numberline {12}References}{29}{section.12}%
