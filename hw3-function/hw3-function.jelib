@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell hw3-function-layout;1{lay}
-Chw3-function-layout;1{lay}||mocmos|1699296900746|1699337519235||DRC_last_good_drc_area_date()G1699337342867|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1699337342867
+Chw3-function-layout;1{lay}||mocmos|1699296900746|1699338006502||DRC_last_good_drc_area_date()G1699337342867|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1699337342867
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||0|11||3||
 NMetal-1-P-Active-Con|contact@1||10|11||3||
@@ -66,6 +66,7 @@ NMetal-2-Pin|pin@63||35|-11.5||||
 NMetal-1-Pin|pin@64||-32.5|-11.5||||
 NMetal-1-Pin|pin@65||50|1||||
 NMetal-1-Pin|pin@66||68.5|1||||
+Ngeneric:Invisible-Pin|pin@67||-61.5|-2.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VW W 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VX X 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VY Y 0 PULSE(3.3 0 0 1n 1n 250n 500n),VZ Z 0 PULSE(3.3 0 0 1n 1n 125n 250n),VCLK CLK 0 PULSE(3.3 0 0 1n 1n 62.5n 125n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||5|11|5||R|
 NMetal-1-P-Well-Con|substr@0||18|-23.5|70|||
 NMetal-1-N-Well-Con|well@0||18|22|70|1||
@@ -126,6 +127,8 @@ AMetal-1|net@125|||S900|pin@65||50|1|contact@3||50|-9
 AMetal-1|net@126|||S1800|pin@65||50|1|pin@66||68.5|1
 ECLK||D5G2;X0.5;|pin@47||C
 EF||D5G2;|pin@66||O
+EGND||D5G2;Y-4;|substr@0||G
+EVDD||D5G2;Y4;|well@0||P
 EW||D5G2;|pin@58||I
 EX||D5G2;|pin@60||I
 EY||D5G2;|pin@61||I
