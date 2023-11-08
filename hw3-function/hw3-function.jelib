@@ -136,8 +136,9 @@ EZ||D5G2;|pin@64||I
 X
 
 # Cell hw3-function-schematic;1{sch}
-Chw3-function-schematic;1{sch}||schematic|1699294202872|1699329331501|
+Chw3-function-schematic;1{sch}||schematic|1699294202872|1699339234496|
 Ngeneric:Facet-Center|art@0||0|0||||AV
+NCapacitor|cap@0||36|2.5|||||SCHEM_capacitance(D5G1;)S5f
 NOff-Page|conn@0||42|22||||
 NOff-Page|conn@1||-21|10||||
 NOff-Page|conn@2||-21|17||||
@@ -170,16 +171,17 @@ NWire_Pin|pin@34||16|8||||
 NWire_Pin|pin@35||11|13||||
 NWire_Pin|pin@36||11|10||||
 Ngeneric:Invisible-Pin|pin@37||12|14|||||ART_message(D5G2;)SX
+NWire_Pin|pin@38||36|22||||
+NWire_Pin|pin@39||36|-21||||
+NWire_Pin|pin@40||16|-21||||
 NTransistor|pmos@0||14|27|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NPower|pwr@0||16|33||||
 Awire|net@1|||900|nmos@1|s|3|-1|pin@0||3|-10
 Awire|net@20|||1800|pin@0||3|-10|pin@11||16|-10
 Awire|net@21|||1800|pin@11||16|-10|pin@6||28|-10
 Awire|net@22|||2700|nmos@5|d|16|-15|pin@11||16|-10
-Awire|net@23|||900|nmos@5|s|16|-19|gnd@0||16|-22
 Awire|net@24|||2700|pmos@0|s|16|29|pwr@0||16|33
 Awire|net@25|||900|pmos@0|d|16|25|pin@12||16|22
-Awire|net@27|||0|conn@0|a|40|22|pin@12||16|22
 Awire|net@35|||0|nmos@2|g|13|1|pin@17||7|1
 Awire|net@36|||2700|pin@17||7|1|pin@18||7|17
 Awire|net@37|||0|pin@18||7|17|conn@2|y|-19|17
@@ -203,6 +205,13 @@ Awire|net@63|||2700|nmos@2|d|16|3|pin@34||16|8
 Awire|net@64|||900|nmos@2|s|16|-1|pin@11||16|-10
 Awire|net@65|||2700|nmos@3|d|28|3|pin@32||28|8
 Awire|net@66|||900|nmos@3|s|28|-1|pin@6||28|-10
+Awire|net@67|||0|conn@0|a|40|22|pin@38||36|22
+Awire|net@68|||0|pin@38||36|22|pin@12||16|22
+Awire|net@69|||2700|cap@0|a|36|4.5|pin@38||36|22
+Awire|net@70|||900|cap@0|b|36|0.5|pin@39||36|-21
+Awire|net@71|||900|nmos@5|s|16|-19|pin@40||16|-21
+Awire|net@72|||900|pin@40||16|-21|gnd@0||16|-22
+Awire|net@73|||0|pin@39||36|-21|pin@40||16|-21
 ECLK||D5G2;X2;|conn@5|a|C
 EF||D5G2;X-2;|conn@0|y|O
 EGND||D5G2;X4;Y-3;|gnd@0||G
