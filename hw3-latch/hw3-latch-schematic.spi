@@ -1,0 +1,32 @@
+*** SPICE deck for cell hw3-latch-schematic{sch} from library hw3-latch
+*** Created on Wed Nov 08, 2023 10:04:18
+*** Last revised on Wed Nov 08, 2023 10:25:54
+*** Written on Wed Nov 08, 2023 10:26:01 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: hw3-latch-schematic{sch}
+Mnmos@0 D S net@0 gnd N L=0.35U W=1.4U
+Mnmos@1 QP net@0 gnd gnd N L=0.35U W=1.4U
+Mnmos@2 net@0 net@78 Q gnd N L=0.35U W=1.4U
+Mnmos@3 Q QP gnd gnd N L=0.35U W=1.4U
+Mnmos@4 net@78 S gnd gnd N L=0.35U W=1.4U
+Mpmos@0 D net@78 net@0 vdd P L=0.35U W=1.4U
+Mpmos@1 QP net@0 vdd vdd P L=0.35U W=1.4U
+Mpmos@2 net@0 S Q vdd P L=0.35U W=1.4U
+Mpmos@3 Q QP vdd vdd P L=0.35U W=1.4U
+Mpmos@4 net@78 S vdd vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell 'hw3-latch-schematic{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VS S 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD D 0 PULSE(3.3 0 0 1n 1n 70n 140n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
