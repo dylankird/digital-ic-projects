@@ -1,0 +1,30 @@
+*** SPICE deck for cell hw3-latch-layout{lay} from library hw3-latch
+*** Created on Wed Nov 08, 2023 10:27:21
+*** Last revised on Sun Nov 12, 2023 16:45:31
+*** Written on Sun Nov 12, 2023 16:45:38 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: hw3-latch-layout{lay}
+Mnmos@0 Q net@7 net@0 gnd N L=0.35U W=1.4U AS=1.593P AD=1.593P PS=5.075U PD=5.075U
+Mnmos@1 net@7 S gnd gnd N L=0.35U W=1.4U AS=8.228P AD=1.593P PS=20.825U PD=5.075U
+Mnmos@2 net@0 S D gnd N L=0.35U W=1.4U AS=1.593P AD=1.593P PS=5.075U PD=5.075U
+Mnmos@3 QP net@0 gnd gnd N L=0.35U W=1.4U AS=8.228P AD=1.593P PS=20.825U PD=5.075U
+Mnmos@4 Q QP gnd gnd N L=0.35U W=1.4U AS=8.228P AD=1.593P PS=20.825U PD=5.075U
+Mpmos@0 Q S net@0 vdd P L=0.35U W=1.4U AS=1.593P AD=1.593P PS=5.075U PD=5.075U
+Mpmos@1 net@7 S vdd vdd P L=0.35U W=1.4U AS=9.555P AD=1.593P PS=20.942U PD=5.075U
+Mpmos@2 net@0 net@7 D vdd P L=0.35U W=1.4U AS=1.593P AD=1.593P PS=5.075U PD=5.075U
+Mpmos@3 QP net@0 vdd vdd P L=0.35U W=1.4U AS=9.555P AD=1.593P PS=20.942U PD=5.075U
+Mpmos@4 Q QP vdd vdd P L=0.35U W=1.4U AS=9.555P AD=1.593P PS=20.942U PD=5.075U
+
+* Spice Code nodes in cell cell 'hw3-latch-layout{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VS S 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD D 0 PULSE(3.3 0 0 1n 1n 70n 140n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
