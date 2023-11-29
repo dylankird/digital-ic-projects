@@ -1,7 +1,7 @@
 *** SPICE deck for cell hw3-function-layout{lay} from library hw3-function
 *** Created on Mon Nov 06, 2023 10:55:00
-*** Last revised on Mon Nov 06, 2023 22:20:06
-*** Written on Mon Nov 06, 2023 22:20:12 by Electric VLSI Design System, version 9.07
+*** Last revised on Mon Nov 20, 2023 10:04:26
+*** Written on Mon Nov 20, 2023 10:04:32 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
@@ -17,13 +17,18 @@ Mpmos@0 F CLK vdd vdd P L=0.35U W=1.4U AS=15.374P AD=1.593P PS=33.425U PD=5.075U
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 *
-*For logic simulation:
-VW W 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
-VX X 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
-VY Y 0 PULSE(3.3 0 0 1n 1n 250n 500n)
-VZ Z 0 PULSE(3.3 0 0 1n 1n 125n 250n)
-VCLK CLK 0 PULSE(3.3 0 0 1n 1n 62.5n 125n)
+*Logic:
+VW W 0 DC 3.3
+VX X 0 DC 3.3
+VY Y 0 DC 3.3
+VZ Z 0 DC 3.3
 *
-.TRAN 0 2000n
+* Clock:
+VCLK CLK 0 PULSE(3.3 0 0 0.05n 0.05n 1n 2n)
+*
+*Load capacitor:
+cload F 0 1f
+*
+.TRAN 0 6n
 .include Z:\MOS_model.txt
 .END

@@ -1,13 +1,14 @@
 *** SPICE deck for cell hw3-function-schematic{sch} from library hw3-function
 *** Created on Mon Nov 06, 2023 10:10:02
-*** Last revised on Mon Nov 06, 2023 19:55:31
-*** Written on Mon Nov 06, 2023 19:55:45 by Electric VLSI Design System, version 9.07
+*** Last revised on Mon Nov 20, 2023 09:55:48
+*** Written on Mon Nov 20, 2023 09:55:56 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 .global gnd vdd
 
 *** TOP LEVEL CELL: hw3-function-schematic{sch}
+Ccap@0 gnd F 1f
 Mnmos@1 net@51 Y net@1 gnd N L=0.35U W=1.4U
 Mnmos@2 net@51 W net@1 gnd N L=0.35U W=1.4U
 Mnmos@3 net@51 Z net@1 gnd N L=0.35U W=1.4U
@@ -19,13 +20,15 @@ Mpmos@0 F CLK vdd vdd P L=0.35U W=1.4U
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 *
-*For logic simulation:
-VW W 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
-VX X 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
-VY Y 0 PULSE(3.3 0 0 1n 1n 250n 500n)
-VZ Z 0 PULSE(3.3 0 0 1n 1n 125n 250n)
-VCLK CLK 0 PULSE(3.3 0 0 1n 1n 62.5n 125n)
+*Logic:
+VW W 0 DC 3.3
+VX X 0 DC 3.3
+VY Y 0 DC 3.3
+VZ Z 0 DC 3.3
 *
-.TRAN 0 2000n
+* Clock:
+VCLK CLK 0 PULSE(3.3 0 0 0.05n 0.05n 1n 2n)
+*
+.TRAN 0 6n
 .include Z:\MOS_model.txt
 .END

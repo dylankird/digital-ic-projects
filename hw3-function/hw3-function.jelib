@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell hw3-function-layout;1{lay}
-Chw3-function-layout;1{lay}||mocmos|1699296900746|1699338006502||DRC_last_good_drc_area_date()G1699337342867|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1699337342867
+Chw3-function-layout;1{lay}||mocmos|1699296900746|1700503466531||DRC_last_good_drc_area_date()G1699337342867|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1699337342867
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||0|11||3||
 NMetal-1-P-Active-Con|contact@1||10|11||3||
@@ -66,7 +66,7 @@ NMetal-2-Pin|pin@63||35|-11.5||||
 NMetal-1-Pin|pin@64||-32.5|-11.5||||
 NMetal-1-Pin|pin@65||50|1||||
 NMetal-1-Pin|pin@66||68.5|1||||
-Ngeneric:Invisible-Pin|pin@67||-61.5|-2.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VW W 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VX X 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VY Y 0 PULSE(3.3 0 0 1n 1n 250n 500n),VZ Z 0 PULSE(3.3 0 0 1n 1n 125n 250n),VCLK CLK 0 PULSE(3.3 0 0 1n 1n 62.5n 125n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@69||-55.5|23|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*Logic:,VW W 0 DC 3.3,VX X 0 DC 3.3,VY Y 0 DC 3.3,VZ Z 0 DC 3.3,*,* Clock:,VCLK CLK 0 PULSE(3.3 0 0 0.05n 0.05n 1n 2n),*,*Load capacitor:,cload F 0 1f,*,.TRAN 0 6n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||5|11|5||R|
 NMetal-1-P-Well-Con|substr@0||18|-23.5|70|||
 NMetal-1-N-Well-Con|well@0||18|22|70|1||
@@ -136,9 +136,9 @@ EZ||D5G2;|pin@64||I
 X
 
 # Cell hw3-function-schematic;1{sch}
-Chw3-function-schematic;1{sch}||schematic|1699294202872|1699339234496|
+Chw3-function-schematic;1{sch}||schematic|1699294202872|1700503035673|
 Ngeneric:Facet-Center|art@0||0|0||||AV
-NCapacitor|cap@0||36|2.5|||||SCHEM_capacitance(D5G1;)S5f
+NCapacitor|cap@0||36|2.5|||||SCHEM_capacitance(D5G1;)S1f
 NOff-Page|conn@0||42|22||||
 NOff-Page|conn@1||-21|10||||
 NOff-Page|conn@2||-21|17||||
@@ -164,7 +164,6 @@ NWire_Pin|pin@24||-11|27||||
 Ngeneric:Invisible-Pin|pin@27||-1|3|||||ART_message(D5G2;)SY
 Ngeneric:Invisible-Pin|pin@28||12|2|||||ART_message(D5G2;)SW
 Ngeneric:Invisible-Pin|pin@29||24|2|||||ART_message(D5G2;)SZ
-Ngeneric:Invisible-Pin|pin@30||-54.5|8|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VW W 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VX X 0 PULSE(3.3 0 0 1n 1n 500n 1000n),VY Y 0 PULSE(3.3 0 0 1n 1n 250n 500n),VZ Z 0 PULSE(3.3 0 0 1n 1n 125n 250n),VCLK CLK 0 PULSE(3.3 0 0 1n 1n 62.5n 125n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NWire_Pin|pin@31||3|8||||
 NWire_Pin|pin@32||28|8||||
 NWire_Pin|pin@34||16|8||||
@@ -174,6 +173,8 @@ Ngeneric:Invisible-Pin|pin@37||12|14|||||ART_message(D5G2;)SX
 NWire_Pin|pin@38||36|22||||
 NWire_Pin|pin@39||36|-21||||
 NWire_Pin|pin@40||16|-21||||
+Ngeneric:Invisible-Pin|pin@41||-54.5|-17|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*Logic:,VW W 0 DC 3.3,VX X 0 DC 3.3,VY Y 0 DC 3.3,VZ Z 0 DC 3.3,*,* Clock:,VCLK CLK 0 PULSE(3.3 0 0 0.05n 0.05n 1n 2n),*,.TRAN 0 6n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@42||-52.5|16|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*Logic:,VW W 0 PULSE(3.3 0 0 0.05n 0.05n 8n 16n),VX X 0 PULSE(3.3 0 0 0.05n 0.05n 4n 8n),VY Y 0 PULSE(3.3 0 0 0.05n 0.05n 2n 4n),VZ Z 0 PULSE(3.3 0 0 0.05n 0.05n 1n 2n),*,* Clock:,VCLK CLK 0 PULSE(3.3 0 0 0.05n 0.05n 0.5n 1n),*,.TRAN 0 16n,".include Z:\\MOS_model.txt"]
 NTransistor|pmos@0||14|27|||YR|2|ATTR_length(D5G0.5;X-0.5;Y-1;)D2.0|ATTR_width(D5G1;X0.5;Y-1;)D8.0
 NPower|pwr@0||16|33||||
 Awire|net@1|||900|nmos@1|s|3|-1|pin@0||3|-10
