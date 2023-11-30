@@ -1,0 +1,29 @@
+*** SPICE deck for cell 3-input-nand-schematic{sch} from library 3-input-nand
+*** Created on Wed Nov 29, 2023 13:24:54
+*** Last revised on Wed Nov 29, 2023 18:21:10
+*** Written on Wed Nov 29, 2023 18:22:11 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: 3-input-nand-schematic{sch}
+Mnmos@0 F A net@0 gnd N L=0.35U W=1.4U
+Mnmos@1 net@0 B net@16 gnd N L=0.35U W=1.4U
+Mnmos@3 net@16 C gnd gnd N L=0.35U W=1.4U
+Mpmos@0 F A vdd vdd P L=0.35U W=1.4U
+Mpmos@1 F C vdd vdd P L=0.35U W=1.4U
+Mpmos@2 F B vdd vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell '3-input-nand-schematic{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
+VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
