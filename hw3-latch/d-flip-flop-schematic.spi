@@ -1,0 +1,55 @@
+*** SPICE deck for cell d-flip-flop-schematic{sch} from library d-flip-flop
+*** Created on Mon Nov 13, 2023 11:36:35
+*** Last revised on Fri Dec 01, 2023 21:39:17
+*** Written on Fri Dec 01, 2023 21:39:26 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: d-flip-flop:d-flip-flop-schematic{sch}
+Mnmos@11 net@98 net@88 net@104 gnd N L=0.35U W=1.4U
+Mnmos@12 net@104 net@86 gnd gnd N L=0.35U W=1.4U
+Mnmos@13 net@86 net@98 net@111 gnd N L=0.35U W=1.4U
+Mnmos@14 net@111 CLK net@116 gnd N L=0.35U W=1.4U
+Mnmos@15 net@116 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@16 net@178 net@86 net@193 gnd N L=0.35U W=1.4U
+Mnmos@17 net@193 CLK net@198 gnd N L=0.35U W=1.4U
+Mnmos@18 net@198 net@88 gnd gnd N L=0.35U W=1.4U
+Mnmos@19 net@88 net@178 net@230 gnd N L=0.35U W=1.4U
+Mnmos@20 net@230 D net@235 gnd N L=0.35U W=1.4U
+Mnmos@21 net@235 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@22 Q net@86 net@259 gnd N L=0.35U W=1.4U
+Mnmos@23 net@259 QP gnd gnd N L=0.35U W=1.4U
+Mnmos@24 QP Q net@301 gnd N L=0.35U W=1.4U
+Mnmos@25 net@301 net@178 net@306 gnd N L=0.35U W=1.4U
+Mnmos@26 net@306 RST gnd gnd N L=0.35U W=1.4U
+Mpmos@11 net@98 net@88 vdd vdd P L=0.35U W=1.4U
+Mpmos@12 net@98 net@86 vdd vdd P L=0.35U W=1.4U
+Mpmos@13 net@86 net@98 vdd vdd P L=0.35U W=1.4U
+Mpmos@14 net@86 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@15 net@86 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@16 net@178 net@86 vdd vdd P L=0.35U W=1.4U
+Mpmos@17 net@178 net@88 vdd vdd P L=0.35U W=1.4U
+Mpmos@18 net@178 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@19 net@88 net@178 vdd vdd P L=0.35U W=1.4U
+Mpmos@20 net@88 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@21 net@88 D vdd vdd P L=0.35U W=1.4U
+Mpmos@22 Q net@86 vdd vdd P L=0.35U W=1.4U
+Mpmos@23 Q QP vdd vdd P L=0.35U W=1.4U
+Mpmos@24 QP Q vdd vdd P L=0.35U W=1.4U
+Mpmos@25 QP RST vdd vdd P L=0.35U W=1.4U
+Mpmos@26 QP net@178 vdd vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell 'd-flip-flop:d-flip-flop-schematic{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VCLK CLK 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD D 0 PULSE(3.3 0 0 1n 1n 70n 140n)
+VRST RST 0 DC 3.3
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END

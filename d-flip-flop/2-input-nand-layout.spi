@@ -1,0 +1,24 @@
+*** SPICE deck for cell 2-input-nand-layout{lay} from library 2-input-nand
+*** Created on Thu Nov 30, 2023 12:06:27
+*** Last revised on Thu Nov 30, 2023 12:23:25
+*** Written on Thu Nov 30, 2023 12:23:30 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: 2-input-nand-layout{lay}
+Mnmos@0 net@5 A gnd gnd N L=0.35U W=1.4U AS=7.258P AD=0.482P PS=19.775U PD=2.363U
+Mnmos@1 F B net@5 gnd N L=0.35U W=1.4U AS=0.482P AD=1.184P PS=2.363U PD=3.558U
+Mpmos@0 F A vdd vdd P L=0.35U W=1.4U AS=4.992P AD=1.184P PS=12.6U PD=3.558U
+Mpmos@1 vdd B F vdd P L=0.35U W=1.4U AS=1.184P AD=4.992P PS=3.558U PD=12.6U
+
+* Spice Code nodes in cell cell '2-input-nand-layout{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
+VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END

@@ -1,0 +1,27 @@
+*** SPICE deck for cell 3-input-nand-layout{lay} from library 3-input-nand
+*** Created on Thu Nov 30, 2023 12:24:34
+*** Last revised on Thu Nov 30, 2023 12:47:56
+*** Written on Thu Nov 30, 2023 12:48:00 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+*** TOP LEVEL CELL: 3-input-nand-layout{lay}
+Mnmos@0 net@7 B gnd gnd N L=0.35U W=1.4U AS=8.789P AD=0.482P PS=23.275U PD=2.363U
+Mnmos@1 net@8 A net@7 gnd N L=0.35U W=1.4U AS=0.482P AD=0.482P PS=2.363U PD=2.363U
+Mnmos@2 F C net@8 gnd N L=0.35U W=1.4U AS=0.482P AD=1.286P PS=2.363U PD=3.937U
+Mpmos@0 F B vdd vdd P L=0.35U W=1.4U AS=4.063P AD=1.286P PS=9.742U PD=3.937U
+Mpmos@1 vdd A F vdd P L=0.35U W=1.4U AS=1.286P AD=4.063P PS=3.937U PD=9.742U
+Mpmos@2 F C vdd vdd P L=0.35U W=1.4U AS=4.063P AD=1.286P PS=9.742U PD=3.937U
+
+* Spice Code nodes in cell cell '3-input-nand-layout{lay}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n)
+VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n)
+VC C 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
