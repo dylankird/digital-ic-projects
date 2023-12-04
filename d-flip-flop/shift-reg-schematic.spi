@@ -1,0 +1,151 @@
+*** SPICE deck for cell shift-reg-schematic{sch} from library shift-reg
+*** Created on Sat Dec 02, 2023 00:36:41
+*** Last revised on Sat Dec 02, 2023 22:43:50
+*** Written on Sat Dec 02, 2023 22:43:55 by Electric VLSI Design System, version 9.07
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+
+.global gnd vdd
+
+*** TOP LEVEL CELL: shift-reg-schematic{sch}
+Mnmos@0 net@0 net@5 net@173 gnd N L=0.35U W=1.4U
+Mnmos@1 net@173 net@43 gnd gnd N L=0.35U W=1.4U
+Mnmos@2 net@43 net@0 net@184 gnd N L=0.35U W=1.4U
+Mnmos@3 net@184 CLK net@2 gnd N L=0.35U W=1.4U
+Mnmos@4 net@2 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@5 net@4 net@43 net@208 gnd N L=0.35U W=1.4U
+Mnmos@6 net@208 CLK net@213 gnd N L=0.35U W=1.4U
+Mnmos@7 net@213 net@5 gnd gnd N L=0.35U W=1.4U
+Mnmos@8 net@5 net@4 net@10 gnd N L=0.35U W=1.4U
+Mnmos@9 net@10 D net@16 gnd N L=0.35U W=1.4U
+Mnmos@10 net@16 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@11 Q0 net@43 net@37 gnd N L=0.35U W=1.4U
+Mnmos@12 net@37 net@41 gnd gnd N L=0.35U W=1.4U
+Mnmos@13 net@41 Q0 net@78 gnd N L=0.35U W=1.4U
+Mnmos@14 net@78 net@4 net@84 gnd N L=0.35U W=1.4U
+Mnmos@15 net@84 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@16 net@239 net@252 net@322 gnd N L=0.35U W=1.4U
+Mnmos@17 net@322 net@291 gnd gnd N L=0.35U W=1.4U
+Mnmos@18 net@291 net@239 net@334 gnd N L=0.35U W=1.4U
+Mnmos@19 net@334 CLK net@351 gnd N L=0.35U W=1.4U
+Mnmos@20 net@351 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@21 net@318 net@291 net@361 gnd N L=0.35U W=1.4U
+Mnmos@22 net@361 CLK net@367 gnd N L=0.35U W=1.4U
+Mnmos@23 net@367 net@252 gnd gnd N L=0.35U W=1.4U
+Mnmos@24 net@252 net@318 net@241 gnd N L=0.35U W=1.4U
+Mnmos@25 net@241 Q0 net@307 gnd N L=0.35U W=1.4U
+Mnmos@26 net@307 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@27 Q1 net@291 net@409 gnd N L=0.35U W=1.4U
+Mnmos@28 net@409 net@414 gnd gnd N L=0.35U W=1.4U
+Mnmos@29 net@414 Q1 net@454 gnd N L=0.35U W=1.4U
+Mnmos@30 net@454 net@318 net@461 gnd N L=0.35U W=1.4U
+Mnmos@31 net@461 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@32 net@478 net@491 net@561 gnd N L=0.35U W=1.4U
+Mnmos@33 net@561 net@530 gnd gnd N L=0.35U W=1.4U
+Mnmos@34 net@530 net@478 net@573 gnd N L=0.35U W=1.4U
+Mnmos@35 net@573 CLK net@590 gnd N L=0.35U W=1.4U
+Mnmos@36 net@590 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@37 net@557 net@530 net@600 gnd N L=0.35U W=1.4U
+Mnmos@38 net@600 CLK net@606 gnd N L=0.35U W=1.4U
+Mnmos@39 net@606 net@491 gnd gnd N L=0.35U W=1.4U
+Mnmos@40 net@491 net@557 net@480 gnd N L=0.35U W=1.4U
+Mnmos@41 net@480 Q1 net@546 gnd N L=0.35U W=1.4U
+Mnmos@42 net@546 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@43 Q2 net@530 net@648 gnd N L=0.35U W=1.4U
+Mnmos@44 net@648 net@653 gnd gnd N L=0.35U W=1.4U
+Mnmos@45 net@653 Q2 net@693 gnd N L=0.35U W=1.4U
+Mnmos@46 net@693 net@557 net@700 gnd N L=0.35U W=1.4U
+Mnmos@47 net@700 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@48 net@717 net@730 net@800 gnd N L=0.35U W=1.4U
+Mnmos@49 net@800 net@769 gnd gnd N L=0.35U W=1.4U
+Mnmos@50 net@769 net@717 net@812 gnd N L=0.35U W=1.4U
+Mnmos@51 net@812 CLK net@829 gnd N L=0.35U W=1.4U
+Mnmos@52 net@829 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@53 net@796 net@769 net@839 gnd N L=0.35U W=1.4U
+Mnmos@54 net@839 CLK net@845 gnd N L=0.35U W=1.4U
+Mnmos@55 net@845 net@730 gnd gnd N L=0.35U W=1.4U
+Mnmos@56 net@730 net@796 net@719 gnd N L=0.35U W=1.4U
+Mnmos@57 net@719 Q2 net@785 gnd N L=0.35U W=1.4U
+Mnmos@58 net@785 RST gnd gnd N L=0.35U W=1.4U
+Mnmos@59 Q3 net@769 net@887 gnd N L=0.35U W=1.4U
+Mnmos@60 net@887 net@892 gnd gnd N L=0.35U W=1.4U
+Mnmos@61 net@892 Q3 net@932 gnd N L=0.35U W=1.4U
+Mnmos@62 net@932 net@796 net@939 gnd N L=0.35U W=1.4U
+Mnmos@63 net@939 RST gnd gnd N L=0.35U W=1.4U
+Mpmos@0 net@0 net@5 vdd vdd P L=0.35U W=1.4U
+Mpmos@1 net@0 net@43 vdd vdd P L=0.35U W=1.4U
+Mpmos@2 net@43 net@0 vdd vdd P L=0.35U W=1.4U
+Mpmos@3 net@43 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@4 net@43 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@5 net@4 net@43 vdd vdd P L=0.35U W=1.4U
+Mpmos@6 net@4 net@5 vdd vdd P L=0.35U W=1.4U
+Mpmos@7 net@4 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@8 net@5 net@4 vdd vdd P L=0.35U W=1.4U
+Mpmos@9 net@5 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@10 net@5 D vdd vdd P L=0.35U W=1.4U
+Mpmos@11 Q0 net@43 vdd vdd P L=0.35U W=1.4U
+Mpmos@12 Q0 net@41 vdd vdd P L=0.35U W=1.4U
+Mpmos@13 net@41 Q0 vdd vdd P L=0.35U W=1.4U
+Mpmos@14 net@41 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@15 net@41 net@4 vdd vdd P L=0.35U W=1.4U
+Mpmos@16 net@239 net@252 vdd vdd P L=0.35U W=1.4U
+Mpmos@17 net@239 net@291 vdd vdd P L=0.35U W=1.4U
+Mpmos@18 net@291 net@239 vdd vdd P L=0.35U W=1.4U
+Mpmos@19 net@291 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@20 net@291 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@21 net@318 net@291 vdd vdd P L=0.35U W=1.4U
+Mpmos@22 net@318 net@252 vdd vdd P L=0.35U W=1.4U
+Mpmos@23 net@318 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@24 net@252 net@318 vdd vdd P L=0.35U W=1.4U
+Mpmos@25 net@252 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@26 net@252 Q0 vdd vdd P L=0.35U W=1.4U
+Mpmos@27 Q1 net@291 vdd vdd P L=0.35U W=1.4U
+Mpmos@28 Q1 net@414 vdd vdd P L=0.35U W=1.4U
+Mpmos@29 net@414 Q1 vdd vdd P L=0.35U W=1.4U
+Mpmos@30 net@414 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@31 net@414 net@318 vdd vdd P L=0.35U W=1.4U
+Mpmos@32 net@478 net@491 vdd vdd P L=0.35U W=1.4U
+Mpmos@33 net@478 net@530 vdd vdd P L=0.35U W=1.4U
+Mpmos@34 net@530 net@478 vdd vdd P L=0.35U W=1.4U
+Mpmos@35 net@530 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@36 net@530 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@37 net@557 net@530 vdd vdd P L=0.35U W=1.4U
+Mpmos@38 net@557 net@491 vdd vdd P L=0.35U W=1.4U
+Mpmos@39 net@557 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@40 net@491 net@557 vdd vdd P L=0.35U W=1.4U
+Mpmos@41 net@491 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@42 net@491 Q1 vdd vdd P L=0.35U W=1.4U
+Mpmos@43 Q2 net@530 vdd vdd P L=0.35U W=1.4U
+Mpmos@44 Q2 net@653 vdd vdd P L=0.35U W=1.4U
+Mpmos@45 net@653 Q2 vdd vdd P L=0.35U W=1.4U
+Mpmos@46 net@653 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@47 net@653 net@557 vdd vdd P L=0.35U W=1.4U
+Mpmos@48 net@717 net@730 vdd vdd P L=0.35U W=1.4U
+Mpmos@49 net@717 net@769 vdd vdd P L=0.35U W=1.4U
+Mpmos@50 net@769 net@717 vdd vdd P L=0.35U W=1.4U
+Mpmos@51 net@769 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@52 net@769 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@53 net@796 net@769 vdd vdd P L=0.35U W=1.4U
+Mpmos@54 net@796 net@730 vdd vdd P L=0.35U W=1.4U
+Mpmos@55 net@796 CLK vdd vdd P L=0.35U W=1.4U
+Mpmos@56 net@730 net@796 vdd vdd P L=0.35U W=1.4U
+Mpmos@57 net@730 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@58 net@730 Q2 vdd vdd P L=0.35U W=1.4U
+Mpmos@59 Q3 net@769 vdd vdd P L=0.35U W=1.4U
+Mpmos@60 Q3 net@892 vdd vdd P L=0.35U W=1.4U
+Mpmos@61 net@892 Q3 vdd vdd P L=0.35U W=1.4U
+Mpmos@62 net@892 RST vdd vdd P L=0.35U W=1.4U
+Mpmos@63 net@892 net@796 vdd vdd P L=0.35U W=1.4U
+
+* Spice Code nodes in cell cell 'shift-reg-schematic{sch}'
+VDD VDD 0 DC 3.3
+VGND GND 0 DC 0
+*
+*For logic simulation:
+VCLK CLK 0 PULSE(3.3 0 0 1n 1n 250n 500n)
+VD D 0 PULSE(3.3 0 0 1n 1n 200n 300n)
+VRST RST 0 DC 3.3
+*
+.TRAN 0 2000n
+.include Z:\MOS_model.txt
+.END
