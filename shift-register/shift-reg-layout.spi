@@ -1,7 +1,7 @@
 *** SPICE deck for cell shift-reg-layout{lay} from library shift-reg
 *** Created on Sat Dec 02, 2023 22:45:09
-*** Last revised on Tue Dec 05, 2023 18:27:44
-*** Written on Tue Dec 05, 2023 18:27:47 by Electric VLSI Design System, version 9.07
+*** Last revised on Tue Dec 05, 2023 18:37:54
+*** Written on Tue Dec 05, 2023 18:37:58 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
