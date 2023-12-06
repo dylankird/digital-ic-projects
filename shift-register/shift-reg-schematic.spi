@@ -1,13 +1,13 @@
 *** SPICE deck for cell shift-reg-schematic{sch} from library shift-reg
 *** Created on Sat Dec 02, 2023 00:36:41
-*** Last revised on Sat Dec 02, 2023 22:43:50
-*** Written on Sat Dec 02, 2023 22:43:55 by Electric VLSI Design System, version 9.07
+*** Last revised on Tue Dec 05, 2023 14:37:21
+*** Written on Tue Dec 05, 2023 14:37:34 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
 .global gnd vdd
 
-*** TOP LEVEL CELL: shift-reg-schematic{sch}
+*** TOP LEVEL CELL: shift-reg:shift-reg-schematic{sch}
 Mnmos@0 net@0 net@5 net@173 gnd N L=0.35U W=1.4U
 Mnmos@1 net@173 net@43 gnd gnd N L=0.35U W=1.4U
 Mnmos@2 net@43 net@0 net@184 gnd N L=0.35U W=1.4U
@@ -137,15 +137,21 @@ Mpmos@61 net@892 Q3 vdd vdd P L=0.35U W=1.4U
 Mpmos@62 net@892 RST vdd vdd P L=0.35U W=1.4U
 Mpmos@63 net@892 net@796 vdd vdd P L=0.35U W=1.4U
 
-* Spice Code nodes in cell cell 'shift-reg-schematic{sch}'
+* Spice Code nodes in cell cell 'shift-reg:shift-reg-schematic{sch}'
 VDD VDD 0 DC 3.3
 VGND GND 0 DC 0
 *
 *For logic simulation:
 VCLK CLK 0 PULSE(3.3 0 0 1n 1n 250n 500n)
-VD D 0 PULSE(3.3 0 0 1n 1n 200n 300n)
-VRST RST 0 DC 3.3
+VD D 0 DC PULSE(3.3 0 0 1n 1n 160n 320n)
+VRST RST 0 PULSE(3.3 0 0 1n 1n 10n 2000n)
 *
-.TRAN 0 2000n
+.TRAN 0 1000n
+.meas risetime TRIG v(Q0)=0.33 TD=0 rise=1 TARG v(Q0)=2.97 TD=0 rise=1
+.meas falltime TRIG v(Q0)=2.97 TD=0 fall=1 TARG v(Q0)=0.33 TD=0 fall=1
+.meas tpHL TRIG v(CLK)=1.65 TD=700ns rise=1 TARG v(Q0)=1.65 TD=0 fall=1
+.meas tpLH TRIG v(CLK)=1.65 TD=0 rise=1 TARG v(Q0)=1.65 TD=0 rise=1
+.meas propagationdelay param=(tpHL+tpLH)/2
+.meas chip_current I_vdd AVG I(VDD)
 .include Z:\MOS_model.txt
 .END
