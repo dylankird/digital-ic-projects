@@ -1,7 +1,7 @@
 *** SPICE deck for cell shift-reg-schematic{sch} from library shift-reg
 *** Created on Sat Dec 02, 2023 00:36:41
-*** Last revised on Tue Dec 05, 2023 18:31:17
-*** Written on Tue Dec 05, 2023 18:31:20 by Electric VLSI Design System, version 9.07
+*** Last revised on Wed Dec 06, 2023 10:08:06
+*** Written on Wed Dec 06, 2023 10:08:12 by Electric VLSI Design System, version 9.07
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
 
