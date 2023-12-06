@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell shift-reg-layout;1{lay}
-Cshift-reg-layout;1{lay}||mocmos|1701585909835|1701829184579||DRC_last_good_drc_area_date()G1701587176071|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1701587176071
+Cshift-reg-layout;1{lay}||mocmos|1701585909835|1701829184579||DRC_last_good_drc_area_date()G1701829311455|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1701829311455
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-42.5|95||3||
 NMetal-1-P-Active-Con|contact@1||-32.5|95||3||
