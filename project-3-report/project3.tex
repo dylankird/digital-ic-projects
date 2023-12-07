@@ -36,14 +36,82 @@
 
 \section{Executive Summary}
   \paragraph{}
-  The goal of this project was to build a 4-bit shift register in Electric.  
+  The goal of this project was to build a 4-bit shift register in Electric. A shift register is a digital device which can shift bits across a number of outputs. In our case, there are 4 outputs, Q0 through Q3. Every clock cycle, the value of the bit stored at Q2 is shifted to Q3, the value of Q1 is shifted to Q2, Q0 is shifted to Q1, and the state of input D is stored in Q0. This is a very useful circuit for a number of applications, as we can control four outputs with only two inputs: A clock pin and a data pin. Moreover, multiple shift registers can be chained together to create a larger shift register with more outputs. For example, I once worked on a project in which 8-bit shift registers were chained together to control 64 LEDs with just two pins on a microcontroller.
+
+  \paragraph{}
+  For this project, the shift register shifts data on the positive clock edge. This is done by making the shift register out of four postive edge-triggered D flip-flops, each flip-flop representing one bit. The shift register also has a reset pin, which is active low. When the reset pin is pulled low, all four outputs are reset to logic low.
+
+  \paragraph{}
+  The project involves designing the shift register as both a schematic and a layout in Electric. Both the schematic and layout are simulated in LTspice and IRSIM to confirm that the shift register design works properly. Measurements are also taken using LTspice to determine the rise times, fall times, propagation delay, and power draw of the designs. For this project specifically, the layout is simulated with parasitic resistances and capacitances. This makes the simulation much more realistic, since more of the physical properties of the design are taken into account.
+
+\section{Introduction and Background}
+  \paragraph{}
+  The design for the shift register consists of a couple of layers of designs. In order to build the shift register, we must first build a positive-edge-triggered master slave D flip-flop, and in order to build the flip-flop, we must first build a 2-input NAND gate and a 3-input NAND gate. The design for the positive-edge-triggered master-slave D flip-flop is shown in Figure \ref{fig:ff-design}. The design consists of two 2-input NAND gates and four 3-input NAND gates. The flip-flop has inputs for the clock signal, data signal, and reset line. It outputs Q and Q prime, however we will only be using Q for the shift register. The flip-flop works like a set of latches; while the clock is low, the "master" latch is set and the "slave" latch is held, and while the clock is high, the "master" latch is held while the "slave" latch is set. Because of this setup, the output of the flip-flop only changes to reflect the input on the positive clock edge. 
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth, frame]{images/ff-design.png}
+    \caption{The design for the positive-edge-triggered master-slave flip-flop.}
+    \label{fig:ff-design}
+  \end{figure}
+
+  \paragraph{}
+  Now that we understand how the flip-flop works, we can understand how the shift register works. As shown in Figure \ref{fig:shift-reg-design}, the 4-bit shift register is simply four positive-edge-triggered master-slave D flip-flops chained together. All of the reset pins of the flip-flops are connected together to create the reset line for the shift register. This reset line will reset all outputs to low when it is pulled low. The clock inputs are also tied together so that all of the flip-flops are triggered simultaneously at the positive clock-edge. The D input of the shift register is connected to the D input of the first flip-flop, and then the D input of each successive flip-flop is connected to the output of the previous flip-flop. This way, the data is shifted from left to right each positive clock edge.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth, frame]{images/shift-reg-design.png}
+    \caption{The design for the 4-bit shift register consisting of four positive-edge-triggered master-slave D flip-flops.}
+    \label{fig:shift-reg-design}
+  \end{figure}
+
+  \paragraph{}
+  To give an example of how the shift register works, let us consider the following scenario. First, we pulse the reset pin low temporarily and then keep it high again. Now all outputs Q0, Q1, Q2, and Q3 are low. We will set D high for the first positive-edge of the clock. After the positive-edge of the clock pulse, Q0 is now high. After another positive-edge of the clock, the 1 stored at Q0 is shifted to Q1. Then after another positive clock edge, Q2 is high. Next positive clock edge, Q3 is high. And then after another positive clock edge, the signal from D going low again has been shifted through the whole shift register and all of the outputs are low again. This example demonstrates how the high pulse on D "shifts" through the shift register, making the jump every positive clock edge.
+
+
+\section{Electric Circuit Schematics}
+  \paragraph{}
+  The basic building blocks for the shift register, as discussed in the previous section, are the 2-input and 3-input NAND gates. The schematic for the 2-input NAND gate is shown in Figure \ref{fig:2-in-nand-schem}. It is a very simple static CMOS design with two PMOS transistors in parallel and two NMOS transistors in series to create the NAND logic. The schematic for the 3-input NAND gate is shown in Figure \ref{fig:3-in-nand-schem}. The design is the same as for the 2-input NAND gate, except that there are three NMOS transistors and three PMOS transistors to support three inputs.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth, frame]{screenshots/2-input-nand-schem.png}
+    \caption{The schematic for the 2-input NAND gates, one component of the D flip-flops that make up the shift register.}
+    \label{fig:2-in-nand-schem}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth, frame]{screenshots/3-input-nand-schem.png}
+    \caption{The schematic for the 3-input NAND gates, one component of the D flip-flops that make up the shift register.}
+    \label{fig:3-in-nand-schem}
+  \end{figure}
+
+  \paragraph{}
+  Two 2-input NAND gates and four 3-input NAND gates are combined in the configuration shown in Figure \ref{fig:ff-design} to create the schematic for the positive-edge-triggered master-slave D flip-flop that the shift register is based on. The schematic for the flip-flop is shown in Figure \ref{fig:d-ff-schem}. The NAND gates can be4 clearly seen in the design. As described previously, the flip-flop design has inputs for the clock signal, data signal, and reset line and has outputs Q and Q prime. Crucially, the flip-flop is positive-edge-triggered due to the master-slave design that acts like two latches chained together.
+
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth, frame]{screenshots/d-ff-schem.png}
+    \caption{The schematic for the postive-edge-triggered master-slave D flip-flop.}
+    \label{fig:d-ff-schem}
+  \end{figure}
+
+  \paragraph{}
+
+
+
+
 
 
 
 \newpage
 \section{References}
 
-\noindent [\text{1}] EE 457 Lectures 1, 2, 3, and 4
+\noindent [\text{1}] EE 457 Lectures 1, 2, 3, and 4h
 
 \noindent [\text{2}] https://cmosedu.com/videos/electric/tutorial3/electric\_tutorial\_3.htm 
 

@@ -2,7 +2,6 @@
 H2-input-nand|9.07
 
 # Views:
-Vicon|ic
 Vlayout|lay
 Vschematic|sch
 
@@ -10,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell 2-input-nand-layout;1{lay}
-C2-input-nand-layout;1{lay}||mocmos|1701374787138|1701375805478||DRC_last_good_drc_area_date()G1701375558382|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1701375558382
+C2-input-nand-layout;1{lay}||mocmos|1701374787138|1701987354350||DRC_last_good_drc_area_date()G1701375558382|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1701375558382
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-9|30||3||
 NMetal-1-P-Active-Con|contact@1||1|30||3||
@@ -34,7 +33,7 @@ NMetal-1-Pin|pin@6||8.5|20||||
 NPolysilicon-1-Pin|pin@9||15.5|20||||
 NMetal-1-Pin|pin@10||-24.5|20||||
 NMetal-1-Pin|pin@11||-24.5|10||||
-Ngeneric:Invisible-Pin|pin@12||-46|14.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@12||-44|18|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VA A 0 PULSE(3.3 0 0 1n 1n 1000n 2000n),VB B 0 PULSE(3.3 0 0 1n 1n 500n 1000n),*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||-4|30|5||R|
 NP-Transistor|pmos@1||6|30|5||R|
 NMetal-1-P-Well-Con|substr@0||1|-0.5|32|||
@@ -74,36 +73,8 @@ EGND||D5G2;Y-4;|substr@0||G
 EVDD||D5G2;Y4.5;|well@0||P
 X
 
-# Cell 2-input-nand-schematic;1{ic}
-C2-input-nand-schematic;1{ic}||artwork|1701890445285|1701892565810|E
-Ngeneric:Facet-Center|art@0||0|0||||AV
-NOpened-Thicker-Polygon|art@1||0|0|6|10|||SCHEM_function(D5G2;X2;Y6;)S2-input-nand-schematic|trace()V[-3/-5,-3/5,3/5,3/-5,-3/-5]
-NCircle|art@2||1|-2|6|6||
-Nschematic:Bus_Pin|pin@0||-5|1||||
-Nschematic:Wire_Pin|pin@1||-3|1||||
-Nschematic:Bus_Pin|pin@2||-5|-1||||
-Nschematic:Wire_Pin|pin@3||-3|-1||||
-Nschematic:Bus_Pin|pin@4||5|0||||
-Nschematic:Wire_Pin|pin@5||3|0||||
-Nschematic:Bus_Pin|pin@6||1|-7||||
-Nschematic:Wire_Pin|pin@7||1|-5||||
-Nschematic:Bus_Pin|pin@8||-1|-7||||
-Nschematic:Wire_Pin|pin@9||-1|-5||||
-Aschematic:wire|net@0|||0|pin@1||-3|1|pin@0||-5|1
-Aschematic:wire|net@1|||0|pin@3||-3|-1|pin@2||-5|-1
-Aschematic:wire|net@2|||1800|pin@5||3|0|pin@4||5|0
-Aschematic:wire|net@3|||900|pin@7||1|-5|pin@6||1|-7
-Aschematic:wire|net@4|||900|pin@9||-1|-5|pin@8||-1|-7
-EA||D5G2;|pin@0||I
-EB||D5G2;|pin@2||I
-EF||D5G2;|pin@4||O
-EGND||D5G2;|pin@6||G
-EVDD||D5G2;|pin@8||P
-X
-
 # Cell 2-input-nand-schematic;1{sch}
-C2-input-nand-schematic;1{sch}||schematic|1701293026044|1701890445285|
-I2-input-nand-schematic;1{ic}|2-input-@0||29|19|||D5G4;
+C2-input-nand-schematic;1{sch}||schematic|1701293026044|1701987386615|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-21.5|1.5||||
 NOff-Page|conn@1||-21.5|-3||||
