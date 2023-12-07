@@ -2,6 +2,7 @@
 H2-input-nand|9.07
 
 # Views:
+Vicon|ic
 Vlayout|lay
 Vschematic|sch
 
@@ -73,8 +74,36 @@ EGND||D5G2;Y-4;|substr@0||G
 EVDD||D5G2;Y4.5;|well@0||P
 X
 
+# Cell 2-input-nand-schematic;1{ic}
+C2-input-nand-schematic;1{ic}||artwork|1701890445285|1701892565810|E
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOpened-Thicker-Polygon|art@1||0|0|6|10|||SCHEM_function(D5G2;X2;Y6;)S2-input-nand-schematic|trace()V[-3/-5,-3/5,3/5,3/-5,-3/-5]
+NCircle|art@2||1|-2|6|6||
+Nschematic:Bus_Pin|pin@0||-5|1||||
+Nschematic:Wire_Pin|pin@1||-3|1||||
+Nschematic:Bus_Pin|pin@2||-5|-1||||
+Nschematic:Wire_Pin|pin@3||-3|-1||||
+Nschematic:Bus_Pin|pin@4||5|0||||
+Nschematic:Wire_Pin|pin@5||3|0||||
+Nschematic:Bus_Pin|pin@6||1|-7||||
+Nschematic:Wire_Pin|pin@7||1|-5||||
+Nschematic:Bus_Pin|pin@8||-1|-7||||
+Nschematic:Wire_Pin|pin@9||-1|-5||||
+Aschematic:wire|net@0|||0|pin@1||-3|1|pin@0||-5|1
+Aschematic:wire|net@1|||0|pin@3||-3|-1|pin@2||-5|-1
+Aschematic:wire|net@2|||1800|pin@5||3|0|pin@4||5|0
+Aschematic:wire|net@3|||900|pin@7||1|-5|pin@6||1|-7
+Aschematic:wire|net@4|||900|pin@9||-1|-5|pin@8||-1|-7
+EA||D5G2;|pin@0||I
+EB||D5G2;|pin@2||I
+EF||D5G2;|pin@4||O
+EGND||D5G2;|pin@6||G
+EVDD||D5G2;|pin@8||P
+X
+
 # Cell 2-input-nand-schematic;1{sch}
-C2-input-nand-schematic;1{sch}||schematic|1701293026044|1701310910971|
+C2-input-nand-schematic;1{sch}||schematic|1701293026044|1701890445285|
+I2-input-nand-schematic;1{ic}|2-input-@0||29|19|||D5G4;
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-21.5|1.5||||
 NOff-Page|conn@1||-21.5|-3||||
