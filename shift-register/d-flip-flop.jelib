@@ -9,7 +9,7 @@ Vschematic|sch
 Tmocmos|ScaleFORmocmos()D175.0
 
 # Cell d-flip-flop-layout;1{lay}
-Cd-flip-flop-layout;1{lay}||mocmos|1701495820688|1701501587224||DRC_last_good_drc_area_date()G1701501572616|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1701501572616
+Cd-flip-flop-layout;1{lay}||mocmos|1701495820688|1701987547964||DRC_last_good_drc_area_date()G1701501572616|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1701501572616
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NMetal-1-P-Active-Con|contact@0||-2.5|35||3||
 NMetal-1-P-Active-Con|contact@1||7.5|35||3||
@@ -226,7 +226,7 @@ NMetal-1-Pin|pin@116||-58.5|-162||||
 NMetal-1-Pin|pin@117||148.5|-93||||
 NMetal-2-Pin|pin@118||121.5|-34||||
 NMetal-1-Pin|pin@119||148.5|-34||||
-Ngeneric:Invisible-Pin|pin@120||-58.5|-10.5|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VCLK CLK 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 70n 140n),VRST RST 0 DC 3.3,*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@120||-66|-21|||||SIM_spice_card(D5G3;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VCLK CLK 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 70n 140n),VRST RST 0 DC 3.3,*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NP-Transistor|pmos@0||2.5|35|5||R|
 NP-Transistor|pmos@1||12.5|35|5||R|
 NP-Transistor|pmos@2||0|-24|5||R|
@@ -551,7 +551,7 @@ EVDD||D5G2;Y4.5;|well@0||P
 X
 
 # Cell d-flip-flop-schematic;1{sch}
-Cd-flip-flop-schematic;1{sch}||schematic|1699904195412|1701495557622|
+Cd-flip-flop-schematic;1{sch}||schematic|1699904195412|1701987574199|
 Ngeneric:Facet-Center|art@0||0|0||||AV
 NOff-Page|conn@0||-96.5|-92.5|4|2||
 NOff-Page|conn@1||-80.5|-208.5|4|2||
@@ -708,7 +708,7 @@ NWire_Pin|pin@199||80.5|-95.5||||
 NWire_Pin|pin@200||80.5|-97||||
 NWire_Pin|pin@201||87.5|-236.5||||
 NWire_Pin|pin@202||87.5|-127||||
-Ngeneric:Invisible-Pin|pin@203||-111.5|-131|||||SIM_spice_card(D5G1.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VCLK CLK 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 70n 140n),VRST RST 0 DC 3.3,*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
+Ngeneric:Invisible-Pin|pin@203||-97.5|-6|||||SIM_spice_card(D5G4.5;)S[VDD VDD 0 DC 3.3,VGND GND 0 DC 0,*,*For logic simulation:,VCLK CLK 0 PULSE(3.3 0 0 1n 1n 250n 500n),VD D 0 PULSE(3.3 0 0 1n 1n 70n 140n),VRST RST 0 DC 3.3,*,.TRAN 0 2000n,".include Z:\\MOS_model.txt"]
 NWire_Pin|pin@204||0.5|14||||
 NWire_Pin|pin@205||40|14||||
 NWire_Pin|pin@206||0.5|-66||||
